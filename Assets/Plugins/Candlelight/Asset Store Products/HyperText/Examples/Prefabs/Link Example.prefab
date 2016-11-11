@@ -41,13 +41,18 @@ MonoBehaviour:
     m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: You must recover the banana in order to rescue the children from the deadly
     archosaur!
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -95,9 +100,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_QuadMaterial: {fileID: 0}
   m_ShouldOverrideStylesFontStyle: 0
   m_ShouldOverrideStylesFontColor: 0
   m_ShouldOverrideStylesLineSpacing: 0
+  m_ShouldOverrideStylesLinkHitboxPadding: 0
   m_TextProcessor:
     m_LinkKeywordCollections:
     - m_ClassName: items_common
@@ -111,9 +118,10 @@ MonoBehaviour:
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 
+    m_OutputText: You must recover the banana in order to rescue the children from
+      the deadly archosaur!
     m_QuadKeywordCollections: []
-    m_ReferenceFontSize: 24
+    m_ReferenceFontSize: 32
     m_ShouldOverrideStylesFontSize: 0
     m_Styles: {fileID: 11400000, guid: 662521a6cf8864b718fc3e306b00a50c, type: 2}
     m_TagKeywordCollections: []
@@ -143,17 +151,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -.30070582, z: 0, w: .953716934}
-  m_LocalPosition: {x: 0, y: 0, z: -100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -.130526215, z: 0, w: .991444886}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.00000012, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: .5}
-  m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 200, y: 0}
-  m_SizeDelta: {x: 350, y: 120}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 24, y: -24}
+  m_SizeDelta: {x: 440, y: 120}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

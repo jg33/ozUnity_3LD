@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 // Upgrade NOTE: commented out 'float4 unity_LightmapST', a built-in variable
 // Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
 // Upgrade NOTE: commented out 'sampler2D unity_LightmapInd', a built-in variable
@@ -91,7 +93,7 @@ Shader "Hidden/FurBaseToonLighted"
               #ifndef LIGHTMAP_OFF
               o.lmap.xy = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
               #endif
-              float3 worldN = mul((float3x3)_Object2World, SCALED_NORMAL);
+              float3 worldN = mul((float3x3)unity_ObjectToWorld, SCALED_NORMAL);
               #ifdef LIGHTMAP_OFF
               o.normal = worldN;
               #endif
@@ -99,7 +101,7 @@ Shader "Hidden/FurBaseToonLighted"
               float3 shlight = ShadeSH9 (float4(worldN,1.0));
               o.vlight = shlight;
               #ifdef VERTEXLIGHT_ON
-              float3 worldPos = mul(_Object2World, v.vertex).xyz;
+              float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
               o.vlight += Shade4PointLights (
                 unity_4LightPosX0, unity_4LightPosY0, unity_4LightPosZ0,
                 unity_LightColor[0].rgb, unity_LightColor[1].rgb, unity_LightColor[2].rgb, unity_LightColor[3].rgb,

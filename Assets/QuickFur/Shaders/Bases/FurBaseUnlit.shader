@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "Hidden/FurBaseUnlit"
 {
     CGINCLUDE
@@ -47,7 +49,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * _Length/20);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -75,7 +77,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * _Length/10);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/100); //Gravity*(Layer/10)^2
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -102,7 +104,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * 3*_Length/20);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -130,7 +132,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * _Length/5);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/25);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -158,7 +160,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * _Length/4);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/16);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -186,7 +188,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * 3*_Length/10);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/100);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -214,7 +216,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * 7 * _Length/20);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 49*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -242,7 +244,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * 2*_Length/5);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 4*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/25);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -270,7 +272,7 @@ Shader "Hidden/FurBaseUnlit"
 		          float3 p = (v.normal * 9*_Length/20);
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 81*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -299,7 +301,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/4);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -328,7 +330,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 121*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -357,7 +359,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/25);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -386,7 +388,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 169*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -415,7 +417,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 49*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/100);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -444,7 +446,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/16);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -473,7 +475,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 16*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/25);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -502,7 +504,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 289*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -531,7 +533,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 81*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/100);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -560,7 +562,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 361*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/400);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -589,7 +591,7 @@ Shader "Hidden/FurBaseUnlit"
                   o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind)));
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                   
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
 	            }
 
@@ -635,7 +637,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 3*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -670,7 +672,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * _Length/8);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + (_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/64);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -705,7 +707,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 7 * _Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 49*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -740,7 +742,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 9*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 81*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -775,7 +777,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 11*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 121*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -811,7 +813,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 13 *_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 169*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -846,7 +848,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 3 *_Length/8);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 9*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/64);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -882,7 +884,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 17 *_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 289*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -917,7 +919,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 19 *_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 361*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -953,7 +955,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal *21*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 441*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -989,7 +991,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 23*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 529*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1025,7 +1027,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 5*_Length/8);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 25*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/64);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1061,7 +1063,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 27*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 729*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1097,7 +1099,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 29*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 841*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1133,7 +1135,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 31*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 961*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1168,7 +1170,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 33*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 1089*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1203,7 +1205,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 7*_Length/8);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 49*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/64);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1239,7 +1241,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 37*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 1369*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1275,7 +1277,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * 39*_Length/40);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 1521*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind))/1600);
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 
@@ -1311,7 +1313,7 @@ Shader "Hidden/FurBaseUnlit"
               float3 p = (v.normal * _Length * 1.025);
               o.pos = mul(UNITY_MATRIX_MVP, v.vertex + float4(p,0) + 1.050625*(_Gravity+(sin(_Time.y*_WindSpeed)*_Wind)));
                   o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                  o.normal = normalize(mul(float4(v.normal,0), _Object2World));
+                  o.normal = normalize(mul(float4(v.normal,0), unity_ObjectToWorld));
                   return o;
         }
 

@@ -6,6 +6,8 @@ namespace Candlelight.UI.HyperTextDemo
 {
 	public class PopupSummoner : MonoBehaviour
 	{
+		private List<Rect> m_Hitboxes = new List<Rect>();
+
 		[SerializeField]
 		private float m_Padding = 16f;
 		private Popup m_Popup;
@@ -47,23 +49,24 @@ namespace Candlelight.UI.HyperTextDemo
 			{
 				// get center of hitboxes involved
 				Vector2 hitboxCenter = Vector3.zero;
-				foreach (Rect hitbox in linkInfo.Hitboxes)
+				source.GetLinkHitboxes(linkInfo.Index, m_Hitboxes);
+				for (int i = 0; i < m_Hitboxes.Count; ++i)
 				{
-					hitboxCenter += hitbox.center;
+					hitboxCenter += m_Hitboxes[i].center;
 				}
-				hitboxCenter /= linkInfo.Hitboxes.Length;
+				hitboxCenter /= m_Hitboxes.Count;
 				// set position of popup
 				Popup.transform.localPosition = hitboxCenter -
 					Vector2.up * ((Popup.RectTransform.rect.height + m_Source.FontSizeToUse) * 0.5f + m_Padding);
 			}
 			// set text of popup
-			m_Source.GetLinkKeywordCollections(ref m_LinkKeywords);
+			m_Source.GetLinkKeywordCollections(m_LinkKeywords);
 			Popup.SetText(
 				(
 					m_LinkKeywords.Where(
 						collection => collection.ClassName == linkInfo.ClassName
 					).First().Collection as KeywordsGlossary
-				).GetEntry(linkInfo.Id).Definition
+				).GetEntry(linkInfo.Name).Definition
 			);
 			// reveal the popup
 			Popup.Reveal();

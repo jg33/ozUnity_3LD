@@ -33,20 +33,27 @@ MonoBehaviour:
   m_Font: {fileID: 0}
   m_FontSize: 24
   m_InheritedStyles:
+  - {fileID: 11400000, guid: f456b9aed89864c5da9e51d19b79c7fa, type: 2}
   - {fileID: 11400000, guid: 6c7aacc94be3049018be6258bef22c7c, type: 2}
   - {fileID: 11400000, guid: 662521a6cf8864b718fc3e306b00a50c, type: 2}
   m_LineSpacing: 1
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
   m_LinkStyles: []
   m_QuadStyles:
   - m_LinkClassName: 
     m_LinkId: 
-    m_ClassName: btn_defend
-    m_ShouldRespectColorization: 0
-    m_SizeScalar: 1.29999995
-    m_Sprite: {fileID: 21300000, guid: 6f29f065c62f34cb3b09134ff401748d, type: 3}
-    m_VerticalOffset: -.200000003
+    m_ClassName: lit2
+    m_ShouldRespectColorization: 1
+    m_SizeScalar: 2
+    m_Sprite: {fileID: 21300000, guid: b2196b0c44a294eaa87522755ad6399d, type: 3}
+    m_VerticalOffset: 0
   m_ShouldOverrideInheritedDefaultFontStyle: 0
   m_ShouldOverrideInheritedDefaultLinkStyle: 0
   m_ShouldOverrideInheritedDefaultTextColor: 0
   m_ShouldOverrideInheritedFontSize: 0
   m_ShouldOverrideInheritedLineSpacing: 0
+  m_ShouldOverrideInheritedLinkHitboxPadding: 0

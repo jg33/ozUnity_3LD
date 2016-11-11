@@ -13,32 +13,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrentLocale: ko
   m_DefaultText: Good day! :)
-  m_LocalizedText:
-  - m_Locale: ar
-    m_Text: "\u064A\u0648\u0645 \u062C\u064A\u062F! :)"
-  - m_Locale: da
-    m_Text: God dag! :)
-  - m_Locale: de
-    m_Text: Guten Tag! :)
-  - m_Locale: es
-    m_Text: "\xA1Buenos d\xEDas! :)"
-  - m_Locale: fr
-    m_Text: Bonjour! :)
-  - m_Locale: it
-    m_Text: Buona giornata! :)
-  - m_Locale: iw
-    m_Text: "\u05D9\u05D5\u05DD \u05D8\u05D5\u05D1! :)"
-  - m_Locale: ja
-    m_Text: "\u826F\u3044\u4E00\u65E5! :)"
-  - m_Locale: ko
-    m_Text: "\uC88B\uC740 \uD558\uB8E8! :)"
-  - m_Locale: pl
-    m_Text: "Dzie\u0144 dobry! :)"
-  - m_Locale: pt
-    m_Text: Bom dia! :)
-  - m_Locale: ru
-    m_Text: "\u0414\u043E\u0431\u0440\u044B\u0439 \u0434\u0435\u043D\u044C! :)"
-  - m_Locale: zh
-    m_Text: "\u4F60\u597D! :)"
-  - m_Locale: ms
-    m_Text: Selamat tengah hari! :)
+  m_LocaleOverrides:
+  - m_Identifier: ar
+    m_Data: "\u064A\u0648\u0645 \u062C\u064A\u062F! :)"
+  - m_Identifier: da
+    m_Data: God dag! :)
+  - m_Identifier: de
+    m_Data: Guten Tag! :)
+  - m_Identifier: es
+    m_Data: "\xA1Buenos d\xEDas! :)"
+  - m_Identifier: fr
+    m_Data: Bonjour! :)
+  - m_Identifier: it
+    m_Data: Buona giornata! :)
+  - m_Identifier: iw
+    m_Data: "\u05D9\u05D5\u05DD \u05D8\u05D5\u05D1! :)"
+  - m_Identifier: ja
+    m_Data: "\u826F\u3044\u4E00\u65E5! :)"
+  - m_Identifier: ko
+    m_Data: "\uC88B\uC740 \uD558\uB8E8! :)"
+  - m_Identifier: pl
+    m_Data: "Dzie\u0144 dobry! :)"
+  - m_Identifier: pt
+    m_Data: Bom dia! :)
+  - m_Identifier: ru
+    m_Data: "\u0414\u043E\u0431\u0440\u044B\u0439 \u0434\u0435\u043D\u044C! :)"
+  - m_Identifier: zh
+    m_Data: "\u4F60\u597D! :)"
+  - m_Identifier: ms
+    m_Data: Selamat tengah hari! :)
+  m_LocalizedText: []

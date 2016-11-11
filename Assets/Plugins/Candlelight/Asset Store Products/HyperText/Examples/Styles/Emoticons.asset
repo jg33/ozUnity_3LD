@@ -44,10 +44,16 @@ MonoBehaviour:
     m_ColorTintMode: 1
     m_ColorTweenMode: 0
   m_DefaultTextColor: {r: .196999997, g: .196999997, b: .196999997, a: 1}
-  m_Font: {fileID: 12800000, guid: 06cf73d72b1a140848605265ed1af742, type: 3}
-  m_FontSize: 24
-  m_InheritedStyles: []
+  m_Font: {fileID: 0}
+  m_FontSize: 32
+  m_InheritedStyles:
+  - {fileID: 11400000, guid: 662521a6cf8864b718fc3e306b00a50c, type: 2}
   m_LineSpacing: 1
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
   m_LinkStyles: []
   m_QuadStyles:
   - m_LinkClassName: 
@@ -62,3 +68,4 @@ MonoBehaviour:
   m_ShouldOverrideInheritedDefaultTextColor: 0
   m_ShouldOverrideInheritedFontSize: 0
   m_ShouldOverrideInheritedLineSpacing: 0
+  m_ShouldOverrideInheritedLinkHitboxPadding: 0

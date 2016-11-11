@@ -30,10 +30,15 @@ MonoBehaviour:
     m_ColorTintMode: 1
     m_ColorTweenMode: 0
   m_DefaultTextColor: {r: .196999997, g: .196999997, b: .196999997, a: 1}
-  m_Font: {fileID: 12800000, guid: b4acddf2bccc1438eb33d3df0d94138f, type: 3}
+  m_Font: {fileID: 0}
   m_FontSize: 24
   m_InheritedStyles: []
   m_LineSpacing: 1
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
   m_LinkStyles: []
   m_QuadStyles:
   - m_LinkClassName: 
@@ -41,17 +46,18 @@ MonoBehaviour:
     m_ClassName: btn_attack
     m_ShouldRespectColorization: 0
     m_SizeScalar: 1.29999995
-    m_Sprite: {fileID: 21300000, guid: 25c359dc6d77947dc8c0fa94af01c625, type: 3}
-    m_VerticalOffset: -.100000001
+    m_Sprite: {fileID: 21300000, guid: 8fbd5837fc5944197b349c3011881d77, type: 3}
+    m_VerticalOffset: -.150000006
   - m_LinkClassName: 
     m_LinkId: 
     m_ClassName: btn_defend
     m_ShouldRespectColorization: 0
     m_SizeScalar: 1.29999995
-    m_Sprite: {fileID: 21300000, guid: cf7ebd57c1d874b59a7de25b8340ba7b, type: 3}
-    m_VerticalOffset: -.100000001
+    m_Sprite: {fileID: 21300000, guid: b5702425f79154153873532931e541b8, type: 3}
+    m_VerticalOffset: -.150000006
   m_ShouldOverrideInheritedDefaultFontStyle: 0
   m_ShouldOverrideInheritedDefaultLinkStyle: 0
   m_ShouldOverrideInheritedDefaultTextColor: 0
   m_ShouldOverrideInheritedFontSize: 0
   m_ShouldOverrideInheritedLineSpacing: 0
+  m_ShouldOverrideInheritedLinkHitboxPadding: 0
