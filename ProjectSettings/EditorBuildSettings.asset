@@ -19,5 +19,3 @@ EditorBuildSettings:
     path: Assets/KEVAN_MONTCLAIR_TESTING/LookTests_Evals.unity
   - enabled: 0
     path: Assets/coins.unity
-  - enabled: 0
-    path: Assets/Mland_3LD_PreBuild.unity
