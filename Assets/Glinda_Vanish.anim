@@ -12,87 +12,92 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
+  m_EulerCurves: []
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -2.61619997, y: 1.70000005, z: 0}
+        value: {x: -2.6162, y: 1.7, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 41.6166649
-        value: {x: -2.61619997, y: 1.70000005, z: 0}
+      - time: 41.616665
+        value: {x: -2.6162, y: 1.7, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     path: 
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 2.89075899, y: 2.89076018, z: 2.89076018}
+        value: {x: 2.890759, y: 2.8907602, z: 2.8907602}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 4.66666651
-        value: {x: 2.89075899, y: 2.89076018, z: 2.89076018}
+      - time: 4.6666665
+        value: {x: 2.890759, y: 2.8907602, z: 2.8907602}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 5
-        value: {x: 2.89075899, y: 2.89076018, z: 2.89076018}
+        value: {x: 2.890759, y: 2.8907602, z: 2.8907602}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     path: Glenda_Bubble_AnimationV3_NEW
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 8, y: 8, z: 8}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        value: {x: 20, y: 20, z: 20}
+        inSlope: {x: -2.5714288, y: -2.5714288, z: -2.5714288}
+        outSlope: {x: -2.5714288, y: -2.5714288, z: -2.5714288}
         tangentMode: 0
-      - time: 4.66666651
+      - time: 4.6666665
         value: {x: 8, y: 8, z: 8}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 5
         value: {x: 9, y: 9, z: 9}
-        inSlope: {x: -13.4999914, y: -13.4999914, z: -13.4999914}
-        outSlope: {x: -13.4999914, y: -13.4999914, z: -13.4999914}
+        inSlope: {x: -13.499991, y: -13.499991, z: -13.499991}
+        outSlope: {x: -13.499991, y: -13.499991, z: -13.499991}
         tangentMode: 0
-      - time: 5.30000019
+      - time: 5.3
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: -29.9999809, y: -29.9999809, z: -29.9999809}
-        outSlope: {x: -29.9999809, y: -29.9999809, z: -29.9999809}
+        inSlope: {x: -29.99998, y: -29.99998, z: -29.99998}
+        outSlope: {x: -29.99998, y: -29.99998, z: -29.99998}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     path: 
   m_FloatCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.90999997
-        inSlope: -.381999999
-        outSlope: -.381999999
+        value: 1.91
+        inSlope: -0.382
+        outSlope: -0.382
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.381999999
-        outSlope: -.381999999
+        inSlope: -0.382
+        outSlope: -0.382
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_Size
     path: Glenda_Bubble_AnimationV3_NEW
     classID: 122
@@ -101,17 +106,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.22000003
-        inSlope: -.244000003
-        outSlope: -.244000003
+        value: 1.22
+        inSlope: -0.244
+        outSlope: -0.244
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.244000003
-        outSlope: -.244000003
+        inSlope: -0.244
+        outSlope: -0.244
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_Size
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
     classID: 122
@@ -131,6 +137,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: EmissionModule.rate.scalar
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
     classID: 198
@@ -150,6 +157,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.r
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -158,17 +166,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.g
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -177,17 +186,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.b
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -196,17 +206,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .291000009
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        value: 0.291
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.a
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -221,16 +232,17 @@ AnimationClip:
         tangentMode: 10
       - time: 5
         value: 1
-        inSlope: -1.66666555
-        outSlope: -1.66666555
+        inSlope: -1.6666656
+        outSlope: -1.6666656
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -3.33333111
-        outSlope: -3.33333111
+        inSlope: -3.333331
+        outSlope: -3.333331
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.r
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -239,22 +251,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .323529422
-        inSlope: -.539215386
-        outSlope: -.539215386
+        value: 0.32352942
+        inSlope: -0.5392154
+        outSlope: -0.5392154
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -1.07843077
-        outSlope: -1.07843077
+        inSlope: -1.0784308
+        outSlope: -1.0784308
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.g
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -263,22 +276,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .505476475
-        inSlope: -.842460275
-        outSlope: -.842460275
+        value: 0.5054765
+        inSlope: -0.8424603
+        outSlope: -0.8424603
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -1.68492055
-        outSlope: -1.68492055
+        inSlope: -1.6849205
+        outSlope: -1.6849205
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.b
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -287,17 +301,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .291000009
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        value: 0.291
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.a
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -306,17 +321,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .103
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        value: 0.103
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Metallic
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -325,12 +341,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .103
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        value: 0.103
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Metallic
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -339,17 +356,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .833999991
-        inSlope: -.157358482
-        outSlope: -.157358482
+        value: 0.834
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.157358482
-        outSlope: -.157358482
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Glossiness
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -358,12 +376,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .833999991
-        inSlope: -.157358482
-        outSlope: -.157358482
+        value: 0.834
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Glossiness
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -372,17 +391,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0199999996
-        inSlope: -.00377358473
-        outSlope: -.00377358473
+        value: 0.02
+        inSlope: -0.0037735847
+        outSlope: -0.0037735847
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00377358473
-        outSlope: -.00377358473
+        inSlope: -0.0037735847
+        outSlope: -0.0037735847
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.r
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -391,17 +411,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        value: 0.015735295
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.g
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -410,17 +431,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        value: 0.015735295
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.b
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -430,16 +452,17 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -.188679233
-        outSlope: -.188679233
+        inSlope: -0.18867923
+        outSlope: -0.18867923
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.188679233
-        outSlope: -.188679233
+        inSlope: -0.18867923
+        outSlope: -0.18867923
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.a
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -448,17 +471,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0199999996
+        value: 0.02
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0199999996
+      - time: 5.3
+        value: 0.02
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.r
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -467,17 +491,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0157352947
+      - time: 5.3
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.g
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -486,17 +511,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0157352947
+      - time: 5.3
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.b
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -509,13 +535,14 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.a
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -687,11 +714,14 @@ AnimationClip:
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 41.6166649
+    m_StopTime: 41.616665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
     m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
@@ -707,17 +737,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -2.61619997
+        value: -2.6162
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: 41.6166649
-        value: -2.61619997
+      - time: 41.616665
+        value: -2.6162
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.x
     path: 
     classID: 4
@@ -726,12 +757,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.70000005
+        value: 1.7
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.y
     path: 
     classID: 4
@@ -746,6 +778,7 @@ AnimationClip:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.z
     path: 
     classID: 4
@@ -754,17 +787,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.90999997
-        inSlope: -.381999999
-        outSlope: -.381999999
+        value: 1.91
+        inSlope: -0.382
+        outSlope: -0.382
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.381999999
-        outSlope: -.381999999
+        inSlope: -0.382
+        outSlope: -0.382
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_Size
     path: Glenda_Bubble_AnimationV3_NEW
     classID: 122
@@ -773,17 +807,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.22000003
-        inSlope: -.244000003
-        outSlope: -.244000003
+        value: 1.22
+        inSlope: -0.244
+        outSlope: -0.244
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.244000003
-        outSlope: -.244000003
+        inSlope: -0.244
+        outSlope: -0.244
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_Size
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
     classID: 122
@@ -803,6 +838,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: EmissionModule.rate.scalar
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
     classID: 198
@@ -811,22 +847,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 2.89075899
+        value: 2.890759
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 4.66666651
-        value: 2.89075899
+      - time: 4.6666665
+        value: 2.890759
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
-        value: 2.89075899
+        value: 2.890759
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.x
     path: Glenda_Bubble_AnimationV3_NEW
     classID: 4
@@ -835,22 +872,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 2.89076018
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 4.66666651
-        value: 2.89076018
+      - time: 4.6666665
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
-        value: 2.89076018
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.y
     path: Glenda_Bubble_AnimationV3_NEW
     classID: 4
@@ -859,22 +897,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 2.89076018
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 4.66666651
-        value: 2.89076018
+      - time: 4.6666665
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
-        value: 2.89076018
+        value: 2.8907602
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.z
     path: Glenda_Bubble_AnimationV3_NEW
     classID: 4
@@ -883,27 +922,28 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
+        value: 20
+        inSlope: -2.5714288
+        outSlope: -2.5714288
         tangentMode: 10
-      - time: 4.66666651
+      - time: 4.6666665
         value: 8
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
         value: 9
-        inSlope: -13.4999914
-        outSlope: -13.4999914
+        inSlope: -13.499991
+        outSlope: -13.499991
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -29.9999809
-        outSlope: -29.9999809
+        inSlope: -29.99998
+        outSlope: -29.99998
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.x
     path: 
     classID: 4
@@ -912,27 +952,28 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
+        value: 20
+        inSlope: -2.5714288
+        outSlope: -2.5714288
         tangentMode: 10
-      - time: 4.66666651
+      - time: 4.6666665
         value: 8
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
         value: 9
-        inSlope: -13.4999914
-        outSlope: -13.4999914
+        inSlope: -13.499991
+        outSlope: -13.499991
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -29.9999809
-        outSlope: -29.9999809
+        inSlope: -29.99998
+        outSlope: -29.99998
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.y
     path: 
     classID: 4
@@ -941,27 +982,28 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
+        value: 20
+        inSlope: -2.5714288
+        outSlope: -2.5714288
         tangentMode: 10
-      - time: 4.66666651
+      - time: 4.6666665
         value: 8
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - time: 5
         value: 9
-        inSlope: -13.4999914
-        outSlope: -13.4999914
+        inSlope: -13.499991
+        outSlope: -13.499991
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -29.9999809
-        outSlope: -29.9999809
+        inSlope: -29.99998
+        outSlope: -29.99998
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalScale.z
     path: 
     classID: 4
@@ -981,6 +1023,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.r
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -989,17 +1032,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.g
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1008,17 +1052,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.b
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1027,17 +1072,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .291000009
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        value: 0.291
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.a
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1052,16 +1098,17 @@ AnimationClip:
         tangentMode: 10
       - time: 5
         value: 1
-        inSlope: -1.66666555
-        outSlope: -1.66666555
+        inSlope: -1.6666656
+        outSlope: -1.6666656
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -3.33333111
-        outSlope: -3.33333111
+        inSlope: -3.333331
+        outSlope: -3.333331
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.r
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1070,22 +1117,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .323529422
+        value: 0.32352942
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .323529422
-        inSlope: -.539215386
-        outSlope: -.539215386
+        value: 0.32352942
+        inSlope: -0.5392154
+        outSlope: -0.5392154
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -1.07843077
-        outSlope: -1.07843077
+        inSlope: -1.0784308
+        outSlope: -1.0784308
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.g
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1094,22 +1142,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .505476475
+        value: 0.5054765
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 5
-        value: .505476475
-        inSlope: -.842460275
-        outSlope: -.842460275
+        value: 0.5054765
+        inSlope: -0.8424603
+        outSlope: -0.8424603
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -1.68492055
-        outSlope: -1.68492055
+        inSlope: -1.6849205
+        outSlope: -1.6849205
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.b
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1118,17 +1167,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .291000009
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        value: 0.291
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       - time: 5
         value: 0
-        inSlope: -.0582000017
-        outSlope: -.0582000017
+        inSlope: -0.0582
+        outSlope: -0.0582
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Color.a
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1137,17 +1187,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .103
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        value: 0.103
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Metallic
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1156,12 +1207,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .103
-        inSlope: -.0194339622
-        outSlope: -.0194339622
+        value: 0.103
+        inSlope: -0.019433962
+        outSlope: -0.019433962
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Metallic
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1170,17 +1222,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .833999991
-        inSlope: -.157358482
-        outSlope: -.157358482
+        value: 0.834
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.157358482
-        outSlope: -.157358482
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Glossiness
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1189,12 +1242,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .833999991
-        inSlope: -.157358482
-        outSlope: -.157358482
+        value: 0.834
+        inSlope: -0.15735848
+        outSlope: -0.15735848
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._Glossiness
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1203,17 +1257,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0199999996
-        inSlope: -.00377358473
-        outSlope: -.00377358473
+        value: 0.02
+        inSlope: -0.0037735847
+        outSlope: -0.0037735847
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00377358473
-        outSlope: -.00377358473
+        inSlope: -0.0037735847
+        outSlope: -0.0037735847
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.r
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1222,17 +1277,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        value: 0.015735295
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.g
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1241,17 +1297,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        value: 0.015735295
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.00296892342
-        outSlope: -.00296892342
+        inSlope: -0.0029689234
+        outSlope: -0.0029689234
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.b
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1261,16 +1318,17 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -.188679233
-        outSlope: -.188679233
+        inSlope: -0.18867923
+        outSlope: -0.18867923
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 0
-        inSlope: -.188679233
-        outSlope: -.188679233
+        inSlope: -0.18867923
+        outSlope: -0.18867923
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.a
     path: Glenda_Bubble_AnimationV3_NEW/sphere_1
     classID: 137
@@ -1279,17 +1337,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0199999996
+        value: 0.02
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0199999996
+      - time: 5.3
+        value: 0.02
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.r
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1298,17 +1357,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0157352947
+      - time: 5.3
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.g
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1317,17 +1377,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0157352947
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
-        value: .0157352947
+      - time: 5.3
+        value: 0.015735295
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.b
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
@@ -1340,13 +1401,14 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 5.30000019
+      - time: 5.3
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: material._EmissionColor.a
     path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
     classID: 137
