@@ -3,6 +3,7 @@
 var angle: float;
 var correctionVec:Vector3;
 var correctionQuat: Quaternion;
+var gyro: Quaternion;
 var outputAngle:float;
 
 function Start () {
