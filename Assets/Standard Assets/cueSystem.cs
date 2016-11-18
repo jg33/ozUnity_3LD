@@ -428,6 +428,29 @@ public class cueSystem : MonoBehaviour{
 		source.loop = _looping;
 	}
 
+
+	[RPC] public IEnumerator playAudioWithDelay(string _clip, float _minDelay, float _maxDelay){
+		float _delay = Random.value;
+		_delay *= _maxDelay-_minDelay;
+		_delay += _minDelay;
+		yield return new WaitForSeconds(_delay);
+		playAudio(_clip);
+
+	}
+
+	[RPC] public IEnumerator loopAudioWithDelay(string _clip, float _minDelay, float _maxDelay, int _loops){
+		for (int i=0;i<_loops;i++){
+			float _delay = Random.value;
+			_delay *= _maxDelay-_minDelay;
+			_delay += _minDelay;
+			playAudioWithDelay(_clip, _delay, _delay);
+			_delay +=3;
+			yield return new WaitForSeconds(_delay);
+			 //adding time for clip to complete.
+		}
+	}
+
+
 	[RPC] public void setTextRemote(string _text){
 		GameObject msg = GameObject.Find("Message");
 		if (msg) msg.SendMessage("changeText", _text);
