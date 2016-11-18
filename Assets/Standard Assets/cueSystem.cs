@@ -376,7 +376,6 @@ public class cueSystem : MonoBehaviour{
 					break;
 				}
 				break;
-				break;
 
 			default:
 				clip = Resources.Load ("Audio/etc/"+clipName) as AudioClip;			
