@@ -280,12 +280,6 @@ public class cueSystem : MonoBehaviour{
 			case "cicada2":
 				clip = Resources.Load ("Audio/ambiance/cicada2") as AudioClip;
 				break;
-			case "frogs1":
-				clip = Resources.Load ("Audio/ambiance/frogs1") as AudioClip;				
-				break;
-			case "frogs2":
-				clip = Resources.Load ("Audio/ambiance/frogs2") as AudioClip;				
-				break;
 			case "drums1":
 				clip = Resources.Load ("Audio/drums/DRUMS-76") as AudioClip;				
 				break;
@@ -334,6 +328,38 @@ public class cueSystem : MonoBehaviour{
 			case "ladiescheering3":
 				clip = Resources.Load ("Audio/applause/ladiescheering3") as AudioClip;
 				break;
+
+//3LD 2016 SOUNDS START
+
+			case "CountryBirds"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/COUNTRY BIRDS") as AudioClip;
+				break;
+			case "CountryEvening"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/COUNTRY EVENING") as AudioClip;
+				break;
+			case "DottyScene"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/dotty scene1") as AudioClip;
+				break;
+			case "MoneyAmbient"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/MONEY AMBIENT") as AudioClip;
+				break;
+			case "Money1"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/MONEY1") as AudioClip;
+				break;
+			case "Money2"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/MONEY2") as AudioClip;
+				break;
+			case "TwisterSiren"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/TWISTER SIREN") as AudioClip;
+				break;
+			case "Twister1"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/TWISTER1") as AudioClip;
+				break;
+			case "Twister2"
+				clip = Resources.AudioClipLoadType ("Audio/FilmingAmbient/TWISTER2") as AudioClip;
+				break;
+
+//3LD 2016 SOUNDS END
 
 			case "laughShort":
 				switch(Random.Range(0,3)){
