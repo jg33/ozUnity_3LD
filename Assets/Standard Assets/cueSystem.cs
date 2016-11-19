@@ -375,15 +375,27 @@ public class cueSystem : MonoBehaviour{
 				break;
 
 			case "PlayMoney":
-				switch (Random.Range (0, 2)) {
+				switch (Random.Range (0, 6)) {
 				case 0:
-					clip = Resources.Load ("Audio/FilmingAmbient/MONEY1") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/cashRegister") as AudioClip;
 					break;
 				case 1:
-					clip = Resources.Load ("Audio/FilmingAmbient/MONEY2") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_1") as AudioClip;
 					break;
 				case 2:
-					clip = Resources.Load ("Audio/FilmingAmbient/MONEY AMBIENT") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_2") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_3") as AudioClip;
+					break;
+				case 4:
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_4") as AudioClip;
+					break;
+				case 5:
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_5") as AudioClip;
+					break;
+				case 6:
+					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins") as AudioClip;
 					break;
 				}
 				break;
