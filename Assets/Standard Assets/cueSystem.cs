@@ -331,26 +331,17 @@ public class cueSystem : MonoBehaviour{
 
 //3LD 2016 SOUNDS START
 
-			case "CountryBirds":
-				clip = Resources.Load ("Audio/FilmingAmbient/COUNTRY BIRDS") as AudioClip;
-				break;
-			case "CountryEvening":
-				clip = Resources.Load ("Audio/FilmingAmbient/COUNTRY EVENING") as AudioClip;
-				break;
-			case "DottyScene":
+			case "YouWereThereAmbient":
 				clip = Resources.Load ("Audio/FilmingAmbient/dotty scene1") as AudioClip;
 				break;
-			case "MoneyAmbient":
-				clip = Resources.Load ("Audio/FilmingAmbient/MONEY AMBIENT") as AudioClip;
-				break;
 
-			case "PlayMoney":
+			case "Barnyard":
 				switch (Random.Range (0, 1)) {
 				case 0:
-					clip = Resources.Load ("Audio/FilmingAmbient/MONEY1") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/COUNTRY BIRDS") as AudioClip;
 					break;
 				case 1:
-					clip = Resources.Load ("Audio/FilmingAmbient/MONEY2") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/COUNTRY EVENING") as AudioClip;
 					break;
 				}
 				break;
@@ -368,6 +359,25 @@ public class cueSystem : MonoBehaviour{
 					break;
 				}
 				break;
+
+			case "PlayMoney":
+				switch (Random.Range (0, 2)) {
+				case 0:
+					clip = Resources.Load ("Audio/FilmingAmbient/MONEY1") as AudioClip;
+					break;
+				case 1:
+					clip = Resources.Load ("Audio/FilmingAmbient/MONEY2") as AudioClip;
+					break;
+				case 2:
+					clip = Resources.Load ("Audio/FilmingAmbient/MONEY AMBIENT") as AudioClip;
+					break;
+				}
+				break;
+			case "MargetHamiltonSizzle":
+				clip = Resources.Load ("Audio/laughter/SizzleMargretHamilton") as AudioClip;
+				break;
+
+
 
 //3LD 2016 SOUNDS END
 
