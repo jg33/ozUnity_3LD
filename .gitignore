@@ -7,3 +7,25 @@ Build
 *.unityproj
 *.sln
 *.userprefs
+Assets/Audio.meta
+Assets/Models.meta
+Assets/QuickFur.meta
+Assets/Audio/applause.meta
+Assets/Plugins/Android/src/com/qualcomm.meta
+Assets/Poppies_V2/SKY.meta
+Assets/Poppies_V2/SKY/Quantum Theory.meta
+Assets/Poppies_V2/SKY/Quantum Theory/SkyShop Skies.meta
+Assets/Resources/cypher.meta
+Assets/Resources/MoeOzTest.meta
+Assets/Resources/rainbow4_.meta
+Assets/Resources/scratchSm.meta
+Assets/Resources/static.meta
+Assets/Resources/tvStatic.meta
+Assets/Resources/cypher/Resources.meta
+Assets/Resources/MoeOzTest/Resources.meta
+Assets/Resources/rainbow4_/Resources.meta
+Assets/Resources/scratchSm/Resources.meta
+Assets/Resources/static/Resources.meta
+Assets/Resources/tvStatic/Resources.meta
+Assets/Standard Assets/UniversalVideoTexture/_Resources.meta
+Assets/StreamingAssets/Audio.meta
