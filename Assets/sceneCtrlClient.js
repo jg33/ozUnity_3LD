@@ -142,8 +142,8 @@ function Update () {
 						break;
 						
 						case 6:
-							cueComponent.playAudio("applause");
-							Debug.Log("applesauce.");
+							cueComponent.playMovie("copyright");
+							Debug.Log("copyright video!");
 						break;
 						
 						case 7:
