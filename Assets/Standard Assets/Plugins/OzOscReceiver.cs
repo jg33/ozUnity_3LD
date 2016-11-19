@@ -60,7 +60,7 @@ public class OzOscReceiver : MonoBehaviour {
 	private float maxAudioDelay=0;
 	private bool flagAudioDelayLoopSend = false;
 	private int delayAudioLoops;
-	private int flagAudioStop = false;
+	private bool flagAudioStop = false;
 
 
 
