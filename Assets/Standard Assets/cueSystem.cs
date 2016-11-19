@@ -140,17 +140,28 @@ public class cueSystem : MonoBehaviour{
 
 		if(Network.isClient && cam.GetComponent<Camera>() ){
 
-			if(clipName == "randomRainbow"){
-				Debug.Log("randomRainbow");
+			if (clipName == "randomRainbow") {
+				Debug.Log ("randomRainbow");
 				Random.seed = Time.frameCount;
-				int rando = Random.Range(1,7);
-				string videoString = string.Format("Video/rainbow_{0:00}.mp4", rando );
-					#if UNITY_IPHONE
-				Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
-					#elif UNITY_ANDROID
+				int rando = Random.Range (1, 7);
+				string videoString = string.Format ("Video/rainbow_{0:00}.mp4", rando);
+				#if UNITY_IPHONE
+				Handheld.PlayFullScreenMovie (videoString, Color.black, FullScreenMovieControlMode.Hidden);
+				#elif UNITY_ANDROID
 					string path = Application.persistentDataPath + "/" + videoString;
 					Debug.LogError( "The video path: " + path );
 				Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
+				#endif
+			}
+				else if(clipName == "copyright"){
+					Debug.Log("copyright");
+				string videoString = "Video/Youtube_Copyright.mp4";
+					#if UNITY_IPHONE
+					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					#elif UNITY_ANDROID
+					string path = Application.persistentDataPath + "/" + videoString;
+					Debug.LogError( "The video path: " + path );
+					Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#endif
 			
 			} else if(clipName == "MoeTest"){
