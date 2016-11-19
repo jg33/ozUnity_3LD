@@ -374,7 +374,7 @@ public class cueSystem : MonoBehaviour{
 				}
 				break;
 			case "MargetHamiltonSizzle":
-				clip = Resources.Load ("Audio/laughter/SizzleMargretHamilton") as AudioClip;
+				clip = Resources.Load ("Audio/FilmingAmbient/SizzleMargretHamilton") as AudioClip;
 				break;
 
 
