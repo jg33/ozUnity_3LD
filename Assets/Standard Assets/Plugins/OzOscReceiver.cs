@@ -60,6 +60,7 @@ public class OzOscReceiver : MonoBehaviour {
 	private float maxAudioDelay=0;
 	private bool flagAudioDelayLoopSend = false;
 	private int delayAudioLoops;
+	private int flagAudioStop = false;
 
 
 
@@ -136,6 +137,10 @@ public class OzOscReceiver : MonoBehaviour {
 			flagAudioDelayLoopSend = false;
 		}
 
+		if(flagAudioStop){
+			nv.RPC("stopAudio", RPCMode.All);
+			flagAudioStop= false;
+		}
 
 		
 		currentTime = Time.time;
@@ -220,6 +225,10 @@ public class OzOscReceiver : MonoBehaviour {
 				audioToSend = (string) oscMessage.Values[0];
 				flagAudioSend = true;
 
+				break;
+
+			case "/stopAudio":
+				flagAudioStop = true;
 				break;
 
 			case "/targetPosition":
