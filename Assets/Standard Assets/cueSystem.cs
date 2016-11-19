@@ -209,6 +209,12 @@ public class cueSystem : MonoBehaviour{
 				seqPlayer.SendMessage("play");
 				seqPlayer.GetComponent<Animator>().SetBool("textureIn", true);
 
+			} else if(clipName == "ozFace"){
+				seqPlayer.SendMessage("setFrames", 120);
+				seqPlayer.SendMessage("loadMovie","ozFace" );
+				seqPlayer.SendMessage("play");
+				seqPlayer.GetComponent<Animator>().SetBool("textureIn", true);
+
 			}
 
 		
