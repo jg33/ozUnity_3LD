@@ -358,7 +358,7 @@ public class cueSystem : MonoBehaviour{
 				break;
 
 			case "TwisterEvent":
-				switch (Random.Range (0, 2)) {
+				switch (Random.Range (0, 3)) {
 				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/TWISTER SIREN") as AudioClip;
 					break;
@@ -367,6 +367,9 @@ public class cueSystem : MonoBehaviour{
 					break;
 				case 2:
 					clip = Resources.Load ("Audio/FilmingAmbient/TWISTER2") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/cyclone3") as AudioClip;
 					break;
 				}
 				break;
@@ -387,7 +390,40 @@ public class cueSystem : MonoBehaviour{
 			case "MargetHamiltonSizzle":
 				clip = Resources.Load ("Audio/FilmingAmbient/SizzleMargretHamilton") as AudioClip;
 				break;
-
+			case "Mland_Locals":
+				switch (Random.Range (0, 9)) {
+				case 0:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_1") as AudioClip;
+					break;
+				case 1:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_2") as AudioClip;
+					break;
+				case 2:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_3") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_4") as AudioClip;
+					break;
+				case 4:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_5") as AudioClip;
+					break;
+				case 5:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_6") as AudioClip;
+					break;
+				case 6:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_7") as AudioClip;
+					break;
+				case 7:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_8") as AudioClip;
+					break;
+				case 8:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter_9") as AudioClip;
+					break;
+				case 9:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter") as AudioClip;
+					break;
+				}
+				break;
 
 
 //3LD 2016 SOUNDS END
