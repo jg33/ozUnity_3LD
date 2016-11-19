@@ -173,8 +173,8 @@ function Update () {
 						
 						
 						case 12:
-							cueComponent.playAudio("cicada");
-							Debug.Log("cicada!");
+							cueComponent.playMovie("ozFace");
+							Debug.Log("ozFace!");
 						break;	
 						
 						case 13:
