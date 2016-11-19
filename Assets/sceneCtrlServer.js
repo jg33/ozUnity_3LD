@@ -72,7 +72,9 @@ function Update () {
 						break;
 						
 						case 6:
-							//applause
+							//copyright
+							cueComponent.playMovie("copyright");
+							Debug.Log("youtube copyright video!");
 						break;
 						
 						case 7:
