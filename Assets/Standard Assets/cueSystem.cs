@@ -211,7 +211,7 @@ public class cueSystem : MonoBehaviour{
 
 			} else if(clipName == "ozFace"){
 				seqPlayer.SendMessage("setFrames", 120);
-				seqPlayer.SendMessage("loadMovie","ozFace" );
+				seqPlayer.SendMessage("loadMovie","ozHead" );
 				seqPlayer.SendMessage("play");
 				seqPlayer.GetComponent<Animator>().SetBool("textureIn", true);
 
@@ -439,6 +439,20 @@ public class cueSystem : MonoBehaviour{
 					break;
 				case 9:
 					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/munchkins chatter") as AudioClip;
+					break;
+				}
+				break;
+
+			case "OhWeOh":
+				switch (Random.Range (0, 2)) {
+				case 0:
+					clip = Resources.Load ("Audio/FilmingAmbient/oWEo_1 minute") as AudioClip;
+					break;
+				case 1:
+					clip = Resources.Load ("Audio/FilmingAmbient/oWEo_1") as AudioClip;
+					break;
+				case 2:
+					clip = Resources.Load ("Audio/FilmingAmbient/oWEo") as AudioClip;
 					break;
 				}
 				break;

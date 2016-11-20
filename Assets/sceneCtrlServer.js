@@ -96,7 +96,16 @@ function Update () {
 						case 10:
 							//setCompletedShow();
 						break;
-						
+
+						case 11:
+							//cueComponent.playMovie("ozFace");
+						break;
+
+						case 12:
+							cueComponent.playMovie("ozFace");
+							//ozFace
+						break;
+
 						default: 
 						break;
 						
