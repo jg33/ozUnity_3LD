@@ -20,6 +20,9 @@ public var tightTracking:boolean;
 public var gyroResetter:GameObject;
 public var foundTarget:boolean;
 
+public var ignoreArInActiveMode: boolean;
+public var activeModeCameraLocation: Vector3;
+
 //tolerance is how far it can vary before it ignores the target
 public var maxDistanceTolerance:float = 1;
 public var maxAngleTolerance:float = 1;
@@ -48,6 +51,12 @@ function Start () {
 	targetRotationArray = new Array();
 	targetGyroCorrectionArray = new Array();
 	
+}
+
+function FixedUpdate(){
+	if(ignoreArInActiveMode && Application.loadedLevel == 2){
+		transform.localPosition = activeModeCameraLocation;
+	}
 }
 
 function Update () {
