@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Passive4GreenGlasses" size="100.000000 132.659500" />
+    <ImageTarget name="Passive1Cyclone" size="100.000000 133.587784" />
+    <ImageTarget name="Passive3Monkey" size="100.000000 133.164230" />
+    <ImageTarget name="Passive2Poppies" size="100.000000 134.615387" />
+  </Tracking>
+</QCARConfig>

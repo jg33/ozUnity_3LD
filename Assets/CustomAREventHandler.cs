@@ -83,7 +83,9 @@ namespace Vuforia
 		{
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
-			
+
+			Debug.Log("Custom AR! Found: " +mTrackableBehaviour.TrackableName);
+
 			// Enable rendering:
 			foreach (Renderer component in rendererComponents)
 			{
@@ -122,22 +124,29 @@ namespace Vuforia
 				camCtl.SendMessage("setTightTracking", true);
 				storm = GameObject.Find("storm");
 				storm.SetActive(false);
-				
 				if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
 				}
 
-			} else if (mTrackableBehaviour.TrackableName== "Passive1Cylone"){ //always show cyclone
+			} else if (mTrackableBehaviour.TrackableName== "Passive1Cyclone"){ //always show cyclone
 				camCtl = GameObject.Find ("Camera Container");
 				camCtl.SendMessage("setTightTracking", true);
 				storm = GameObject.Find("storm");
 				storm.SetActive(false);
+				Debug.Log("Found tornado");
+
 
 				if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
 				}
 
+			} else {
+				Debug.Log("Didn't Find Named Trackable. This is: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name);
+//				Debug.Log("Matched names: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name.Equals(mTrackableBehaviour.TrackableName));
+//				Debug.Log(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName);
+//				Debug.Log(mTrackableBehaviour.TrackableName == "Passive1Cyclone");
+//				Debug.Log(mTrackableBehaviour.TrackableName);
 			}
 
 
