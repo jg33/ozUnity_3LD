@@ -63,6 +63,11 @@ function FixedUpdate(){
 	if(ignoreArInActiveMode && Application.loadedLevel == 2){
 		transform.localPosition = activeModeCameraLocation;
 	}
+
+	//Enable Gyro if not
+	if(Input.gyro.enabled == false){
+		Input.gyro.enabled = true;
+	}
 }
 
 function Update () {
