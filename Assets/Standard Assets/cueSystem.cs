@@ -533,19 +533,24 @@ public class cueSystem : MonoBehaviour{
 		_delay *= _maxDelay-_minDelay;
 		_delay += _minDelay;
 		yield return new WaitForSeconds(_delay);
+		stopAudio();
 		playAudio(_clip);
 
 	}
 
-	[RPC] public IEnumerator loopAudioWithDelay(string _clip, float _minDelay, float _maxDelay, int _loops){
-		for (int i=0;i<_loops;i++){
+	[RPC] public IEnumerator loopAudioWithDelay(string _clip, float _minDelay, float _maxDelay, int loops, float _clipLength){
+		//float _clipLength = 0;
+		Debug.Log("loop called");
+
+		for (int i=0;i<loops;i++){
+			Debug.Log("looped");
 			float _delay = Random.value;
 			_delay *= _maxDelay-_minDelay;
 			_delay += _minDelay;
-			playAudioWithDelay(_clip, _delay, _delay);
-			_delay +=3;
-			yield return new WaitForSeconds(_delay);
-			 //adding time for clip to complete.
+			yield return new WaitForSeconds( _delay );
+			stopAudio();
+			playAudio(_clip);
+			yield return new WaitForSeconds(_clipLength);
 		}
 	}
 

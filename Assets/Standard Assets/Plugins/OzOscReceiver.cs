@@ -60,6 +60,7 @@ public class OzOscReceiver : MonoBehaviour {
 	private float maxAudioDelay=0;
 	private bool flagAudioDelayLoopSend = false;
 	private int delayAudioLoops;
+	private float clipLength;
 	private bool flagAudioStop = false;
 
 
@@ -126,14 +127,15 @@ public class OzOscReceiver : MonoBehaviour {
 		}
 
 		if (flagAudioDelaySend){
-			nv.RPC("stopAudio", RPCMode.All);
+			//nv.RPC("stopAudio", RPCMode.All);
 			nv.RPC("playAudioWithDelay", RPCMode.All, audioToSend, minAudioDelay, maxAudioDelay);
 			flagAudioDelaySend = false;
 		}
 
 		if (flagAudioDelayLoopSend){
-			nv.RPC("stopAudio", RPCMode.All);
-			nv.RPC("loopAudioWithDelay", RPCMode.All, audioToSend, minAudioDelay, maxAudioDelay, delayAudioLoops);
+			//nv.RPC("stopAudio", RPCMode.All);
+			Debug.Log("loop called.");
+			nv.RPC("loopAudioWithDelay", RPCMode.All, audioToSend, minAudioDelay, maxAudioDelay, delayAudioLoops, clipLength);
 			flagAudioDelayLoopSend = false;
 		}
 
@@ -278,10 +280,12 @@ public class OzOscReceiver : MonoBehaviour {
 				break;
 
 			case "/loopAudioWithDelay":
+				Debug.Log("loop.");
 				audioToSend = (string) oscMessage.Values[0];
 				minAudioDelay = (float) oscMessage.Values[1];
 				maxAudioDelay = (float) oscMessage.Values[2];
 				delayAudioLoops = (int) oscMessage.Values[3];
+				clipLength = (float) oscMessage.Values[4];
 				flagAudioDelayLoopSend = true;
 				break;
 
