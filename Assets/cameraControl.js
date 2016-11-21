@@ -43,6 +43,12 @@ private var calibrationMsg:GameObject;
 private var gotProjMatrix:boolean = false;
 
 function Start () {
+
+	//Enable Gyro if not
+	if(Input.gyro.enabled == false){
+		Input.gyro.enabled = true;
+	}
+
 	ARCam = GameObject.Find("ARCamera");
 	
 	targetPosition = this.transform.GetChild(0);
