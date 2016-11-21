@@ -457,6 +457,23 @@ public class cueSystem : MonoBehaviour{
 				}
 				break;
 
+			case "Mland_Panic":
+				switch (Random.Range (0, 4)) {
+				case 0:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic_1") as AudioClip;
+					break;
+				case 1:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic_2") as AudioClip;
+					break;
+				case 2:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic_3") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic") as AudioClip;
+					break;
+				}
+				break;
+			
 
 //3LD 2016 SOUNDS END
 
