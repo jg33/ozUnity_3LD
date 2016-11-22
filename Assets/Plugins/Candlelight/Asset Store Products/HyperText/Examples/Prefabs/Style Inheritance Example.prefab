@@ -26,7 +26,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 22479274}
   - 222: {fileID: 22279274}
-  - 114: {fileID: 11429212}
   m_Layer: 5
   m_Name: <quad>
   m_TagString: Untagged
@@ -43,7 +42,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 22479276}
   - 222: {fileID: 22279276}
-  - 114: {fileID: 11429214}
   m_Layer: 5
   m_Name: <quad>
   m_TagString: Untagged
@@ -51,28 +49,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11429212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772cb281b0f654e24a2f685f0876a037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11429214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772cb281b0f654e24a2f685f0876a037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11469738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,7 +72,7 @@ MonoBehaviour:
     m_Alignment: 5
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Press <quad class="btn_defend"> to increase <quad class="def">
   m_DefaultStyles: {fileID: 0}

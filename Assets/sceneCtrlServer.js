@@ -106,6 +106,23 @@ function Update () {
 							//ozFace
 						break;
 
+						case 13:
+							//
+						break;
+
+						case 14:
+							//
+						break;
+
+						case 15:
+							//
+						break;
+
+						case 16:
+							cueComponent.playMovie("FireBall");
+							Debug.Log("FireBall!");	
+						break;
+
 						default: 
 						break;
 						

@@ -192,6 +192,11 @@ function Update () {
 							cueComponent.playAudio("drums2");
 							Debug.Log("drums2!");	
 						break;
+
+						case 16:
+							cueComponent.playMovie("FireBall");
+							Debug.Log("FireBall!");	
+						break;
 						
 						
 						

@@ -73,9 +73,9 @@
 				v2f OUT;
 				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
 				OUT.texcoord = IN.texcoord;
-				OUT.texcoord.y += (int)(_Time * _Speed) / _Cells;
+				OUT.texcoord.y += frac(floor(_Time.y * _Speed) / _Cells);
 #ifdef UNITY_HALF_TEXEL_OFFSET
-				OUT.vertex.xy += (_ScreenParams.zw-1.0)*float2(-1,1);
+				OUT.vertex.xy += (_ScreenParams.zw - 1.0) * float2(-1, 1);
 #endif
 				OUT.color = IN.color * _Color;
 				return OUT;

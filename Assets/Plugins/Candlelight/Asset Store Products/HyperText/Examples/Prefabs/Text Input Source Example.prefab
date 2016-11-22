@@ -26,7 +26,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 22434836}
   - 222: {fileID: 22234836}
-  - 114: {fileID: 11466076}
   m_Layer: 5
   m_Name: <quad>
   m_TagString: Untagged
@@ -57,7 +56,7 @@ MonoBehaviour:
     m_Alignment: 2
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: This text will be ignored
   m_DefaultStyles: {fileID: 0}
@@ -115,17 +114,6 @@ MonoBehaviour:
     m_ShouldOverrideStylesFontSize: 0
     m_Styles: {fileID: 11400000, guid: e49794a9cf6c04238bc0569c8847a498, type: 2}
     m_TagKeywordCollections: []
---- !u!114 &11466076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772cb281b0f654e24a2f685f0876a037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &22234836
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 22410084}
   - 222: {fileID: 22210084}
-  - 114: {fileID: 11410084}
   m_Layer: 5
   m_Name: <quad>
   m_TagString: Untagged
@@ -34,17 +33,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11410084
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772cb281b0f654e24a2f685f0876a037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11453578
 MonoBehaviour:
   m_ObjectHideFlags: 1

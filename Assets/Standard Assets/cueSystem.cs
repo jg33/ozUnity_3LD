@@ -164,7 +164,21 @@ public class cueSystem : MonoBehaviour{
 					Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#endif
 			
-			} else if(clipName == "MoeTest"){
+			} 
+			else if(clipName == "FireBall"){
+				Debug.Log("FireBall");
+				string videoString = "Video/FireBall.mp4";
+					#if UNITY_IPHONE
+					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					#elif UNITY_ANDROID
+					string path = Application.persistentDataPath + "/" + videoString;
+					Debug.LogError( "The video path: " + path );
+					Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					#endif
+
+			}
+
+			else if(clipName == "MoeTest"){
 				cam.SendMessage("loadMovie", "MoeOzTest", SendMessageOptions.DontRequireReceiver);
 				cam.SendMessage("gotoPosition", 0.01f, SendMessageOptions.DontRequireReceiver);
 				cam.SendMessage("setNumLoops", 1);
@@ -349,7 +363,23 @@ public class cueSystem : MonoBehaviour{
 //3LD 2016 SOUNDS START
 
 			case "YouWereThereAmbient":
-				clip = Resources.Load ("Audio/FilmingAmbient/dotty scene1") as AudioClip;
+				switch (Random.Range (0, 4)) {
+				case 0:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/dotty scene1") as AudioClip;
+					break;
+				case 1:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/birds1") as AudioClip;
+					break;
+				case 2:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/birds2") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/birds3") as AudioClip;
+					break;
+				case 4:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/birds4") as AudioClip;
+					break;
+				}
 				break;
 
 			case "Barnyard":
@@ -444,21 +474,30 @@ public class cueSystem : MonoBehaviour{
 				break;
 
 			case "OhWeOh":
-				switch (Random.Range (0, 2)) {
+				switch (Random.Range (0, 5)) {
 				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/oWEo_1 minute") as AudioClip;
 					break;
 				case 1:
-					clip = Resources.Load ("Audio/FilmingAmbient/oWEo_1") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/new/oWEo_1 minute2") as AudioClip;
 					break;
 				case 2:
-					clip = Resources.Load ("Audio/FilmingAmbient/oWEo") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/new/oWEo_1") as AudioClip;
+					break;
+				case 3:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/oWEo") as AudioClip;
+					break;
+				case 4:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/oWEoDAN") as AudioClip;
+					break;
+				case 5:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/oWEoPAD") as AudioClip;
 					break;
 				}
 				break;
 
 			case "Mland_Panic":
-				switch (Random.Range (0, 4)) {
+				switch (Random.Range (0, 17)) {
 				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic_1") as AudioClip;
 					break;
@@ -471,9 +510,62 @@ public class cueSystem : MonoBehaviour{
 				case 3:
 					clip = Resources.Load ("Audio/FilmingAmbient/munchkin panic/munchkins panic") as AudioClip;
 					break;
+				case 4:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/munchkins panic_4") as AudioClip;
+					break;
+				case 5:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/witch aura") as AudioClip;
+					break;
+				case 6:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_02-04") as AudioClip;
+					break;
+				case 7:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_02-06") as AudioClip;
+					break;
+				case 8:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_03-05") as AudioClip;
+					break;
+				case 9:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_03-06") as AudioClip;
+					break;
+				case 10:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_03-07") as AudioClip;
+					break;
+				case 11:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_03-08") as AudioClip;
+					break;
+				case 12:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_04-06") as AudioClip;
+					break;
+				case 13:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_04-07") as AudioClip;
+					break;
+				case 14:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_04-08") as AudioClip;
+					break;
+				case 15:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_05-07") as AudioClip;
+					break;
+				case 16:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_05-08") as AudioClip;
+					break;
+				case 17:
+					clip = Resources.Load ("Audio/FilmingAmbient/new/panic spanish/Immigrant-Gain_05-09") as AudioClip;
+					break;
 				}
 				break;
+
+			case "WitchPoof":
+				clip = Resources.Load ("Audio/FilmingAmbient/new/witch poof") as AudioClip;
+				break;
 			
+			case "FireBall":
+				clip = Resources.Load ("Audio/FilmingAmbient/new/fireball") as AudioClip;
+				break;
+
+			case "toto":
+				clip = Resources.Load ("Audio/FilmingAmbient/new/dog bark") as AudioClip;
+				break;
 
 //3LD 2016 SOUNDS END
 
