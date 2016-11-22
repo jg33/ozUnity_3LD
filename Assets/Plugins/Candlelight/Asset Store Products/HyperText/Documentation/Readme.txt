@@ -1,4 +1,4 @@
-HyperText readme
+HyperText 1.7.0 readme
 ================================================================================
 Although alpha and beta releases of Unity are not officially supported, this
 package will sometimes be updated during test cycles to add support as feasible.
@@ -27,8 +27,8 @@ buttons at the bottom to report a bug or visit the support forum.
 Using the Package
 --------------------------------------------------------------------------------
 
-Please visit http://candlelightinteractive.com/docs/uas-hypertext/ for a guide
-to getting started with HyperText.
+Please visit http://candlelightinteractive.com/docs/uas-hypertext/ for a guide to
+getting started with HyperText.
 
 
 Known Issues
