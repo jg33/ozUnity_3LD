@@ -1271,6 +1271,21 @@ MonoBehaviour:
   blowoutTex: {fileID: 2800000, guid: c13e1ee6f0bd1db44a31ce99326a8b79, type: 3}
   levelsTex: {fileID: 2800000, guid: e2b8832796fea61469e8fe90e9ae4465, type: 3}
   obturation: 1
+--- !u!1 &1551253724 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+  m_PrefabInternal: {fileID: 1825287120}
+--- !u!114 &1551253725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551253724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1da45fbdc69415a9b625e1e4ca6ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1561470375
 GameObject:
   m_ObjectHideFlags: 0
