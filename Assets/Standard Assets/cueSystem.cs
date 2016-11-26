@@ -363,21 +363,21 @@ public class cueSystem : MonoBehaviour{
 //3LD 2016 SOUNDS START
 
 			case "YouWereThereAmbient":
-				switch (Random.Range (0, 4)) {
+				switch (Random.Range (0, 5)) {
 				case 0:
 					//clip = Resources.Load ("Audio/FilmingAmbient/new/Dotty/dotty scene1") as AudioClip;
 					break;
 				case 1:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/birds1") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/Birdy1") as AudioClip;
 					break;
 				case 2:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/birds2") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/Birdy2") as AudioClip;
 					break;
 				case 3:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/birds3") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/Birdy3") as AudioClip;
 					break;
 				case 4:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/birds4") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new birds/Birdy4") as AudioClip;
 					break;
 				case 5:
 					clip = Resources.Load ("Audio/FilmingAmbient/SILENCE") as AudioClip;
@@ -386,7 +386,7 @@ public class cueSystem : MonoBehaviour{
 				break;
 
 			case "Barnyard":
-				switch (Random.Range (0, 1)) {
+				switch (Random.Range (0, 3)) {
 				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new barnyard/12 sheep") as AudioClip;
 					break;
