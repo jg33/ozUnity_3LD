@@ -44,7 +44,7 @@ namespace Vuforia
 		
 			}
 
-			sepiaAnimator = GameObject.Find("Camera").GetComponent("Animator");
+			sepiaAnimator = GameObject.Find("Camera").GetComponent<Animator>();
 
 		}
 		
