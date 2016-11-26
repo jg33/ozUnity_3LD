@@ -130,7 +130,7 @@ namespace Vuforia
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
 				}
 
-			} else if (mTrackableBehaviour.TrackableName== "Passive1Cyclone"){ //always show cyclone
+			} else if (mTrackableBehaviour.TrackableName== "Passive1Cylone"){ //always show cyclone
 				camCtl = GameObject.Find ("Camera Container");
 				camCtl.SendMessage("setTightTracking", true);
 				storm = GameObject.Find("storm");
@@ -150,7 +150,7 @@ namespace Vuforia
 				camCtl.SendMessage("setTightTracking", true);
 				storm = GameObject.Find("storm");
 				storm.SetActive(false);
-				Debug.Log("Found tornado");
+				Debug.Log("Found Glinda!");
 			if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
 

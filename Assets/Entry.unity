@@ -1467,7 +1467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: VuforiaLicenseKey
-      value: AZaUmxH/////AAAAAUf4FVal/07WgWvyCavSkbENjjvNtP3QjBk4CeBntgFbWsnXmpodIjqfWBhB6/sGdovtNfcuybfRnh8tPliyr1+8oLKGw4W/Q2y1zAmFDvlOAjOYKuPadSMq59IhWvNQBxOaJ/IaBP3X6GlKhN4EiPAj6rJ1yBjxSxwpJAUkq7DzHHgrPDtvY+5kNug644vtH4KmSnT69Sg3f67O7iK3L4NPbj+B3qVMHqvc+N+o2fd7V8UGNKsjlm3jVYPqm31blFET0eow81EZ5AvOc5bD1HRFCMRAdz4/YL+1ZEFRbzRvIiHTuw6MBXmsoBCMWS6hPFFdV2bClmRnoFTuzyYrwWfH36l4E5EDnpKuTztVDg+r
+      value: AWvWHUP/////AAAAAEcyBasHuk6tq2tpNPr2K3kJdVTCfnrr5r/urm6W6Q6muR22Y8hs3Pq/Uasi/fuKLp0XpVfxd1YpElp5trpVKGLy+QibKGv6oBrh8Zyj4k/88oVeYmMFMN3GBrR8TyXE+lnqyTnoRxkh68ext1vSo/lt5uxa9kJXRzp0FFAImQoAwV9nE8eNjxMGkEwDEZd8l4zZx514wK6Tbpft0n82jg23dRw/a3LnNCLLRO5uL4kAyL/EpCH3OgIh/fF7co/bzkhQF9U8owJbl2hH6aofR2xzUZqXjnvHQaXx4nFbFiYfP4nF+wbG2CgjBZXZee5NgluRlZkcUmH43DImXFzSWBcSMJ0zt6PYByjOZKsJ42rQ
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_Enabled
@@ -1475,11 +1475,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[0]
-      value: oz_2016_bw
+      value: ozUnity_3LD
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[0]
-      value: oz_2016_bw
+      value: ozUnity_3LD
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_Name
@@ -1507,11 +1507,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[1]
-      value: 3LD_OzWrkShop6
+      value: ozUnity
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[1]
-      value: 3LD_OzWrkShop6
+      value: ozUnity
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_Enabled

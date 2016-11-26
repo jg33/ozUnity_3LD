@@ -1,0 +1,825 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: GLINDA_NYT_hover
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0.711, z: 0}
+        inSlope: {x: 0, y: -0.08186441, z: 0.07932203}
+        outSlope: {x: 0, y: -0.08186441, z: 0.07932203}
+        tangentMode: 0
+      - time: 1.9666667
+        value: {x: 0, y: 0.55, z: 0.156}
+        inSlope: {x: -0.048719995, y: -0.009012204, z: 0.039661016}
+        outSlope: {x: -0.048719995, y: -0.009012204, z: 0.039661016}
+        tangentMode: 0
+      - time: 4.05
+        value: {x: -0.203, y: 0.683, z: 0.156}
+        inSlope: {x: -0.048719995, y: -0.00038770586, z: -0.06769232}
+        outSlope: {x: -0.048719995, y: -0.00038770586, z: -0.06769232}
+        tangentMode: 0
+      - time: 6
+        value: {x: -0.203, y: 0.557, z: -0.108}
+        inSlope: {x: 0.114999995, y: -0.0028076991, z: -0.06769232}
+        outSlope: {x: 0.114999995, y: -0.0028076991, z: -0.06769232}
+        tangentMode: 0
+      - time: 8
+        value: {x: 0.257, y: 0.675, z: -0.108}
+        inSlope: {x: 0.07375, y: 0.00050000846, z: 0.068}
+        outSlope: {x: 0.07375, y: 0.00050000846, z: 0.068}
+        tangentMode: 0
+      - time: 10
+        value: {x: 0.092, y: 0.559, z: 0.164}
+        inSlope: {x: -0.06425, y: 0.009000003, z: 0.027000003}
+        outSlope: {x: -0.06425, y: 0.009000003, z: 0.027000003}
+        tangentMode: 0
+      - time: 12
+        value: {x: 0, y: 0.711, z: 0}
+        inSlope: {x: -0.046, y: 0.076000005, z: -0.082}
+        outSlope: {x: -0.046, y: 0.076000005, z: -0.082}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: 
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 2.203282, y: 2.203282, z: 2.203282}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 12
+        value: {x: 2.203282, y: 2.203282, z: 2.203282}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: 
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Size
+    path: Glenda_Bubble_AnimationV3_NEW
+    classID: 122
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Size
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
+    classID: 122
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 14.270542
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 14.270542
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: EmissionModule.rate.scalar
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
+    classID: 198
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5054765
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.5054765
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.53732276
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.53732276
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.27329448
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.27329448
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 0
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1597981208
+      attribute: 3378360693
+      script: {fileID: 0}
+      classID: 122
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2726931672
+      attribute: 3378360693
+      script: {fileID: 0}
+      classID: 122
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2726931672
+      attribute: 2181258151
+      script: {fileID: 0}
+      classID: 198
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4228317331
+      attribute: 1303350129
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 4228317331
+      attribute: 1571785585
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 4228317331
+      attribute: 1840221041
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 4228317331
+      attribute: 2108656497
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 942884053
+      attribute: 1303350129
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 942884053
+      attribute: 1571785585
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 942884053
+      attribute: 1840221041
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - path: 942884053
+      attribute: 2108656497
+      script: {fileID: 0}
+      classID: 137
+      customType: 22
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 12
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.9666667
+        value: 0
+        inSlope: -0.048719995
+        outSlope: -0.048719995
+        tangentMode: 10
+      - time: 4.05
+        value: -0.203
+        inSlope: -0.048719995
+        outSlope: -0.048719995
+        tangentMode: 10
+      - time: 6
+        value: -0.203
+        inSlope: 0.114999995
+        outSlope: 0.114999995
+        tangentMode: 10
+      - time: 8
+        value: 0.257
+        inSlope: 0.07375
+        outSlope: 0.07375
+        tangentMode: 10
+      - time: 10
+        value: 0.092
+        inSlope: -0.06425
+        outSlope: -0.06425
+        tangentMode: 10
+      - time: 12
+        value: 0
+        inSlope: -0.046
+        outSlope: -0.046
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.711
+        inSlope: -0.08186441
+        outSlope: -0.08186441
+        tangentMode: 10
+      - time: 1.9666667
+        value: 0.55
+        inSlope: -0.009012204
+        outSlope: -0.009012204
+        tangentMode: 10
+      - time: 4.05
+        value: 0.683
+        inSlope: -0.00038770586
+        outSlope: -0.00038770586
+        tangentMode: 10
+      - time: 6
+        value: 0.557
+        inSlope: -0.0028076991
+        outSlope: -0.0028076991
+        tangentMode: 10
+      - time: 8
+        value: 0.675
+        inSlope: 0.00050000846
+        outSlope: 0.00050000846
+        tangentMode: 10
+      - time: 10
+        value: 0.559
+        inSlope: 0.009000003
+        outSlope: 0.009000003
+        tangentMode: 10
+      - time: 12
+        value: 0.711
+        inSlope: 0.076000005
+        outSlope: 0.076000005
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0.07932203
+        outSlope: 0.07932203
+        tangentMode: 10
+      - time: 1.9666667
+        value: 0.156
+        inSlope: 0.039661016
+        outSlope: 0.039661016
+        tangentMode: 10
+      - time: 4.05
+        value: 0.156
+        inSlope: -0.06769232
+        outSlope: -0.06769232
+        tangentMode: 10
+      - time: 6
+        value: -0.108
+        inSlope: -0.06769232
+        outSlope: -0.06769232
+        tangentMode: 10
+      - time: 8
+        value: -0.108
+        inSlope: 0.068
+        outSlope: 0.068
+        tangentMode: 10
+      - time: 10
+        value: 0.164
+        inSlope: 0.027000003
+        outSlope: 0.027000003
+        tangentMode: 10
+      - time: 12
+        value: 0
+        inSlope: -0.082
+        outSlope: -0.082
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 2.203282
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Size
+    path: Glenda_Bubble_AnimationV3_NEW
+    classID: 122
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.65945876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Size
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
+    classID: 122
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 14.270542
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 14.270542
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: EmissionModule.rate.scalar
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)
+    classID: 198
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 12
+        value: 0.2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5054765
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.5054765
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Glenda_Bubble_AnimationV3_NEW/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.53732276
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.53732276
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.32352942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.27329448
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.27329448
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 12
+        value: 0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Glenda_Bubble_AnimationV3_NEW/Glenda_Bubble_AnimationV3_NEW (1)/sphere_1
+    classID: 137
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 1
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
