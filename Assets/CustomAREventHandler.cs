@@ -1,4 +1,4 @@
-﻿/*==============================================================================
+/*==============================================================================
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
@@ -20,6 +20,8 @@ namespace Vuforia
 
 		private GameObject camCtl;
 		private GameObject storm;
+		
+		private Animator sepiaAnimator;
 
 		#endregion // PRIVATE_MEMBER_VARIABLES
 		
@@ -42,7 +44,7 @@ namespace Vuforia
 		
 			}
 
-
+			sepiaAnimator = GameObject.Find("Camera").GetComponent(Animator);
 
 		}
 		
@@ -141,6 +143,9 @@ namespace Vuforia
 
 				}
 
+			} else if(mTrackableBehaviour.TrackableName== "GlindaTarget"){
+				sepiaAnimator.setBool("isSepia", false);
+			
 			} else {
 				Debug.Log("Didn't Find Named Trackable. This is: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name);
 //				Debug.Log("Matched names: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name.Equals(mTrackableBehaviour.TrackableName));
@@ -184,6 +189,8 @@ namespace Vuforia
 
 				GameObject.Find("GyroResetter").SendMessage("resetResetter"); //zeros out gyro to keep storm
 
+			} else if (mTrackableBehaviour.TrackableName== "GlindaTarget"){
+				sepiaAnimator.SetBool("isSepia", true);
 			}
 
 
