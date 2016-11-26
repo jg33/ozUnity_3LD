@@ -44,7 +44,7 @@ namespace Vuforia
 		
 			}
 
-			sepiaAnimator = GameObject.Find("Camera").GetComponent(Animator);
+			sepiaAnimator = GameObject.Find("Camera").GetComponent("Animator");
 
 		}
 		
@@ -144,7 +144,7 @@ namespace Vuforia
 				}
 
 			} else if(mTrackableBehaviour.TrackableName== "GlindaTarget"){
-				sepiaAnimator.setBool("isSepia", false);
+				sepiaAnimator.SetBool("isSepia", false);
 			
 			} else {
 				Debug.Log("Didn't Find Named Trackable. This is: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name);
