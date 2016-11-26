@@ -143,8 +143,18 @@ namespace Vuforia
 
 				}
 
-			} else if(mTrackableBehaviour.TrackableName== "GlindaTarget"){
+			} else if(mTrackableBehaviour.TrackableName== "GlindaTarget"){ //always show glinda nyt target
 				sepiaAnimator.SetBool("isSepia", false);
+				
+				camCtl = GameObject.Find ("Camera Container");
+				camCtl.SendMessage("setTightTracking", true);
+				storm = GameObject.Find("storm");
+				storm.SetActive(false);
+				Debug.Log("Found tornado");
+			if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
+					gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
+				}
 			
 			} else {
 				Debug.Log("Didn't Find Named Trackable. This is: "+ gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name);
@@ -191,6 +201,23 @@ namespace Vuforia
 
 			} else if (mTrackableBehaviour.TrackableName== "GlindaTarget"){
 				sepiaAnimator.SetBool("isSepia", true);
+				
+				//hide it, reset tracking.
+				GameObject camCtl = GameObject.Find ("Camera Container");
+				camCtl.SendMessage("setTightTracking", false);
+				GameObject.Find("GyroResetter").SendMessage("setTightTracking", false);
+				if(!storm) storm = GameObject.Find("storm");
+				if (storm) storm.SetActive(true);
+
+				if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
+					gameObject.transform.GetChild(0).gameObject.SetActive(false);
+//					gameObject.transform.GetChild(1).gameObject.SetActive(false);
+					Debug.Log ("BORT " + gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name+ " "  );
+
+				}
+
+				GameObject.Find("GyroResetter").SendMessage("resetResetter"); //zeros out gyro to keep storm
+				
 			}
 
 
