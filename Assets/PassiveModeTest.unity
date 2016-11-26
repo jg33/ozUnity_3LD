@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44887227, g: 0.49894053, b: 0.5759485, a: 1}
+  m_IndirectSpecularColor: {r: 0.4488716, g: 0.49893898, b: 0.57594675, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -325,12 +325,14 @@ RectTransform:
   - {fileID: 1789286103}
   - {fileID: 1134700893}
   - {fileID: 1886373562}
+  - {fileID: 837249575}
+  - {fileID: 1681793208}
   m_Father: {fileID: 717096944}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 272}
-  m_SizeDelta: {x: 1940, y: 5297}
+  m_SizeDelta: {x: 1940, y: 4760}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &60042685
 MonoBehaviour:
@@ -416,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &75852684
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18519,6 +18521,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812634528}
+--- !u!1 &837249574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 837249575}
+  - 222: {fileID: 837249577}
+  - 114: {fileID: 837249576}
+  m_Layer: 5
+  m_Name: APP_TEAM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &837249575
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837249574}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.84586746, y: 0.90563846, z: 0.84586734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 16
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -4437}
+  m_SizeDelta: {x: 1673, y: 222}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &837249576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837249574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fffda87a1f1054f64a179f46a8e45c03, type: 3}
+    m_FontSize: 54
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 54
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: App Development Team
+--- !u!222 &837249577
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837249574}
 --- !u!1 &847475500
 GameObject:
   m_ObjectHideFlags: 0
@@ -18819,7 +18895,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2798}
+  m_AnchoredPosition: {x: 0, y: -2142.66}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898393045
@@ -22741,7 +22817,7 @@ RectTransform:
   m_RootOrder: 14
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -201.84, y: -4898}
+  m_AnchoredPosition: {x: -201.84, y: -3865}
   m_SizeDelta: {x: 465, y: 713.28516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134700894
@@ -31210,8 +31286,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2761}
-  m_SizeDelta: {x: 1673, y: 5792.704}
+  m_AnchoredPosition: {x: 0, y: -2145}
+  m_SizeDelta: {x: 1673, y: 4448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320314233
 MonoBehaviour:
@@ -31395,7 +31471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1341961984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32293,10 +32369,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "A lighthearted 21st\_century mash-up of\_The Wizard of Oz, featuring YouTube
-    fanatics, heavy metal, a heartfelt re-creation of the iconic film, and smart phone
-    interactivity to deliver the Technicolor Land of Oz of our imaginations. Here
-    are some allegories and theories about The Wizard of Oz:"
+  m_Text: This lighthearted 21st century mash-up of The Wizard of Oz features YouTube
+    Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film, and smartphone
+    interactivity to delve into the land of our Technicolor imaginations.
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -32308,17 +32383,15 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: "A lighthearted 21st\_century mash-up of\_The Wizard of Oz, featuring
-      YouTube fanatics, heavy metal, a heartfelt re-creation of the iconic film, and
-      smart phone interactivity to deliver the Technicolor Land of Oz of our imaginations.
-      Here are some allegories and theories about The Wizard of Oz:"
+    m_InputText: This lighthearted 21st century mash-up of The Wizard of Oz features
+      YouTube Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film,
+      and smartphone interactivity to delve into the land of our Technicolor imaginations.
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: "A lighthearted 21st\_century mash-up of\_The Wizard of Oz, featuring
-      YouTube fanatics, heavy metal, a heartfelt re-creation of the iconic film, and
-      smart phone interactivity to deliver the Technicolor Land of Oz of our imaginations.
-      Here are some allegories and theories about The Wizard of Oz:"
+    m_OutputText: This lighthearted 21st century mash-up of The Wizard of Oz features
+      YouTube Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film,
+      and smartphone interactivity to delve into the land of our Technicolor imaginations.
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -32392,8 +32465,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3398}
-  m_SizeDelta: {x: 1673, y: 4212.104}
+  m_AnchoredPosition: {x: 0, y: -3110}
+  m_SizeDelta: {x: 1673, y: 3699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426734440
 MonoBehaviour:
@@ -37598,8 +37671,8 @@ RectTransform:
   m_RootOrder: 12
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -5317}
-  m_SizeDelta: {x: 1673, y: 2188.004}
+  m_AnchoredPosition: {x: 0.00024414062, y: -3911}
+  m_SizeDelta: {x: 1673, y: 1423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673316027
 MonoBehaviour:
@@ -37640,6 +37713,160 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673316025}
+--- !u!1 &1681793207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1681793208}
+  - 222: {fileID: 1681793210}
+  - 114: {fileID: 1681793209}
+  m_Layer: 5
+  m_Name: APP_TEAM CREDIT NAMES
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1681793208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681793207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.84586746, y: 0.90563846, z: 0.8458672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 17
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -4539}
+  m_SizeDelta: {x: 465, y: 261}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1681793209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681793207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'John Cleater
+
+    Jesse Garrison
+
+    Larry Shea
+
+    Kevan Loney'
+  m_DefaultStyles: {fileID: 0}
+  m_QuadRenderersPool: []
+  m_Interactable: 1
+  m_OpenURLPatterns: 0
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_TextProcessor:
+    m_LinkKeywordCollections: []
+    m_InputText: 'John Cleater
+
+      Jesse Garrison
+
+      Larry Shea
+
+      Kevan Loney'
+    m_InputTextSourceObject: {fileID: 0}
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_OutputText: 'John Cleater
+
+      Jesse Garrison
+
+      Larry Shea
+
+      Kevan Loney'
+    m_QuadKeywordCollections: []
+    m_ReferenceFontSize: 54
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: 6ceea1b1d91bf49c1bc9de79c6cfb42f, type: 2}
+    m_TagKeywordCollections: []
+  m_ShouldOverrideStylesFontStyle: 0
+  m_ShouldOverrideStylesFontColor: 0
+  m_ShouldOverrideStylesLineSpacing: 0
+  m_ShouldOverrideStylesLinkHitboxPadding: 0
+  m_QuadMaterial: {fileID: 0}
+  m_ClickedLink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60042685}
+        m_MethodName: openURL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mcDirections
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_EnteredLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ExitedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_PressedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ReleasedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!222 &1681793210
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681793207}
 --- !u!1001 &1684378286
 Prefab:
   m_ObjectHideFlags: 0
@@ -38490,7 +38717,7 @@ RectTransform:
   m_RootOrder: 13
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -4746}
+  m_AnchoredPosition: {x: 0.00024414062, y: -3680}
   m_SizeDelta: {x: 1689, y: 713.28516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789286104
@@ -39047,7 +39274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1809944098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39211,7 +39438,7 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3851}
+  m_AnchoredPosition: {x: 0, y: -2865}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831127122
@@ -39376,7 +39603,7 @@ RectTransform:
   m_RootOrder: 15
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 247, y: -4898}
+  m_AnchoredPosition: {x: 247, y: -3865}
   m_SizeDelta: {x: 437, y: 713.28516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886373563
