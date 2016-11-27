@@ -451,34 +451,34 @@ public class cueSystem : MonoBehaviour{
 			case "Mland_Locals":
 				switch (Random.Range (0, 9)) {
 				case 0:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_1") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_1") as AudioClip;
 					break;
 				case 1:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_2") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_2") as AudioClip;
 					break;
 				case 2:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_3") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_3") as AudioClip;
 					break;
 				case 3:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_4") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_4") as AudioClip;
 					break;
 				case 4:
-					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/quieter chatter/munchkins chatter_5") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/munchkins/quieter chatter/munch chatter_5") as AudioClip;
 					break;
 				case 5:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_6") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_6") as AudioClip;
 					break;
 				case 6:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_7") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_7") as AudioClip;
 					break;
 				case 7:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_8") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_8") as AudioClip;
 					break;
 				case 8:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter_9") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter_9") as AudioClip;
 					break;
 				case 9:
-					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munchkins chatter") as AudioClip;
+					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new munch/munch chatter") as AudioClip;
 					break;
 				case 10:
 					clip = Resources.Load ("Audio/FilmingAmbient/SILENCE") as AudioClip;
