@@ -42,6 +42,9 @@ namespace Vuforia
 				gameObject.transform.GetChild(0).gameObject.SetActive(false);
 				Debug.Log ("Turn that shit off " + gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name+ " "  );
 		
+			} else if (mTrackableBehaviour.TrackableName == "GlindaTarget"){
+				gameObject.transform.GetChild(0).gameObject.SetActive(false);
+				Debug.Log ("Turn that shit off " + gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name+ " "  );
 			}
 
 			sepiaAnimator = GameObject.Find("Camera").GetComponent<Animator>();
@@ -150,8 +153,10 @@ namespace Vuforia
 				camCtl.SendMessage("setTightTracking", true);
 				storm = GameObject.Find("storm");
 				storm.SetActive(false);
+
 				Debug.Log("Found Glinda!");
-			if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
+
+				if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
 				}
@@ -200,7 +205,7 @@ namespace Vuforia
 				GameObject.Find("GyroResetter").SendMessage("resetResetter"); //zeros out gyro to keep storm
 
 			} else if (mTrackableBehaviour.TrackableName== "GlindaTarget"){
-				sepiaAnimator.SetBool("isSepia", true);
+				//sepiaAnimator.SetBool("isSepia", true);
 				
 				//hide it, reset tracking.
 				GameObject camCtl = GameObject.Find ("Camera Container");
