@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="GlindaTarget" size="1.000000 0.562075" />
+    <ImageTarget name="GlindaTarget" size="1.000000 0.565612" />
     <ImageTarget name="Passive2Poppies" size="100.000000 133.333328" />
     <ImageTarget name="Passive4GreenGlasses" size="100.000000 133.333328" />
     <ImageTarget name="Passive1Cylone" size="100.000000 133.333328" />
