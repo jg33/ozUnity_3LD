@@ -206,7 +206,7 @@ namespace Vuforia
 
 			} else if (mTrackableBehaviour.TrackableName== "GlindaTarget"){
 				try{
-                   if (!sepiaAnimator.GetBool("isSepia")) sepiaAnimator.SetBool("isSepia", true);
+					if (!sepiaAnimator.GetBool("isSepia") && PlayerPrefs.GetInt("CompletedShow",0) == 0) sepiaAnimator.SetBool("isSepia", true);
 				} catch (System.Exception e){
 				Debug.Log("Broke with Sepia back on");
 }
