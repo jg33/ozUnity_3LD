@@ -205,8 +205,11 @@ namespace Vuforia
 				GameObject.Find("GyroResetter").SendMessage("resetResetter"); //zeros out gyro to keep storm
 
 			} else if (mTrackableBehaviour.TrackableName== "GlindaTarget"){
-				//sepiaAnimator.SetBool("isSepia", true);
-				
+				try{
+                   if (!sepiaAnimator.GetBool("isSepia")) sepiaAnimator.SetBool("isSepia", true);
+				} catch (Exception e){
+				Debug.Log("Broke with Sepia back on");
+}
 				//hide it, reset tracking.
 				GameObject camCtl = GameObject.Find ("Camera Container");
 				camCtl.SendMessage("setTightTracking", false);
