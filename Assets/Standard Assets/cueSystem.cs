@@ -155,25 +155,27 @@ public class cueSystem : MonoBehaviour{
 			}
 				else if(clipName == "copyright"){
 					Debug.Log("copyright");
-				string videoString = "Video/Youtube_Copyright.mp4";
+				string videoString = string.Format ("Video/Youtube_Copyright.mp4", 0);
 					#if UNITY_IPHONE
 					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#elif UNITY_ANDROID
-					string path = Application.persistentDataPath + "/" + videoString;
-					Debug.LogError( "The video path: " + path );
-					Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					//string path = Application.persistentDataPath + "/" + videoString;
+					//Debug.LogError( "The video path: " + path );
+					//Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#endif
 			
 			} 
 			else if(clipName == "FireBall"){
 				Debug.Log("FireBall");
-				string videoString = "Video/FireBall.mp4";
+				string videoString = string.Format ("Video/FireBall.mp4", 0);
 					#if UNITY_IPHONE
 					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#elif UNITY_ANDROID
-					string path = Application.persistentDataPath + "/" + videoString;
-					Debug.LogError( "The video path: " + path );
-					Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					Handheld.PlayFullScreenMovie(videoString, Color.black, FullScreenMovieControlMode.Hidden);
+					//string path = Application.persistentDataPath + "/" + videoString;
+					//Debug.LogError( "The video path: " + path );
+					//Handheld.PlayFullScreenMovie( Application.persistentDataPath + "/" + videoString, Color.black, FullScreenMovieControlMode.Hidden);
 					#endif
 
 			}
