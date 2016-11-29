@@ -386,7 +386,8 @@ public class cueSystem : MonoBehaviour{
 				break;
 
 			case "Barnyard":
-				switch (Random.Range (0, 3)) {
+				switch (Random.Range (0, 1)) {
+				/*
 				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new barnyard/12 sheep") as AudioClip;
 					break;
@@ -394,10 +395,11 @@ public class cueSystem : MonoBehaviour{
 				case 1:
 					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new barnyard/15 Pigs") as AudioClip;
 					break;
-				case 2:
+				*/
+				case 0:
 					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new barnyard/16 Hen") as AudioClip;
 					break;
-				case 3:
+				case 1:
 					clip = Resources.Load ("Audio/FilmingAmbient/New_11.26.16/new barnyard/chicken") as AudioClip;
 					break;
 				}
@@ -429,13 +431,13 @@ public class cueSystem : MonoBehaviour{
 					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_1") as AudioClip;
 					break;
 				case 2:
-					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_2") as AudioClip;
+					//clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_2") as AudioClip;
 					break;
 				case 3:
 					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_3") as AudioClip;
 					break;
 				case 4:
-					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_4") as AudioClip;
+					//clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_4") as AudioClip;
 					break;
 				case 5:
 					clip = Resources.Load ("Audio/FilmingAmbient/coins/coins_5") as AudioClip;
