@@ -23,8 +23,8 @@ public class androidObbManager : MonoBehaviour {
 
 		//grab each file and load it. 
 		List<string> filesInOBB = new List<string>();
-		filesInOBB.Add ( Application.streamingAssetsPath + "/QCAR/ozUnity.xml" );
-		filesInOBB.Add ( Application.streamingAssetsPath + "/QCAR/ozUnity.dat" );
+		filesInOBB.Add ( Application.streamingAssetsPath + "/QCAR/ozUnity_3LD.xml" );
+		filesInOBB.Add ( Application.streamingAssetsPath + "/QCAR/ozUnity_3LD.dat" );
 		
 		filesInOBB.Add ( Application.streamingAssetsPath + "/Video/rainbow_01.mp4" );
 		filesInOBB.Add ( Application.streamingAssetsPath + "/Video/rainbow_02.mp4" );
