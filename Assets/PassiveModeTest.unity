@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3883496, g: 0.42390797, b: 0.4899056, a: 1}
+  m_IndirectSpecularColor: {r: 0.44887227, g: 0.49894053, b: 0.5759485, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -326,13 +326,14 @@ RectTransform:
   - {fileID: 1134700893}
   - {fileID: 1886373562}
   - {fileID: 837249575}
+  - {fileID: 1935714009}
   - {fileID: 1681793208}
   m_Father: {fileID: 717096944}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 272}
-  m_SizeDelta: {x: 1940, y: 4760}
+  m_SizeDelta: {x: 1940, y: 4662.89}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &60042685
 MonoBehaviour:
@@ -20880,7 +20881,7 @@ RectTransform:
   m_RootOrder: 16
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4437}
+  m_AnchoredPosition: {x: 0, y: -4399}
   m_SizeDelta: {x: 1673, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837249576
@@ -25017,7 +25018,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -201.84, y: -3865}
-  m_SizeDelta: {x: 465, y: 713.28516}
+  m_SizeDelta: {x: 465, y: 785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134700894
 MonoBehaviour:
@@ -25053,29 +25054,29 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Mary Beebe
 
-    Cee Scott Brown
+    Richard Block
 
-    Sharon Connelly
+    Scott Cohen
+
+    Peter Cooke
 
     Gai Gherardi
 
-    Catherine Gund
+    jdobkin
 
-    Cynthia Hedstrom
+    Margaret Healey
 
-    Anna Magenta
+    Matthew Karges
 
-    Laurence Miller
+    David Mendoza
 
-    Ellen Salpeter
+    Carrie Moyer
 
-    Lowery Sims
+    Adam Simon
 
-    Lisa Vogel
+    Narelle Sissons
 
-    Kim Whitener
-
-'
+    Jeff Weems'
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -25089,57 +25090,57 @@ MonoBehaviour:
     m_LinkKeywordCollections: []
     m_InputText: 'Mary Beebe
 
-      Cee Scott Brown
+      Richard Block
 
-      Sharon Connelly
+      Scott Cohen
+
+      Peter Cooke
 
       Gai Gherardi
 
-      Catherine Gund
+      jdobkin
 
-      Cynthia Hedstrom
+      Margaret Healey
 
-      Anna Magenta
+      Matthew Karges
 
-      Laurence Miller
+      David Mendoza
 
-      Ellen Salpeter
+      Carrie Moyer
 
-      Lowery Sims
+      Adam Simon
 
-      Lisa Vogel
+      Narelle Sissons
 
-      Kim Whitener
-
-'
+      Jeff Weems'
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
     m_OutputText: 'Mary Beebe
 
-      Cee Scott Brown
+      Richard Block
 
-      Sharon Connelly
+      Scott Cohen
+
+      Peter Cooke
 
       Gai Gherardi
 
-      Catherine Gund
+      jdobkin
 
-      Cynthia Hedstrom
+      Margaret Healey
 
-      Anna Magenta
+      Matthew Karges
 
-      Laurence Miller
+      David Mendoza
 
-      Ellen Salpeter
+      Carrie Moyer
 
-      Lowery Sims
+      Adam Simon
 
-      Lisa Vogel
+      Narelle Sissons
 
-      Kim Whitener
-
-'
+      Jeff Weems'
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -40157,11 +40158,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 60042684}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4539}
-  m_SizeDelta: {x: 465, y: 261}
+  m_AnchoredPosition: {x: 247, y: -4460.9}
+  m_SizeDelta: {x: 465, y: 182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681793209
 MonoBehaviour:
@@ -40189,19 +40190,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'John Cleater
+  m_Text: 'Jesse Garrison
 
-    Jesse Garrison
+    Kevan Loney
 
-    Larry Shea
-
-    Kevan Loney'
+    Adam Lewis'
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -40213,23 +40212,19 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: 'John Cleater
+    m_InputText: 'Jesse Garrison
 
-      Jesse Garrison
+      Kevan Loney
 
-      Larry Shea
-
-      Kevan Loney'
+      Adam Lewis'
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 'John Cleater
+    m_OutputText: 'Jesse Garrison
 
-      Jesse Garrison
+      Kevan Loney
 
-      Larry Shea
-
-      Kevan Loney'
+      Adam Lewis'
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -42230,7 +42225,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 247, y: -3865}
-  m_SizeDelta: {x: 437, y: 713.28516}
+  m_SizeDelta: {x: 437, y: 785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886373563
 MonoBehaviour:
@@ -42264,29 +42259,31 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Richard Block
+  m_Text: 'bevcoyle
 
-    Scott Cohen
+    Cee Scott Brown
 
-    Peter Cooke
+    Sharon Connelly
+
+    Babs Davy
 
     James Gibbs
 
-    Margaret Healey
+    Catherine Gund
 
-    Matthew Karges
+    Cynthia Hedstrom
 
-    David Mendoza
+    Anna Magenta
 
-    Carrie Moyer
+    Laurence Miller
 
-    Adam Simon
+    Ellen Salpeter
 
-    Narelle Sissons
+    Lowery Sims
 
-    Jeff Weems
+    Lisa Vogel
 
-'
+    Kim Whitener'
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -42298,55 +42295,59 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: 'Richard Block
+    m_InputText: 'bevcoyle
 
-      Scott Cohen
+      Cee Scott Brown
 
-      Peter Cooke
+      Sharon Connelly
+
+      Babs Davy
 
       James Gibbs
 
-      Margaret Healey
+      Catherine Gund
 
-      Matthew Karges
+      Cynthia Hedstrom
 
-      David Mendoza
+      Anna Magenta
 
-      Carrie Moyer
+      Laurence Miller
 
-      Adam Simon
+      Ellen Salpeter
 
-      Narelle Sissons
+      Lowery Sims
 
-      Jeff Weems
+      Lisa Vogel
 
-'
+      Kim Whitener'
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 'Richard Block
+    m_OutputText: 'bevcoyle
 
-      Scott Cohen
+      Cee Scott Brown
 
-      Peter Cooke
+      Sharon Connelly
+
+      Babs Davy
 
       James Gibbs
 
-      Margaret Healey
+      Catherine Gund
 
-      Matthew Karges
+      Cynthia Hedstrom
 
-      David Mendoza
+      Anna Magenta
 
-      Carrie Moyer
+      Laurence Miller
 
-      Adam Simon
+      Ellen Salpeter
 
-      Narelle Sissons
+      Lowery Sims
 
-      Jeff Weems
+      Lisa Vogel
 
-'
+      Kim Whitener'
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -42666,6 +42667,154 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931679443}
+--- !u!1 &1935714008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1935714009}
+  - 222: {fileID: 1935714011}
+  - 114: {fileID: 1935714010}
+  m_Layer: 5
+  m_Name: APP_TEAM CREDIT NAMES (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1935714009
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935714008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8458674, y: 0.9056384, z: 0.8458672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 17
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -201.84, y: -4460.9}
+  m_SizeDelta: {x: 465, y: 182}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1935714010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935714008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'John Cleater
+
+    Larry Shea
+
+    Andrew LeClair'
+  m_DefaultStyles: {fileID: 0}
+  m_QuadRenderersPool: []
+  m_Interactable: 1
+  m_OpenURLPatterns: 0
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_TextProcessor:
+    m_LinkKeywordCollections: []
+    m_InputText: 'John Cleater
+
+      Larry Shea
+
+      Andrew LeClair'
+    m_InputTextSourceObject: {fileID: 0}
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_OutputText: 'John Cleater
+
+      Larry Shea
+
+      Andrew LeClair'
+    m_QuadKeywordCollections: []
+    m_ReferenceFontSize: 54
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: 6ceea1b1d91bf49c1bc9de79c6cfb42f, type: 2}
+    m_TagKeywordCollections: []
+  m_ShouldOverrideStylesFontStyle: 0
+  m_ShouldOverrideStylesFontColor: 0
+  m_ShouldOverrideStylesLineSpacing: 0
+  m_ShouldOverrideStylesLinkHitboxPadding: 0
+  m_QuadMaterial: {fileID: 0}
+  m_ClickedLink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60042685}
+        m_MethodName: openURL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mcDirections
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_EnteredLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ExitedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_PressedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ReleasedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!222 &1935714011
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935714008}
 --- !u!1 &1947871771
 GameObject:
   m_ObjectHideFlags: 0
