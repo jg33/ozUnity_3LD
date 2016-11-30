@@ -63,6 +63,8 @@ public class OzOscReceiver : MonoBehaviour {
 	private float clipLength;
 	private bool flagAudioStop = false;
 
+	private bool flagVibrate = false;
+
 
 
 	private float currentTime;
@@ -144,6 +146,10 @@ public class OzOscReceiver : MonoBehaviour {
 			flagAudioStop= false;
 		}
 
+		if (flagVibrate) {
+			nv.RPC("vibrate", RPCMode.All);
+			flagVibrate = false;
+		}
 		
 		currentTime = Time.time;
 	}
@@ -288,7 +294,10 @@ public class OzOscReceiver : MonoBehaviour {
 				clipLength = (float) oscMessage.Values[4];
 				flagAudioDelayLoopSend = true;
 				break;
-
+			
+			case "/vibrate":
+				flagVibrate = true;
+				break; 
 			//add playmovie RPC
 			default:
 				Debug.Log("unhandled osc: " + msgString );
