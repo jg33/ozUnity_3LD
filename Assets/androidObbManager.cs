@@ -57,6 +57,7 @@ public class androidObbManager : MonoBehaviour {
 		//Tell QCAR to re-search for files; it searches before the files are loaded.
 		GameObject.Find ("ARCamera").GetComponent<DatabaseLoadBehaviour> ().AddOSSpecificExternalDatasetSearchDirs ();
 		PlayerPrefs.SetInt("extractedObb",1);
+		PlayerPrefs.Save();
 	}
 	private void Save(WWW www, string outputPath) {
 		Debug.LogError( "Writing File: " + www.url + " to: " + outputPath);
