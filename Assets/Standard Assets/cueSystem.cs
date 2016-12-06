@@ -20,6 +20,7 @@ public class cueSystem : MonoBehaviour{
 	public float imageTargetY = 0;
 	public float imageTargetZ = 0;
 
+	private bool cuedRainbow = false;
 
 	NetworkView nv;
 
@@ -88,6 +89,11 @@ public class cueSystem : MonoBehaviour{
 
 		if(!seqPlayer && cueNumber ==1){
 			seqPlayer = GameObject.Find ("TexturePlayer");
+		}
+
+		if (cuedRainbow){
+			playMovie("randomRainbow");
+			cuedRainbow=false;
 		}
 	}
 
@@ -717,7 +723,10 @@ public class cueSystem : MonoBehaviour{
 		
 	}
 
-
+	[RPC] public void playTwoRainbows(){
+		playMovie("randomRainbow");
+		cuedRainbow=true;
+	}
 
 	public void setTransitionSpeed(float f){
 		transitionSpeed = f;
