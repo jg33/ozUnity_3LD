@@ -10,7 +10,7 @@ function Start () {
 }
 
 function FixedUpdate () {
-	if(!hasOriented && cueComponent.tornadoState == 4){
+	if(!hasOriented && cueComponent.tornadoState == 1){
 		transform.localPosition = headTracker.transform.parent.parent.localPosition;
 		var targetRotation:Quaternion = Quaternion.Euler(
 			0,
