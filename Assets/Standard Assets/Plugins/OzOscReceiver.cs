@@ -302,7 +302,7 @@ public class OzOscReceiver : MonoBehaviour {
 				flagVibrate = true;
 				break; 
 
-			case "/twoRainbows":
+			case "/doubleRainbow":
 				flagTwoRainbows = true;
 				break; 
 
