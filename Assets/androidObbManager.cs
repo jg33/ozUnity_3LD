@@ -8,7 +8,7 @@ public class androidObbManager : MonoBehaviour {
 
 	void Start () {
 		#if UNITY_ANDROID
-		if(PlayerPrefs.GetInt("extractedObb",0)) ExtractObbDatasets() ;
+		if(PlayerPrefs.GetInt("extractedObb",0)==0) ExtractObbDatasets() ;
 		#endif
 	}
 	private IEnumerator ExtractObbDatasets () {

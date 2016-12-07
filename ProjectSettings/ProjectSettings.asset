@@ -94,14 +94,14 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: org.thebuildersassociation.oz2016
+  bundleIdentifier: org.thebuildersassociation.ozBeta2
   bundleVersion: 2016.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   xboxOneDisableKinectGpuReservation: 0
   singlePassStereoRendering: 0
   protectGraphicsMemory: 0
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 2
   aotOptions: 
