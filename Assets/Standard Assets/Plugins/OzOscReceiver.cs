@@ -64,7 +64,7 @@ public class OzOscReceiver : MonoBehaviour {
 	private bool flagAudioStop = false;
 
 	private bool flagVibrate = false;
-
+	private bool flagTwoRainbows= false;
 
 
 	private float currentTime;
@@ -150,7 +150,10 @@ public class OzOscReceiver : MonoBehaviour {
 			nv.RPC("vibrate", RPCMode.All);
 			flagVibrate = false;
 		}
-		
+		if (flagTwoRainbows){
+			nv.RPC("playTwoRainbows", RPCMode.All);
+			flagTwoRainbows = false;
+		}
 		currentTime = Time.time;
 	}
 	
@@ -298,6 +301,11 @@ public class OzOscReceiver : MonoBehaviour {
 			case "/vibrate":
 				flagVibrate = true;
 				break; 
+
+			case "/twoRainbows":
+				flagTwoRainbows = true;
+				break; 
+
 			//add playmovie RPC
 			default:
 				Debug.Log("unhandled osc: " + msgString );

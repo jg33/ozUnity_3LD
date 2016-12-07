@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67decd01da9e4df5a9e75cc2f41fa50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectionIP: 192.168.1.2
+  connectionIP: 127.0.0.1
   portNumber: 16261
   timeout: 300
   cueComponent: {fileID: 1120223039}
@@ -1004,6 +1004,7 @@ GameObject:
   - 95: {fileID: 1402077559}
   - 114: {fileID: 1402077557}
   - 114: {fileID: 1402077570}
+  - 114: {fileID: 1402077558}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1065,6 +1066,25 @@ MonoBehaviour:
   autoHideWhenDone: 1
   autoLoadLevelWhenDone: 0
   LevelToLoad: 
+--- !u!114 &1402077558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402077555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bd9298e9fa6cc45965867bc9e57cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  brightness: 0
+  contrast: 0
+  saturation: 1
+  gamma: 1
+  threshold: 0.26
+  maxOffset: 0.77
+  thresholdYUV: 1
 --- !u!95 &1402077559
 Animator:
   serializedVersion: 3
