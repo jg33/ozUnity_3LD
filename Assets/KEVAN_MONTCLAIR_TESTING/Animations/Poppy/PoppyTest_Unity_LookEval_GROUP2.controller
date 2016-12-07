@@ -43,9 +43,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .100000001
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: .899999976
+  m_ExitTime: 0.9
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -64,9 +64,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 2.76945305
+  m_TransitionDuration: 2.769453
   m_TransitionOffset: 0
-  m_ExitTime: .89662236
+  m_ExitTime: 0.89662236
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -90,7 +90,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 5
   m_TransitionOffset: 0
-  m_ExitTime: 99.0905457
+  m_ExitTime: 99.090546
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -109,9 +109,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 2.00152397
+  m_TransitionDuration: 2.001524
   m_TransitionOffset: 0
-  m_ExitTime: .704241514
+  m_ExitTime: 0.7042415
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -130,9 +130,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 2.76945305
+  m_TransitionDuration: 2.769453
   m_TransitionOffset: 0
-  m_ExitTime: .89662236
+  m_ExitTime: 0.89662236
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -154,9 +154,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .0333333239
+  m_TransitionDuration: 0.033333324
   m_TransitionOffset: 0
-  m_ExitTime: .966666698
+  m_ExitTime: 0.9666667
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -303,7 +303,7 @@ AnimatorStateMachine:
     m_Position: {x: 288, y: 384, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110260026}
-    m_Position: {x: 288, y: 312, z: 0}
+    m_Position: {x: 288, y: 300, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110116814}

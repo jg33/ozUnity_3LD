@@ -197,8 +197,16 @@ function Update () {
 							cueComponent.playMovie("FireBall");
 							Debug.Log("FireBall!");	
 						break;
-						
-						
+
+						case 17:
+							//Animate Camera -> Glitch
+							GameObject.Find("Camera").GetComponent.<Animator>().SetBool("isGlitch", true);
+						break;
+
+						case 18:
+							//Animate Camera -> Glitch OFF CALLED WITH "THE END"
+							GameObject.Find("Camera").GetComponent.<Animator>().SetBool("isGlitch", false);
+						break;
 						
 						default: 
 						break;

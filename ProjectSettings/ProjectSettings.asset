@@ -94,8 +94,8 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: org.thebuildersassociation.oz2016
-  bundleVersion: 2016.1
+  bundleIdentifier: org.thebuildersassociation.ozBeta2
+  bundleVersion: 2016.2
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   xboxOneDisableKinectGpuReservation: 0
@@ -109,7 +109,7 @@ PlayerSettings:
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
-  iPhoneBuildNumber: 0
+  iPhoneBuildNumber: 6.1
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
