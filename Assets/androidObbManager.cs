@@ -6,11 +6,32 @@ using System.Collections.Generic;
 
 public class androidObbManager : MonoBehaviour {
 
+	public GameObject arCam;
+	private bool loadedDataSet = false;
+
 	void Start () {
+		//PlayerPrefs.DeleteAll (); //only for testing
+		//PlayerPrefs.Save ();
+		PlayerPrefs.SetInt("readyToEnter",0);
+		PlayerPrefs.Save();
+		Debug.Log ("OBB MANGER");
 		#if UNITY_ANDROID
-		if(PlayerPrefs.GetInt("extractedObb",0)==0) ExtractObbDatasets() ;
+		//if(PlayerPrefs.GetInt("extractedObb",0)==0) ;
+		StartCoroutine(ExtractObbDatasets()) ;
 		#endif
 	}
+
+	void Update(){
+
+		if (PlayerPrefs.GetInt ("readyToEnter", 0) == 1 && !loadedDataSet && arCam.activeSelf) {
+			//Tell QCAR to re-search for files; it searches before the files are loaded.
+			arCam.GetComponent<DatabaseLoadBehaviour> ().AddOSSpecificExternalDatasetSearchDirs ();
+			Debug.Log ("Loading Data Set when ready");
+			loadedDataSet = true;
+		}
+
+	}
+
 	private IEnumerator ExtractObbDatasets () {
 		//Persistent Datapath grabs the file from within the OBB file.
 		//the path will look something like:
@@ -34,8 +55,9 @@ public class androidObbManager : MonoBehaviour {
 		filesInOBB.Add ( Application.streamingAssetsPath + "/Video/rainbow_06.mp4" );
 		filesInOBB.Add ( Application.streamingAssetsPath + "/Video/rainbow_07.mp4" );
 
+		Debug.Log ("AssetPath: " + Application.streamingAssetsPath);
 		foreach (string filename in filesInOBB) {
-
+			Debug.Log ("attempting: " + filename);
 			//Debug.LogError("Attempting to load: " + filename + " " + Path.GetFileName(filename));
 			if (!filename.EndsWith(".meta")) {
 
@@ -54,10 +76,13 @@ public class androidObbManager : MonoBehaviour {
 				}
 			}
 		}
-		//Tell QCAR to re-search for files; it searches before the files are loaded.
-		GameObject.Find ("ARCamera").GetComponent<DatabaseLoadBehaviour> ().AddOSSpecificExternalDatasetSearchDirs ();
+
 		PlayerPrefs.SetInt("extractedObb",1);
+		Debug.Log ("Extracted Obb");
 		PlayerPrefs.Save();
+		//Application.Quit ();
+		// ReloadDataSet();
+
 	}
 	private void Save(WWW www, string outputPath) {
 		Debug.LogError( "Writing File: " + www.url + " to: " + outputPath);
@@ -69,4 +94,21 @@ public class androidObbManager : MonoBehaviour {
 		else
 			Debug.LogError("Failure!! - File does not exist at: " + outputPath);
 	}
+
+
+	private void ReloadDataSet(){
+		ObjectTracker objTracker = TrackerManager.Instance.GetTracker<ObjectTracker> ();
+		DataSet dataset = objTracker.CreateDataSet();
+		dataset.Load ("ozUnity_3LD");
+		objTracker.Stop();
+		objTracker.ActivateDataSet (dataset);
+		objTracker.Start ();
+
+
+
+
+	}
+
+
+
 }

@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &228227263
 Transform:
   m_ObjectHideFlags: 0
@@ -881,6 +881,7 @@ GameObject:
   - 114: {fileID: 1120223037}
   - 114: {fileID: 1120223036}
   - 114: {fileID: 1120223041}
+  - 114: {fileID: 1120223042}
   m_Layer: 0
   m_Name: Network
   m_TagString: Untagged
@@ -981,6 +982,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42708e0b57c448a9986b955908c4672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arCam: {fileID: 1551253724}
+--- !u!114 &1120223042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120223035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809b6c15eaf98494cb97251eec0823d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camContainer: {fileID: 228227262}
+  arCam: {fileID: 1551253724}
 --- !u!20 &1390718757 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2000000, guid: bf30d577eead1ef40bcf2b404289daf4,
@@ -1291,6 +1306,93 @@ MonoBehaviour:
   blowoutTex: {fileID: 2800000, guid: c13e1ee6f0bd1db44a31ce99326a8b79, type: 3}
   levelsTex: {fileID: 2800000, guid: e2b8832796fea61469e8fe90e9ae4465, type: 3}
   obturation: 1
+--- !u!1 &1446823075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1446823080}
+  - 20: {fileID: 1446823079}
+  - 124: {fileID: 1446823078}
+  - 92: {fileID: 1446823077}
+  - 81: {fileID: 1446823076}
+  m_Layer: 0
+  m_Name: EntryCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1446823076
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446823075}
+  m_Enabled: 1
+--- !u!92 &1446823077
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446823075}
+  m_Enabled: 1
+--- !u!124 &1446823078
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446823075}
+  m_Enabled: 1
+--- !u!20 &1446823079
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446823075}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1446823080
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446823075}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1551253724 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
@@ -1306,6 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1da45fbdc69415a9b625e1e4ca6ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggeredAutoFocus: 0
 --- !u!1 &1561470375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_Enabled

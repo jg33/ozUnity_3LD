@@ -57,7 +57,13 @@ function Start () {
 }
 
 function Update () {
+	// Gotta make sure the obb loads!
+	#if UNITY_ANDROID
+	if (connected && PlayerPrefs.GetInt("readyToEnter",0)==1){
+
+	#elif UNITY_IOS
 	if (connected){	
+	#endif
 		
 		forcePassive = cueComponent.forcePassive;
 				
@@ -271,7 +277,14 @@ function Update () {
 	} else{ //not connected
 	
 		if(Application.loadedLevel ==0){
+			#if UNITY_ANDROID
+			if(PlayerPrefs.GetInt("readyToEnter",0)==1){
+				Application.LoadLevel(1);
+
+			}
+			#elif UNITY_IOS
 			Application.LoadLevel(1);
+			#endif
 		
 		} else if (Application.loadedLevel == 2 ){ //if in active mode and disconnected, try to connect!
 			
