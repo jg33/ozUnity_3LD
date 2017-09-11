@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,19 +24,18 @@ namespace VintageImageEffects
   public sealed class VintageNashville : ImageEffectBase
   {
     /// <summary>
-    /// Default 'Resources/nashvilleMap'.
+    /// Effect description.
     /// </summary>
-    public Texture2D levelsTex;
+    public override string Description { get { return @"Nashville gives your game a warm retro fell and adds a soft purple-pink hue."; } }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageNashville"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private Texture2D levelsTex;
+
+    private const string variableLevelsTex = @"_LevelsTex";
 
     /// <summary>
     /// Creates the material and textures.
@@ -46,9 +52,7 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderLevelsTex, levelsTex);
-
-      base.SendValuesToShader();
+      this.Material.SetTexture(variableLevelsTex, levelsTex);
     }
   }
 }

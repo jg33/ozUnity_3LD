@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,29 +24,35 @@ namespace VintageImageEffects
   public sealed class VintageSutro : ImageEffectBase
   {
     /// <summary>
-    // Levels. Default 'Resources/sutroEdgeBurn'.
+    /// Effect description.
     /// </summary>
-    public Texture2D edgeBurnTex;
+    public override string Description { get { return @"Sutro gives you Sepia-like tones, with an emphasis on purple and brown."; } }
 
     /// <summary>
-    // Levels. Default 'Resources/sutroCurves'.
+    /// Obturation of the vignette [0.0 - 2.0].
     /// </summary>
-    public Texture2D curvesTex;
-
-    /// <summary>
-    /// Obturation of the vignette (0 none, 2 semi closed).
-    /// </summary>
-    public float obturation = 1.0f;
+    public float Obturation
+    {
+      get { return obturation; }
+      set { obturation = Mathf.Clamp(value, 0.0f, 2.0f); }
+    }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageSutro"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private Texture2D edgeBurnTex;
+    private Texture2D curvesTex;
+
+    [SerializeField]
+    private float obturation = 1.0f;
+
+    private const string keywordObturation = @"OBTURATION";
+
+    private const string variableEdgeBurnTex = @"_EdgeBurnTex";
+    private const string variableCurvesTex = @"_CurvesTex";
+    private const string variableObturation = @"_Obturation";
 
     /// <summary>
     /// Creates the material and textures.
@@ -67,11 +80,17 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderEdgeBurnTex, edgeBurnTex);
-      this.Material.SetTexture(VintageHelper.ShaderCurvesTex, curvesTex);
-      this.Material.SetFloat(VintageHelper.ShaderObturation, obturation);
+      this.Material.SetTexture(variableEdgeBurnTex, edgeBurnTex);
+      this.Material.SetTexture(variableCurvesTex, curvesTex);
 
-      base.SendValuesToShader();
+      if (obturation > 0.0f)
+      {
+        this.Material.EnableKeyword(keywordObturation);
+
+        this.Material.SetFloat(variableObturation, obturation);
+      }
+      else
+        this.Material.DisableKeyword(keywordObturation);
     }
   }
 }

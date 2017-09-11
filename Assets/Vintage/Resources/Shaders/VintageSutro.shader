@@ -1,7 +1,15 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// \brief   Vintage - Sutro.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) Ibuprogames. All rights reserved.
+// Vintage - Image Effects.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // http://unity3d.com/support/documentation/Components/SL-Shader.html
@@ -12,15 +20,6 @@ Shader "Hidden/Vintage/Sutro"
   {
     _MainTex("Base (RGB)", 2D) = "white" {}
     
-    // Default 'Resources/sutroEdgeBurn.png'.
-    _EdgeBurnTex("Edge burn (RGB)", 2D) = "white" {}
-
-    // Default 'Resources/sutroCurves.png'.
-    _CurvesTex("Curves (RGB)", 2D) = "white" {}
-
-    // Obturation of the vignette (0 none, 2 semi closed).
-    _Obturation("Obturation", Range(0.0, 2.0)) = 1.25
-
     // Amount of the effect (0 none, 1 full).
     _Amount("Amount", Range(0.0, 1.0)) = 1.0
   }
@@ -29,57 +28,48 @@ Shader "Hidden/Vintage/Sutro"
   #include "UnityCG.cginc"
   #include "Vintage.cginc"
 
-  /////////////////////////////////////////////////////////////
-  // BEGIN CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
-  // Define this to change the strength of the effect.
-  #define USE_AMOUNT
-
-  // Vignette effect.
-  #define USE_VIGNETTE
-
-  // Edge burn effect.
-  #define USE_EDGEBURN
-
-  /////////////////////////////////////////////////////////////
-  // END CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
   sampler2D _MainTex;
   sampler2D _EdgeBurnTex;
   sampler2D _CurvesTex;
 
   float _Obturation = 1.0f;
-  
   float _Amount = 1.0f;
   
   float4 frag_gamma(v2f_img i) : COLOR
   {
     float3 pixel = tex2D(_MainTex, i.uv).rgb;
-
     float3 final = pixel;
+
+#ifdef EFFECT_ENABLED
 
     float3 rgbPrime = float3(0.1019f, 0.0f, 0.0f);
     float m = dot(float3(0.3f, 0.59f, 0.11f), final.rgb) - 0.03058f;
     final = lerp(final, rgbPrime + m, 0.32f);
     
-#ifdef USE_EDGEBURN
     final *= tex2D(_EdgeBurnTex, i.uv).rgb;
-#endif
 
     final = PixelLevels(_CurvesTex, final);
 
-#ifdef USE_VIGNETTE
+#ifdef OBTURATION
     final = Vignette(final, i.uv, _Obturation);
 #endif
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(final, 1.0f);
@@ -88,29 +78,38 @@ Shader "Hidden/Vintage/Sutro"
   float4 frag_linear(v2f_img i) : COLOR
   {
     float3 pixel = sRGB(tex2D(_MainTex, i.uv).rgb);
-
     float3 final = pixel;
+
+#ifdef EFFECT_ENABLED
 
     float3 rgbPrime = float3(0.1019f, 0.0f, 0.0f);
     float m = dot(float3(0.3f, 0.59f, 0.11f), final.rgb) - 0.03058f;
     final = lerp(final, rgbPrime + m, 0.32f);
     
-#ifdef USE_EDGEBURN
     final = lerp(sRGB(tex2D(_EdgeBurnTex, i.uv).rgb), final, 0.5f);
-#endif
 
     final = PixelLevels(_CurvesTex, final);
 
-#ifdef USE_VIGNETTE
+#ifdef OBTURATION
     final = Vignette(final, i.uv, _Obturation);
 #endif
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(Linear(final), 1.0f);
@@ -131,7 +130,11 @@ Shader "Hidden/Vintage/Sutro"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
-      #pragma target 2.0
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
+      #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_gamma
       ENDCG
@@ -142,6 +145,10 @@ Shader "Hidden/Vintage/Sutro"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
       #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_linear

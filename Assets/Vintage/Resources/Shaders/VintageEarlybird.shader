@@ -1,7 +1,15 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// \brief   Vintage - Earlybird.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) Ibuprogames. All rights reserved.
+// Vintage - Image Effects.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // http://unity3d.com/support/documentation/Components/SL-Shader.html
@@ -12,21 +20,6 @@ Shader "Hidden/Vintage/Earlybird"
   {
     _MainTex("Base (RGB)", 2D) = "white" {}
 
-    // Default 'Resources/Textures/earlyBirdCurves.png'.
-    _CurvesTex("Curves (RGB)", 2D) = "white" {}
-
-    // Default 'Resources/Textures/earlybirdOverlayMap.png'.
-    _OverlayTex("Overlay (RGB)", 2D) = "white" {}
-
-    // Default 'Resources/Textures/earlybirdBlowout.png'.
-    _BlowoutTex("Blowout (RGB)", 2D) = "white" {}
-
-    // Default 'Resources/Textures/earlybirdMap.png'.
-    _LevelsTex("Levels (RGB)", 2D) = "white" {}
-
-    // Obturation of the vignette (0 none, 2 semi closed).
-    _Obturation("Obturation", Range(0.0, 2.0)) = 1.0
-
     // Amount of the effect (0 none, 1 full).
     _Amount("Amount", Range(0.0, 1.0)) = 1.0
   }
@@ -35,26 +28,6 @@ Shader "Hidden/Vintage/Earlybird"
   #include "UnityCG.cginc"
   #include "Vintage.cginc"
 
-  /////////////////////////////////////////////////////////////
-  // BEGIN CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
-  // Define this to change the strength of the effect.
-  #define USE_AMOUNT
-
-  // Overlay effect.
-  #define USE_OVERLAY
-
-  // Blowout effect.
-  #define USE_BLOWOUT
-
-  // Levels effect.
-  #define USE_LEVELS
-
-  /////////////////////////////////////////////////////////////
-  // END CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
   sampler2D _MainTex;
   sampler2D _CurvesTex;
   sampler2D _OverlayTex;
@@ -62,30 +35,29 @@ Shader "Hidden/Vintage/Earlybird"
   sampler2D _LevelsTex;
 
   float _Obturation = 1.0f;
-  
   float _Amount = 1.0f;
 
   float4 frag_gamma(v2f_img i) : COLOR
   {
     float3 pixel = tex2D(_MainTex, i.uv).rgb;
+    float3 final = pixel;
 
-    float3 final;
+#ifdef EFFECT_ENABLED
 
     // Curves.
     float2 lookup;
     lookup.y = 0.5f;
-    lookup.x = pixel.g;
+    lookup.x = pixel.r;
     final.r = tex2D(_CurvesTex, lookup).r;
     lookup.x = pixel.g;
     final.g = tex2D(_CurvesTex, lookup).g;
-    lookup.x = pixel.g;
+    lookup.x = pixel.b;
     final.b = tex2D(_CurvesTex, lookup).b;
 
     // Desaturation.
     float desaturatedColor = Desaturate(final);
 
-#ifdef USE_OVERLAY
-	// Overlay.
+	  // Overlay.
     float3 result;
     lookup.x = desaturatedColor;
     result.r = tex2D(_OverlayTex, lookup).r;
@@ -95,17 +67,18 @@ Shader "Hidden/Vintage/Earlybird"
     result.b = tex2D(_OverlayTex, lookup).b;
 
     final = lerp(final, result, 0.5f);
-#endif
 
+    float value = 0.0;
+#ifdef OBTURATION
     float2 tc = (_Obturation * i.uv) - (_Obturation * 0.5f);
     float vignette = 1.0f - dot(tc, tc);
     final *= vignette * vignette * vignette;
 
     float d = dot(tc, tc) * 0.5f;
-    float value = smoothstep(0.0f, 1.25f, pow(d, 1.35f) / 1.65f);
+    value = smoothstep(0.0f, 1.25f, pow(d, 1.35f) / 1.65f);
+#endif
 
-#ifdef USE_BLOWOUT
-	// Blowout.
+    // Blowout.
     float3 sampled;
     lookup.x = final.r;
     sampled.r = tex2D(_BlowoutTex, lookup).r;
@@ -115,24 +88,31 @@ Shader "Hidden/Vintage/Earlybird"
     sampled.b = tex2D(_BlowoutTex, lookup).b;
 
     final = lerp(sampled, final, value);
-#endif
 
-#ifdef USE_LEVELS
-	// Levels.
+    // Levels.
     lookup.x = final.r;
     final.r = tex2D(_LevelsTex, lookup).r;
     lookup.x = final.g;
     final.g = tex2D(_LevelsTex, lookup).g;
     lookup.x = final.b;
     final.b = tex2D(_LevelsTex, lookup).b;
+
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
 #endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(final, 1.0f);
@@ -141,8 +121,9 @@ Shader "Hidden/Vintage/Earlybird"
   float4 frag_linear(v2f_img i) : COLOR
   {
     float3 pixel = sRGB(tex2D(_MainTex, i.uv).rgb);
+    float3 final = pixel;
 
-    float3 final;
+#ifdef EFFECT_ENABLED
 
     // Curves.
     float2 lookup;
@@ -157,8 +138,7 @@ Shader "Hidden/Vintage/Earlybird"
     // Desaturation.
     float desaturatedColor = Desaturate(final);
 
-#ifdef USE_OVERLAY
-	// Overlay.
+	  // Overlay.
     float3 result;
     lookup.x = desaturatedColor;
     result.r = sRGB(tex2D(_OverlayTex, lookup).rgb).r;
@@ -168,17 +148,18 @@ Shader "Hidden/Vintage/Earlybird"
     result.b = sRGB(tex2D(_OverlayTex, lookup).rgb).b;
 
     final = lerp(final, result, 0.5f);
-#endif
 
+    float value = 0.0;
+#ifdef OBTURATION
     float2 tc = (_Obturation * i.uv) - (_Obturation * 0.5f);
     float vignette = 1.0f - dot(tc, tc);
     final *= vignette * vignette * vignette;
 
     float d = dot(tc, tc) * 0.5f;
-    float value = smoothstep(0.0f, 1.25f, pow(d, 1.35f) / 1.65f);
+    value = smoothstep(0.0f, 1.25f, pow(d, 1.35f) / 1.65f);
+#endif
 
-#ifdef USE_BLOWOUT
-	// Blowout.
+	  // Blowout.
     float3 sampled;
     lookup.x = final.r;
     sampled.r = sRGB(tex2D(_BlowoutTex, lookup).rgb).r;
@@ -187,25 +168,32 @@ Shader "Hidden/Vintage/Earlybird"
     lookup.x = final.b;
     sampled.b = sRGB(tex2D(_BlowoutTex, lookup).rgb).b;
     
-	final = lerp(sampled, final, value);
-#endif
+    final = lerp(sampled, final, value);
 
-#ifdef USE_LEVELS
-	// Levels.
+    // Levels.
     lookup.x = final.r;
     final.r = sRGB(tex2D(_LevelsTex, lookup).rgb).r;
     lookup.x = final.g;
     final.g = sRGB(tex2D(_LevelsTex, lookup).rgb).g;
     lookup.x = final.b;
     final.b = sRGB(tex2D(_LevelsTex, lookup).rgb).b;
+
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
 #endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(Linear(final), 1.0f);
@@ -226,6 +214,10 @@ Shader "Hidden/Vintage/Earlybird"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
       #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_gamma
@@ -237,6 +229,10 @@ Shader "Hidden/Vintage/Earlybird"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
       #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_linear

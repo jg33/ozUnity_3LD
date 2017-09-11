@@ -1,12 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Uncomment to show maps in the Editor.
-//#define _SHOW_MAPS
-
-using UnityEngine;
 using UnityEditor;
 
 namespace VintageImageEffects
@@ -17,30 +21,14 @@ namespace VintageImageEffects
   [CustomEditor(typeof(VintageSutro))]
   public class VintageSutroEditor : ImageEffectBaseEditor
   {
-    private VintageSutro thisTarget;
-
-    private void OnEnable()
-    {
-      thisTarget = (VintageSutro)target;
-
-      this.Help = "Sutro gives you Sepia-like tones, with an emphasis on purple and brown.";
-    }
-
     /// <summary>
     /// Inspector.
     /// </summary>
     protected override void Inspector()
     {
-#if _SHOW_MAPS
-    thisTarget.edgeBurnTex = EditorGUILayout.ObjectField("Edge burn", thisTarget.edgeBurnTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.curvesTex = EditorGUILayout.ObjectField("Curves", thisTarget.curvesTex, typeof(Texture2D), false) as Texture2D;
-#endif
-      thisTarget.obturation = VintageEditorHelper.IntSliderWithReset("Obturation", VintageEditorHelper.TooltipObturation, (int)(thisTarget.obturation * 50.0f), 0, 100, 50) * 0.02f;
+      VintageSutro thisTarget = (VintageSutro)target;
 
-      // Cheking errors.
-      if (thisTarget.edgeBurnTex == null ||
-          thisTarget.curvesTex == null)
-        this.Errors += VintageEditorHelper.ErrorTextureMissing;
+      thisTarget.Obturation = VintageEditorHelper.SliderWithReset("Obturation", "Obturation of the vignette.\nFrom 0 (no obturation) to 2 (semi closed).", thisTarget.Obturation, 0.0f, 2.0f, 1.0f);
     }
   }
 }

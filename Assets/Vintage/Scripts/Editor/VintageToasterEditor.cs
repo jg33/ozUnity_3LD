@@ -1,12 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Uncomment to show maps in the Editor (not recommended).
-//#define _SHOW_MAPS
-
-using UnityEngine;
 using UnityEditor;
 
 namespace VintageImageEffects
@@ -17,35 +21,9 @@ namespace VintageImageEffects
   [CustomEditor(typeof(VintageToaster))]
   public class VintageToasterEditor : ImageEffectBaseEditor
   {
-    private VintageToaster thisTarget;
-
-    private void OnEnable()
-    {
-      thisTarget = (VintageToaster)target;
-
-      this.Help = "Gives your game a burnt, aged look. It also also adds a slight texture plus vignetting.";
-    }
-
     /// <summary>
     /// Inspector.
     /// </summary>
-    protected override void Inspector()
-    {
-#if _SHOW_MAPS
-    thisTarget.metalTex = EditorGUILayout.ObjectField("Metal", thisTarget.metalTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.softLightTex = EditorGUILayout.ObjectField("Soft light", thisTarget.softLightTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.curvesTex = EditorGUILayout.ObjectField("Curves", thisTarget.curvesTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.overlayWarmTex = EditorGUILayout.ObjectField("Overlay warm", thisTarget.overlayWarmTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.colorShiftTex = EditorGUILayout.ObjectField("Color shift", thisTarget.colorShiftTex, typeof(Texture2D), false) as Texture2D;
-#endif
-
-      // Cheking errors.
-      if (thisTarget.metalTex == null ||
-          thisTarget.softLightTex == null ||
-          thisTarget.curvesTex == null ||
-          thisTarget.overlayWarmTex == null ||
-          thisTarget.colorShiftTex == null)
-        this.Errors += VintageEditorHelper.ErrorTextureMissing;
-    }
+    protected override void Inspector() { }
   }
 }

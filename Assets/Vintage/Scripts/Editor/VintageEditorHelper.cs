@@ -1,6 +1,15 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 using UnityEngine;
 using UnityEditor;
@@ -39,6 +48,56 @@ namespace VintageImageEffects
     /// Misc.
     /// </summary>
     public static readonly string DocumentationURL = @"http://www.ibuprogames.com/2015/05/04/vintage-image-efffects/";
+
+    private class HeaderStyle
+    {
+      public GUIStyle header = @"ShurikenModuleTitle";
+      public GUIStyle headerCheckbox = @"ShurikenCheckMark";
+
+      internal HeaderStyle()
+      {
+        header.font = (new GUIStyle("Label")).font;
+        header.border = new RectOffset(15, 7, 4, 4);
+        header.fixedHeight = 22;
+        header.contentOffset = new Vector2(20f, -2f);
+      }
+    }
+
+    private static HeaderStyle headerStyle;
+
+    static VintageEditorHelper()
+    {
+      headerStyle = new HeaderStyle();
+    }
+
+    public static bool Header(ref bool display, bool enabled, string title)
+    {
+      Rect rect = GUILayoutUtility.GetRect(16.0f, 22.0f, headerStyle.header);
+      GUI.Box(rect, title, headerStyle.header);
+
+      Rect toggleRect = new Rect(rect.x + 4.0f, rect.y + 4.0f, 13.0f, 13.0f);
+      if (Event.current.type == EventType.Repaint)
+        headerStyle.headerCheckbox.Draw(toggleRect, false, false, enabled, false);
+
+      Event e = Event.current;
+      if (e.type == EventType.MouseDown)
+      {
+        if (toggleRect.Contains(e.mousePosition))
+        {
+          enabled = !enabled;
+          e.Use();
+          GUI.changed = true;
+        }
+        else if (rect.Contains(e.mousePosition))
+        {
+          display = !display;
+          e.Use();
+          GUI.changed = true;
+        }
+      }
+
+      return enabled;
+    }
 
     /// <summary>
     /// A slider with a reset button.

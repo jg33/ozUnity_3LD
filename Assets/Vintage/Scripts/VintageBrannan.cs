@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,39 +24,26 @@ namespace VintageImageEffects
   public sealed class VintageBrannan : ImageEffectBase
   {
     /// <summary>
-    /// Process. Default 'Resources/brannanProcess.png'.
+    /// Effect description.
     /// </summary>
-    public Texture2D processTex;
+    public override string Description { get { return @"This low-key effect brings out the grays and greens in your game."; } }
 
-    /// <summary>
-    /// Blowout. Default 'Resources/brannanBlowout.png'.
-    /// </summary>
-    public Texture2D blowoutTex;
+    private Texture2D processTex;
+    private Texture2D blowoutTex;
+    private Texture2D contrastTex;
+    private Texture2D lumaTex;
+    private Texture2D screenTex;
 
-    /// <summary>
-    /// Contrast. Default 'Resources/brannanContrast.png'.
-    /// </summary>
-    public Texture2D contrastTex;
-
-    /// <summary>
-    /// Luma. Default 'Resources/brannanLuma.png'.
-    /// </summary>
-    public Texture2D lumaTex;
-
-    /// <summary>
-    /// Screen. Default 'Resources/brannanScreen.png'.
-    /// </summary>
-    public Texture2D screenTex;
+    private const string variableProcessTex = @"_ProcessTex";
+    private const string variableBlowoutTex = @"_BlowoutTex";
+    private const string variableContrastTex = @"_ContrastTex";
+    private const string variableLumaTex = @"_LumaTex";
+    private const string variableScreenTex = @"_ScreenTex";
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageBrannan"; } }
-
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
 
     /// <summary>
     /// Creates the material and textures.
@@ -70,13 +64,11 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderProcessTex, processTex);
-      this.Material.SetTexture(VintageHelper.ShaderBlowoutTex, blowoutTex);
-      this.Material.SetTexture(VintageHelper.ShaderContrastTex, contrastTex);
-      this.Material.SetTexture(VintageHelper.ShaderLumaTex, lumaTex);
-      this.Material.SetTexture(VintageHelper.ShaderScreenTex, screenTex);
-
-      base.SendValuesToShader();
+      this.Material.SetTexture(variableProcessTex, processTex);
+      this.Material.SetTexture(variableBlowoutTex, blowoutTex);
+      this.Material.SetTexture(variableContrastTex, contrastTex);
+      this.Material.SetTexture(variableLumaTex, lumaTex);
+      this.Material.SetTexture(variableScreenTex, screenTex);
     }
   }
 }

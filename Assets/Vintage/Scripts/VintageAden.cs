@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,19 +24,20 @@ namespace VintageImageEffects
   public sealed class VintageAden : ImageEffectBase
   {
     /// <summary>
-    /// Default 'Textures/adenLut.png'.
+    /// Effect description.
     /// </summary>
-    public Texture3D lutTex = null;
+    public override string Description { get { return @"Aden makes games look like pastels."; } }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageAden"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private Texture3D lutTex = null;
+
+    private const string variableScale = @"_Scale";
+    private const string variableOffset = @"_Offset";
+    private const string variableLutTex = @"_LutTex";
 
     /// <summary>
     /// Destroy resources.
@@ -43,11 +51,14 @@ namespace VintageImageEffects
 
     protected override bool CheckHardwareRequirements()
     {
-      if (base.CheckHardwareRequirements() && SystemInfo.supports3DTextures == false)
+      if (base.CheckHardwareRequirements() == true)
       {
-        Debug.LogWarning(string.Format("Hardware not support 3D textures. '{0}' disabled.", this.GetType().ToString()));
+        if (SystemInfo.supports3DTextures == false)
+        {
+          Debug.LogWarning(string.Format("Hardware not support 3D textures. '{0}' disabled.", this.GetType().ToString()));
 
-        return false;
+          return false;
+        }
       }
 
       return true;
@@ -84,12 +95,10 @@ namespace VintageImageEffects
       {
         int lutSize = lutTex.width;
 
-        this.Material.SetFloat(@"_Scale", (lutSize - 1) / (1.0f * lutSize));
-        this.Material.SetFloat(@"_Offset", 1.0f / (2.0f * lutSize));
-        this.Material.SetTexture(@"_LutTex", lutTex as Texture);
+        this.Material.SetFloat(variableScale, (lutSize - 1) / (1.0f * lutSize));
+        this.Material.SetFloat(variableOffset, 1.0f / (2.0f * lutSize));
+        this.Material.SetTexture(variableLutTex, lutTex);
       }
-
-      base.SendValuesToShader();
     }
   }
 }

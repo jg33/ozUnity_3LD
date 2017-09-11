@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,39 +24,39 @@ namespace VintageImageEffects
   public sealed class VintageEarlybird : ImageEffectBase
   {
     /// <summary>
-    /// Default 'Resources/earlyBirdCurves.png'.
+    /// Effect description.
     /// </summary>
-    public Texture2D curvesTex;
+    public override string Description { get { return @"Use Earlybird to get a retro 'Polaroid' feel with soft faded colors and a hint of yellow."; } }
 
     /// <summary>
-    /// Default 'Resources/earlybirdOverlayMap.png'.
+    /// Obturation of the vignette [0.0 - 2.0].
     /// </summary>
-    public Texture2D overlayTex;
-
-    /// <summary>
-    /// Default 'Resources/earlybirdBlowout.png'.
-    /// </summary>
-    public Texture2D blowoutTex;
-
-    /// <summary>
-    /// Default 'Resources/earlybirdMap.png'.
-    /// </summary>
-    public Texture2D levelsTex;
-
-    /// <summary>
-    /// Obturation of the vignette (0 none, 2 semi closed).
-    /// </summary>
-    public float obturation = 1.0f;
+    public float Obturation
+    {
+      get { return obturation; }
+      set { obturation = Mathf.Clamp(value, 0.0f, 2.0f); }
+    }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageEarlybird"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private Texture2D curvesTex;
+    private Texture2D overlayTex;
+    private Texture2D blowoutTex;
+    private Texture2D levelsTex;
+
+    [SerializeField]
+    private float obturation = 1.0f;
+
+    private const string keywordObturation = @"OBTURATION";
+
+    private const string variableBlowoutTex = @"_BlowoutTex";
+    private const string variableOverlayTex = @"_OverlayTex";
+    private const string variableLevelsTex = @"_LevelsTex";
+    private const string variableCurvesTex = @"_CurvesTex";
+    private const string variableObturation = @"_Obturation";
 
     /// <summary>
     /// Creates the material and textures.
@@ -79,13 +86,19 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderCurvesTex, curvesTex);
-      this.Material.SetTexture(VintageHelper.ShaderOverlayTex, overlayTex);
-      this.Material.SetTexture(VintageHelper.ShaderBlowoutTex, blowoutTex);
-      this.Material.SetTexture(VintageHelper.ShaderLevelsTex, levelsTex);
-      this.Material.SetFloat(VintageHelper.ShaderObturation, obturation);
+      this.Material.SetTexture(variableCurvesTex, curvesTex);
+      this.Material.SetTexture(variableOverlayTex, overlayTex);
+      this.Material.SetTexture(variableBlowoutTex, blowoutTex);
+      this.Material.SetTexture(variableLevelsTex, levelsTex);
 
-      base.SendValuesToShader();
+      if (obturation > 0.0f)
+      {
+        this.Material.EnableKeyword(keywordObturation);
+
+        this.Material.SetFloat(variableObturation, obturation);
+      }
+      else
+        this.Material.DisableKeyword(keywordObturation);
     }
   }
 }

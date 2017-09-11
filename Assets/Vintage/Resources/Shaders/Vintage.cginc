@@ -1,23 +1,33 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// \brief   Utils and global config.
+// Vintage - Image Effects.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) Ibuprogames. All rights reserved.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
-// BEGIN CONFIGURATION REGION
-/////////////////////////////////////////////////////////////
-
-// Define this to change the strength of ALL effects.
-#define ENABLE_ALL_AMOUNT
-
-// Do not activate. Only to promotion videos.
+// Do not activate. Only to promotional videos.
 //#define ENABLE_ALL_DEMO
 
-/////////////////////////////////////////////////////////////
-// END CONFIGURATION REGION
-/////////////////////////////////////////////////////////////
+inline float4 Random(float2 uv)
+{
+  float noise = sin(dot(uv + _Time.y, float2(12.9898, 78.233))) * 43758.5453;
 
+  float4 res;
+
+  res.x = frac(noise * 0.573);
+  res.y = frac(noise * 1.085);
+  res.z = frac(noise * 1.226);
+  res.w = frac(noise * 0.782);
+
+  return (res * 2.0) - 1.0;
+}
 
 // Gamma <-> Linear.
 inline float3 sRGB(float3 pixel)
@@ -31,33 +41,44 @@ inline float3 Linear(float3 pixel)
   return (pixel <= float3(0.0404482f, 0.0404482f, 0.0404482f)) ? pixel / 12.9232102f : pow((pixel + 0.055f) * 0.9478672f, 2.4f);
 }
 
-// Strength of the effect.
-inline float3 PixelAmount(float3 pixel, float3 final, float amount)
-{
-#ifdef ENABLE_ALL_AMOUNT
-  return lerp(pixel, final, amount);
-#else
-  return final;
-#endif
-}
-
-// Film grain.
-inline float3 PixelFilm(float3 pixel, float2 uv, float grainStrength, float grainSize, float blinkStrenght)
-{
-  pixel *= (1.0f - blinkStrenght) + blinkStrenght * sin(100.0f * _Time.y);
-
-  float x = (uv.x + 4.0f) * (uv.y + 4.0f) * _Time.y;
-  
-  float3 grain = (fmod((fmod(x, 13.0f) + 1.0f) * (fmod(x, 123.0f) + 1.0f), grainSize) - 0.005f) * grainStrength;
-  grain = 1.0f - grain;
-
-  return pixel * grain;
-}
-
 // Desaturate.
 inline float Desaturate(float3 pixel)
 {
   return dot(float3(0.3f, 0.59f, 0.11f), pixel);
+}
+
+inline float Fade(float t)
+{
+  return t * t * t * ((t * ((t * 6.0) - 15.0)) + 10.0);
+}
+
+// Strength of the effect.
+inline float3 PixelAmount(float3 pixel, float3 final, float amount)
+{
+  return lerp(pixel, final, amount);
+}
+
+// Film.
+inline float3 PixelFilm(float3 pixel, float2 uv, float noiseStrength, float blinkStrenght)
+{
+  float2 pf = frac(uv);
+  
+  float4 n;
+  n.x = dot(Random(Random(uv).x).xy, pf);
+  n.y = dot(Random(Random(uv).x + float2(0, 1)).xy, pf - float2(0, 1));
+  n.z = dot(Random(Random(uv).x + float2(1, 0)).xy, pf - float2(1, 0));
+  n.w = dot(Random(Random(uv).x + 1.0).xy, pf - 1.0);
+  n.xy = lerp(n.xy, n.zw, Fade(pf.x));
+
+  float grain = lerp(n.x, n.y, Fade(pf.y));
+
+  float lum = Desaturate(pixel) * grain;
+
+  pixel += (grain - lum) * noiseStrength;
+  
+  pixel *= (1.0f - blinkStrenght) + blinkStrenght * sin(100.0f * _Time.y);
+
+  return pixel;
 }
 
 // Corrects the brightness, contrast and gamma.
@@ -157,12 +178,25 @@ inline float3 PixelBlowoutOverlayStrength(sampler2D blowout, sampler2D overlay, 
 inline float3 PixelDemo(float3 pixel, float3 final, float2 uv)
 {
   float separator = (sin(_Time.x * 15.0f) * 0.15f) + 0.65f;
+  const float separatorWidth = 0.05f;
 
-  if (abs(uv.x - separator) < 0.002f)
-    final = float4(1.0f, 1.0f, 1.0f, 1.0f);
-  else if (uv.x > separator)
+  if (uv.x > separator)
     final = pixel;
+  else if (abs(uv.x - separator) < separatorWidth)
+    final = lerp(pixel, final, (separator - uv.x) / separatorWidth);
 
   return final;
 }
 #endif
+
+// Color control.
+float _Brightness = 0.0f;
+float _Contrast = 1.0f;
+float _Gamma = 1.0f;
+float _Hue = 0.0f;
+float _Saturation = 0.0f;
+
+// Film.
+float _FilmGrainStrength = 0.0;
+float _FilmBlinkStrenght = 0.0;
+

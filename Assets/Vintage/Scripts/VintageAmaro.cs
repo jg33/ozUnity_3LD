@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,34 +24,37 @@ namespace VintageImageEffects
   public sealed class VintageAmaro : ImageEffectBase
   {
     /// <summary>
-    /// Blowout. Default 'Resources/blackboard1024.png'.
+    /// Effect description.
     /// </summary>
-    public Texture2D blowoutTex;
+    public override string Description { get { return @"This effect adds more light to the centre of the screen and darkens around the edges."; } }
 
     /// <summary>
-    /// Overlay. Default 'Resources/overlayMap.png'.
+    /// Overlay strength [0.0 - 1.0].
     /// </summary>
-    public Texture2D overlayTex;
+    public float Overlay
+    {
+      get { return overlayStrength; }
+      set { overlayStrength = Mathf.Clamp01(value); }
+    }
 
-    /// <summary>
-    /// Default 'Resources/amaroMap.png'.
-    /// </summary>
-    public Texture2D levelsTex;
+    private Texture2D blowoutTex;
+    private Texture2D overlayTex;
+    private Texture2D levelsTex;
 
-    /// <summary>
-    /// Overlay strength (0 none, 1 full).
-    /// </summary>
-    public float overlayStrength = 0.5f;
+    [SerializeField]
+    private float overlayStrength = 0.6f;
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageAmaro"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private const string keywordOverlay = @"OVERLAY";
+
+    private const string variableBlowoutTex = @"_BlowoutTex";
+    private const string variableOverlayTex = @"_OverlayTex";
+    private const string variableLevelsTex = @"_LevelsTex";
+    private const string variableOverlayStrength = @"_OverlayStrength";
 
     /// <summary>
     /// Creates the material and textures.
@@ -63,7 +73,7 @@ namespace VintageImageEffects
     /// </summary>
     public override void ResetDefaultValues()
     {
-      overlayStrength = 0.5f;
+      overlayStrength = 0.6f;
 
       base.ResetDefaultValues();
     }
@@ -73,12 +83,19 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderBlowoutTex, blowoutTex);
-      this.Material.SetTexture(VintageHelper.ShaderOverlayTex, overlayTex);
-      this.Material.SetTexture(VintageHelper.ShaderLevelsTex, levelsTex);
-      this.Material.SetFloat(VintageHelper.ShaderOverlayStrength, overlayStrength);
+      this.Material.SetTexture(variableBlowoutTex, blowoutTex);
+      this.Material.SetTexture(variableLevelsTex, levelsTex);
 
-      base.SendValuesToShader();
+      if (overlayStrength > 0.0f)
+      {
+        this.Material.EnableKeyword(keywordOverlay);
+
+        this.Material.SetTexture(variableOverlayTex, overlayTex);
+
+        this.Material.SetFloat(variableOverlayStrength, overlayStrength);
+      }
+      else
+        this.Material.DisableKeyword(keywordOverlay);
     }
   }
 }

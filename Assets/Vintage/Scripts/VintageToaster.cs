@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,39 +24,26 @@ namespace VintageImageEffects
   public sealed class VintageToaster : ImageEffectBase
   {
     /// <summary>
-    /// Default 'Resources/toasterMetal'.
+    /// Effect description.
     /// </summary>
-    public Texture2D metalTex;
-
-    /// <summary>
-    /// Default 'Resources/toasterSoftLight'.
-    /// </summary>
-    public Texture2D softLightTex;
-
-    /// <summary>
-    /// Default 'Resources/toasterCurves'.
-    /// </summary>
-    public Texture2D curvesTex;
-
-    /// <summary>
-    /// Default 'Resources/toasterOverlayMapWarm'.
-    /// </summary>
-    public Texture2D overlayWarmTex;
-
-    /// <summary>
-    /// Default 'Resources/toasterColorShift'.
-    /// </summary>
-    public Texture2D colorShiftTex;
+    public override string Description { get { return @"Gives your game a burnt, aged look. It also also adds a slight texture plus vignetting."; } }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageToaster"; } }
 
-    /// <summary>
-    /// Is an 'extra' effect?
-    /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    private Texture2D metalTex;
+    private Texture2D softLightTex;
+    private Texture2D curvesTex;
+    private Texture2D overlayWarmTex;
+    private Texture2D colorShiftTex;
+
+    private const string variableMetalTex = @"_MetalTex";
+    private const string variableSoftLightTex = @"_SoftLightTex";
+    private const string variableCurvesTex = @"_CurvesTex";
+    private const string variableOverlayWarmTex = @"_OverlayWarmTex";
+    private const string variableColorShiftTex = @"_ColorShiftTex";
 
     /// <summary>
     /// Creates the material and textures.
@@ -70,13 +64,11 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderMetalTex, metalTex);
-      this.Material.SetTexture(VintageHelper.ShaderSoftLightTex, softLightTex);
-      this.Material.SetTexture(VintageHelper.ShaderCurvesTex, curvesTex);
-      this.Material.SetTexture(VintageHelper.ShaderOverlayWarmTex, overlayWarmTex);
-      this.Material.SetTexture(VintageHelper.ShaderColorShiftTex, colorShiftTex);
-
-      base.SendValuesToShader();
+      this.Material.SetTexture(variableMetalTex, metalTex);
+      this.Material.SetTexture(variableSoftLightTex, softLightTex);
+      this.Material.SetTexture(variableCurvesTex, curvesTex);
+      this.Material.SetTexture(variableOverlayWarmTex, overlayWarmTex);
+      this.Material.SetTexture(variableColorShiftTex, colorShiftTex);
     }
   }
 }

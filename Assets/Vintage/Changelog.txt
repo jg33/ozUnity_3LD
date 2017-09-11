@@ -1,3 +1,18 @@
+Vintage 3.0
+--------------------------
+- New effect: Commodore 64.
+- Complete refactoring (see online documentation).
+- Optimizations.
+
+Vintage 2.4
+--------------------------
+- New effects: EGA, Gameboy and NES.
+- Improvements in the documentation.
+
+Vintage 2.3
+--------------------------
+- New effect: Juno.
+
 Vintage 2.2
 --------------------------
 - New effect: Crema.

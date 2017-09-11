@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-using System;
-
 using UnityEngine;
 
 namespace VintageImageEffects
@@ -17,24 +24,33 @@ namespace VintageImageEffects
   public sealed class VintageWalden : ImageEffectBase
   {
     /// <summary>
-    /// Default 'Resources/waldenMap'.
+    /// Effect description.
     /// </summary>
-    public Texture2D levelsTex;
+    public override string Description { get { return @"Gives your game washed-out, bluish colors and adds a slight corner vignetting."; } }
 
     /// <summary>
-    /// Is an 'extra' effect?
+    /// Obturation of the vignette [0.0 - 2.0].
     /// </summary>
-    public override bool IsExtraEffect { get { return false; } }
+    public float Obturation
+    {
+      get { return obturation; }
+      set { obturation = Mathf.Clamp(value, 0.0f, 2.0f); }
+    }
 
     /// <summary>
     /// Shader path.
     /// </summary>
     protected override string ShaderPath { get { return @"Shaders/VintageWalden"; } }
 
-    /// <summary>
-    /// Obturation of the vignette (0 none, 2 semi closed).
-    /// </summary>
+    [SerializeField]
     public float obturation = 1.0f;
+
+    private Texture2D levelsTex;
+
+    private const string keywordObturation = @"OBTURATION";
+
+    private const string variableLevelsTex = @"_LevelsTex";
+    private const string variableObturation = @"_Obturation";
 
     /// <summary>
     /// Creates the material and textures.
@@ -61,10 +77,16 @@ namespace VintageImageEffects
     /// </summary>
     protected override void SendValuesToShader()
     {
-      this.Material.SetTexture(VintageHelper.ShaderLevelsTex, levelsTex);
-      this.Material.SetFloat(VintageHelper.ShaderObturation, obturation);
+      this.Material.SetTexture(variableLevelsTex, levelsTex);
 
-      base.SendValuesToShader();
+      if (obturation > 0.0f)
+      {
+        this.Material.EnableKeyword(keywordObturation);
+
+        this.Material.SetFloat(variableObturation, obturation);
+      }
+      else
+        this.Material.DisableKeyword(keywordObturation);
     }
   }
 }

@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+import Vuforia;
 public var camContainer: GameObject;
 public var arCam: GameObject;
 
@@ -19,6 +20,7 @@ function Start () {
 		#if UNITY_IOS
 			camContainer.active=true;
 			arCam.active=true;
+			//Vuforia.Instance.VuforiaRuntime.InitVuforia();
 		#endif
 }
 

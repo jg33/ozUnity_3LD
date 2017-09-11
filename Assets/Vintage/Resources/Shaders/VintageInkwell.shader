@@ -1,7 +1,15 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// \brief   Vintage - Inkwell.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) Ibuprogames. All rights reserved.
+// Vintage - Image Effects.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // http://unity3d.com/support/documentation/Components/SL-Shader.html
@@ -12,9 +20,6 @@ Shader "Hidden/Vintage/Inkwell"
   {
     _MainTex("Base (RGB)", 2D) = "white" {}
 
-    // Default 'Resources/Textures/TexturesinkwellMap.png'.
-    _LevelsTex("Levels (RGB)", 2D) = "white" {}
-
     // Amount of the effect (0 none, 1 full).
     _Amount("Amount", Range(0.0, 1.0)) = 1.0
   }
@@ -22,17 +27,6 @@ Shader "Hidden/Vintage/Inkwell"
   CGINCLUDE
   #include "UnityCG.cginc"
   #include "Vintage.cginc"
-
-  /////////////////////////////////////////////////////////////
-  // BEGIN CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
-  // Define this to change the strength of the effect.
-  #define USE_AMOUNT
-
-  /////////////////////////////////////////////////////////////
-  // END CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
 
   sampler2D _MainTex;
   sampler2D _LevelsTex;
@@ -42,17 +36,28 @@ Shader "Hidden/Vintage/Inkwell"
   float4 frag_gamma(v2f_img i) : COLOR
   {
     float3 pixel = tex2D(_MainTex, i.uv).rgb;
+    float3 final = pixel;
 
-    float3 final = Desaturate(pixel).rrr;
+#ifdef EFFECT_ENABLED
+
+    final = Desaturate(pixel).rrr;
 
     final = tex2D(_LevelsTex, float2(final.r, 1.0f - 0.16666f)).r;
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(final, 1.0f);
@@ -61,17 +66,28 @@ Shader "Hidden/Vintage/Inkwell"
   float4 frag_linear(v2f_img i) : COLOR
   {
     float3 pixel = sRGB(tex2D(_MainTex, i.uv).rgb);
+    float3 final = pixel;
 
-    float3 final = Desaturate(pixel).rrr;
+#ifdef EFFECT_ENABLED
+
+    final = Desaturate(pixel).rrr;
 
     final = sRGB(tex2D(_LevelsTex, float2(final.r, 1.0f - 0.16666f)).rgb).r;
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(Linear(final), 1.0f);
@@ -92,7 +108,11 @@ Shader "Hidden/Vintage/Inkwell"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
-      #pragma target 2.0
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
+      #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_gamma
       ENDCG
@@ -103,7 +123,11 @@ Shader "Hidden/Vintage/Inkwell"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
-      #pragma target 2.0
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma multi_compile ___ OBTURATION
+      #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_linear
       ENDCG

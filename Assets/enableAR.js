@@ -3,7 +3,7 @@
 
 public var AREnabled:boolean = true;
 private var ARCam:Vuforia.VuforiaAbstractBehaviour;
-private var webCamBehavior:Vuforia.WebCamAbstractBehaviour;
+private var webCamBehavior:Vuforia.WebCamARController;
 
 private var isDelaying:boolean = false;
 
@@ -15,7 +15,7 @@ function Start () {
 function Update () {
 	if(!ARCam){
 		ARCam = GameObject.Find("ARCamera").GetComponent("VuforiaBehaviour");
-		webCamBehavior = ARCam.gameObject.GetComponent("WebCamBehavior");
+		//webCamBehavior = ARCam.gameObject.GetComponent("WebCamARController");
 	} else {
 	
 		if(AREnabled && !ARCam.enabled && !isDelaying){

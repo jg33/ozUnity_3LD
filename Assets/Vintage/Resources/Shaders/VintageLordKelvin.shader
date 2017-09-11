@@ -1,7 +1,15 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// \brief   Vintage - Lord Kelvin.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) Ibuprogames. All rights reserved.
+// Vintage - Image Effects.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // http://unity3d.com/support/documentation/Components/SL-Shader.html
@@ -11,28 +19,14 @@ Shader "Hidden/Vintage/Lord Kelvin"
   Properties
   {
     _MainTex("Base (RGB)", 2D) = "white" {}
-
-    // Default 'Resources/Textures/TextureskelvinMap.png'.
-    _LevelsTex("Levels (RGB)", 2D) = "white" {}
-
-    // Amount of the effect (0 none, 1 full).
+    
+  // Amount of the effect (0 none, 1 full).
     _Amount("Amount", Range(0.0, 1.0)) = 1.0
   }
 
   CGINCLUDE
   #include "UnityCG.cginc"
   #include "Vintage.cginc"
-
-  /////////////////////////////////////////////////////////////
-  // BEGIN CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
-
-  // Define this to change the strength of the effect.
-  #define USE_AMOUNT
-
-  /////////////////////////////////////////////////////////////
-  // END CONFIGURATION REGION
-  /////////////////////////////////////////////////////////////
 
   sampler2D _MainTex;
   sampler2D _LevelsTex;
@@ -42,8 +36,9 @@ Shader "Hidden/Vintage/Lord Kelvin"
   float4 frag_gamma(v2f_img i) : COLOR
   {
     float3 pixel = tex2D(_MainTex, i.uv).rgb;
+    float3 final = pixel;
 
-	float3 final;
+#ifdef EFFECT_ENABLED
 
     float2 lookup;
     lookup.y = 0.5f;
@@ -57,12 +52,22 @@ Shader "Hidden/Vintage/Lord Kelvin"
     lookup.x = pixel.b;
     final.b = tex2D(_LevelsTex, lookup).b;
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(final, 1.0f);
@@ -71,8 +76,9 @@ Shader "Hidden/Vintage/Lord Kelvin"
   float4 frag_linear(v2f_img i) : COLOR
   {
     float3 pixel = sRGB(tex2D(_MainTex, i.uv).rgb);
+    float3 final = pixel;
 
-	float3 final;
+#ifdef EFFECT_ENABLED
 
     float2 lookup;
     lookup.y = 0.5f;
@@ -86,12 +92,22 @@ Shader "Hidden/Vintage/Lord Kelvin"
     lookup.x = pixel.b;
     final.b = sRGB(tex2D(_LevelsTex, lookup).rgb).b;
 
-#ifdef USE_AMOUNT
-    final = PixelAmount(pixel, final, _Amount);
+#ifdef FILM_ENABLED
+    final = PixelFilm(final, i.uv, _FilmGrainStrength, _FilmBlinkStrenght);
 #endif
+
+#ifdef COLORCONTROL_ENABLED
+    final = PixelBrightnessContrastGamma(final, _Brightness, _Contrast, _Gamma);
+
+    final = PixelHueSaturation(final, _Hue, _Saturation);
+#endif
+
+    final = PixelAmount(pixel, final, _Amount);
 
 #ifdef ENABLE_ALL_DEMO
     final = PixelDemo(pixel, final, i.uv);
+#endif
+
 #endif
 
     return float4(Linear(final), 1.0f);
@@ -112,7 +128,10 @@ Shader "Hidden/Vintage/Lord Kelvin"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
-      #pragma target 2.0
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
+      #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_gamma
       ENDCG
@@ -123,6 +142,9 @@ Shader "Hidden/Vintage/Lord Kelvin"
     {
       CGPROGRAM
       #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma multi_compile ___ EFFECT_ENABLED
+      #pragma multi_compile ___ COLORCONTROL_ENABLED
+      #pragma multi_compile ___ FILM_ENABLED
       #pragma target 3.0
       #pragma vertex vert_img
       #pragma fragment frag_linear

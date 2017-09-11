@@ -1,12 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Uncomment to show maps in the Editor (not recommended).
-//#define _SHOW_MAPS
-
-using UnityEngine;
 using UnityEditor;
 
 namespace VintageImageEffects
@@ -17,32 +21,14 @@ namespace VintageImageEffects
   [CustomEditor(typeof(VintageAmaro))]
   public class VintageAmaroEditor : ImageEffectBaseEditor
   {
-    private VintageAmaro thisTarget;
-
-    private void OnEnable()
-    {
-      thisTarget = (VintageAmaro)target;
-
-      this.Help = @"This effect adds more light to the centre of the screen and darkens around the edges.";
-    }
-
     /// <summary>
     /// Inspector.
     /// </summary>
     protected override void Inspector()
     {
-#if _SHOW_MAPS
-    thisTarget.blowoutTex = EditorGUILayout.ObjectField(@"BlowOut", thisTarget.blowoutTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.overlayTex = EditorGUILayout.ObjectField(@"Overlay", thisTarget.overlayTex, typeof(Texture2D), false) as Texture2D;
-    thisTarget.levelsTex = EditorGUILayout.ObjectField(@"Mapped", thisTarget.levelsTex, typeof(Texture2D), false) as Texture2D;
-#endif
-      thisTarget.overlayStrength = VintageEditorHelper.IntSliderWithReset(@"Overlay", VintageEditorHelper.TooltipOverlay, (int)(thisTarget.overlayStrength * 100.0f), 0, 100, 50) * 0.01f;
+      VintageAmaro thisTarget = (VintageAmaro)target;
 
-      // Cheking errors.
-      if (thisTarget.blowoutTex == null ||
-          thisTarget.overlayTex == null ||
-          thisTarget.levelsTex == null)
-        this.Errors += VintageEditorHelper.ErrorTextureMissing;
+      thisTarget.Overlay = VintageEditorHelper.SliderWithReset(@"Overlay", "The strength with which the texture is applied.\nFrom 0 (no texture) to 100 (full texture).", thisTarget.Overlay, 0.0f, 1.0f, 0.6f);
     }
   }
 }

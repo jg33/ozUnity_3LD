@@ -25,7 +25,8 @@ public class androidObbManager : MonoBehaviour {
 
 		if (PlayerPrefs.GetInt ("readyToEnter", 0) == 1 && !loadedDataSet && arCam.activeSelf) {
 			//Tell QCAR to re-search for files; it searches before the files are loaded.
-			arCam.GetComponent<DatabaseLoadBehaviour> ().AddOSSpecificExternalDatasetSearchDirs ();
+// ---->	arCam.GetComponent<DatabaseLoadARController> ().AddOSSpecificExternalDatasetSearchDirs ();
+			arCam.GetComponent<DatabaseLoadARController> ().AddExternalDatasetSearchDir	("/obb");
 			Debug.Log ("Loading Data Set when ready");
 			loadedDataSet = true;
 		}

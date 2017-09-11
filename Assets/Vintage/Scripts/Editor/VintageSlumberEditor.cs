@@ -1,12 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vintage - Image Effects.
-// Copyright (c) Ibuprogames. All rights reserved.
+//
+// Copyright (c) Ibuprogames <hello@ibuprogames.com>. All rights reserved.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Uncomment to show maps in the Editor (not recommended).
-//#define _SHOW_MAPS
-
-using UnityEngine;
 using UnityEditor;
 
 namespace VintageImageEffects
@@ -17,27 +21,12 @@ namespace VintageImageEffects
   [CustomEditor(typeof(VintageSlumber))]
   public class VintageSlumberEditor : ImageEffectBaseEditor
   {
-    private VintageSlumber thisTarget;
-
-    private void OnEnable()
-    {
-      thisTarget = (VintageSlumber)target;
-
-      this.Help = "Slumber desaturate the game and makes them hazy and dreamy look.\n\nRequires hardware that supports 3D textures.";
-    }
-
     /// <summary>
     /// Inspector.
     /// </summary>
     protected override void Inspector()
     {
-#if _SHOW_MAPS
-      thisTarget.lutTex = EditorGUILayout.ObjectField("Lut", thisTarget.lutTex, typeof(Texture3D), false) as Texture3D;
-#endif
-
-      // Cheking errors.
-      if (thisTarget.lutTex == null)
-        this.Errors += VintageEditorHelper.ErrorTextureMissing;
+      Warnings = @"Requires hardware that supports 3D textures.";
     }
   }
 }
