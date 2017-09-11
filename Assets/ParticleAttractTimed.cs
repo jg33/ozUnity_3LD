@@ -39,7 +39,7 @@ public class ParticleAttractTimed : MonoBehaviour
                  particles in from x[i] towards MagnetPoint over time. Lower the Time.deltaTime / # value to increase how fast the particle attracts*/
 				if ((x[i].position-MagnetPoint.localPosition).magnitude <= 30)
 				{
-					x[i].lifetime = 0;
+					x[i].remainingLifetime = 0;
 				}
 			}
 		}

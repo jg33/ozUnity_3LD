@@ -1,4 +1,6 @@
-﻿Shader "Particle Softrim/Additive For Stretch" 
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Particle Softrim/Additive For Stretch" 
 
 {
 Properties 
@@ -45,7 +47,7 @@ Category {
 			v2f vert (appdata_t v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				fixed3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 				
 				//viewDir.x = -abs(viewDir.x);

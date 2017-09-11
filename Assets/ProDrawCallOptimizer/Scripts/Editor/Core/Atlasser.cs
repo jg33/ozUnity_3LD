@@ -106,7 +106,7 @@
                 bool unsupportedTextureFormat = !Utils.TextureSupported(texturesOfMaterial[i]);
                 textureFormatsUnsupported.Add(unsupportedTextureFormat);
                 if(unsupportedTextureFormat) {
-                    texImporter.textureType = TextureImporterType.Advanced;
+                    texImporter.textureType = TextureImporterType.Default;
 
 //                    if(EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer || EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayerStreamed)
                         //texturePlatforms[i] = "Web";
@@ -192,7 +192,7 @@
             if(foundTextureInProject) {
                 TextureImporter textureImporterFlagNormalMap = AssetImporter.GetAtPath(testTexturePath) as TextureImporter;
                 if(textureImporterFlagNormalMap.normalmap) {//texture is a normal map!, lets mark our atlas as a normal mapped atlas!
-                    atlasTextureImporter.textureType = TextureImporterType.Bump;
+                    atlasTextureImporter.textureType = TextureImporterType.NormalMap;
                     atlasTextureImporter.normalmap = true;
 	                AssetDatabase.ImportAsset(pathOfAtlas);
                 }

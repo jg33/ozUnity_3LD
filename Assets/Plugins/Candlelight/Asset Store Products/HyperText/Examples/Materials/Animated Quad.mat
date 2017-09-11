@@ -93,6 +93,42 @@ Material:
         second: 0.5
       data:
         first:
+          name: _Stencil
+        second: 0
+      data:
+        first:
+          name: _StencilComp
+        second: 8
+      data:
+        first:
+          name: _StencilOp
+        second: 0
+      data:
+        first:
+          name: _StencilReadMask
+        second: 255
+      data:
+        first:
+          name: _StencilWriteMask
+        second: 255
+      data:
+        first:
+          name: _ColorMask
+        second: 15
+      data:
+        first:
+          name: _Speed
+        second: -16
+      data:
+        first:
+          name: _Cells
+        second: 12
+      data:
+        first:
+          name: _UseUIAlphaClip
+        second: 0
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
@@ -127,38 +163,6 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _Stencil
-        second: 0
-      data:
-        first:
-          name: _StencilComp
-        second: 8
-      data:
-        first:
-          name: _StencilOp
-        second: 0
-      data:
-        first:
-          name: _StencilReadMask
-        second: 255
-      data:
-        first:
-          name: _StencilWriteMask
-        second: 255
-      data:
-        first:
-          name: _ColorMask
-        second: 15
-      data:
-        first:
-          name: _Speed
-        second: -16
-      data:
-        first:
-          name: _Cells
-        second: 12
     m_Colors:
       data:
         first:

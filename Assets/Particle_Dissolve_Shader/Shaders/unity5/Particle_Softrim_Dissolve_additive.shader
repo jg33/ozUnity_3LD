@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Unity5/Particle Softrim Dissolve/Additive"
 {
 Properties {
@@ -67,7 +69,7 @@ Category {
 			v2f vert (appdata_t v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				#if SOFTRIM_ON
 				fixed3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 					#if STRETCH_ON

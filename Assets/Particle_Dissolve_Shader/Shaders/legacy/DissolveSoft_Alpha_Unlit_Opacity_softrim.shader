@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Particle Dissolve/Softrim/Opacity/Soft Alpha Blended" 
 {
 Properties {
@@ -44,7 +46,7 @@ Category {
 			v2f vert (appdata_t v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				//o.color = v.color;
 				fixed3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 				
