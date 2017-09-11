@@ -21,7 +21,7 @@ public class InitArInThisScene : MonoBehaviour {
 	}
 
 	IEnumerator delayedEnable(){
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (1);
 		//arCam.GetComponent<Vuforia.VuforiaBehaviour> ().enabled = true;
 
 
