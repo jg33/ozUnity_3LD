@@ -34,7 +34,8 @@ function Update () {
 		//Application.LoadLevel(Application.loadedLevel);
 		if(!arCam.activeSelf){
 			arCam.SetActive(true);
-			arCam.GetComponent(Vuforia.DatabaseLoadAbstractBehaviour).AddOSSpecificExternalDatasetSearchDirs();
+//			arCam.GetComponent(Vuforia.DatabaseLoadARController).AddOSSpecificExternalDatasetSearchDirs();
+			arCam.GetComponent(Vuforia.DatabaseLoadARController).AddExternalDatasetSearchDir("/obb");
 			Debug.Log("activated arCam");
 		} else if(arCam.activeSelf && !camContainer.activeSelf){
 			camContainer.SetActive(true);
