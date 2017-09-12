@@ -177,6 +177,7 @@ namespace Vuforia
 		
 		private void OnTrackingLost() {
 
+			Debug.Log ("Lost This object: " + gameObject.GetComponent<ImageTargetBehaviour> ().ImageTarget.Name);
 			 if (mTrackableBehaviour.TrackableName == "Oz_TopTarget_inverted"){
 				GameObject camCtl = GameObject.Find ("Camera Container");
 				camCtl.SendMessage("lostTarget");
@@ -198,7 +199,7 @@ namespace Vuforia
 				if(gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name == mTrackableBehaviour.TrackableName){
 					gameObject.transform.GetChild(0).gameObject.SetActive(false);
 //					gameObject.transform.GetChild(1).gameObject.SetActive(false);
-					Debug.Log ("BORT " + gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name+ " "  );
+					Debug.Log ("Lost " + gameObject.GetComponent<ImageTargetBehaviour>().ImageTarget.Name+ " "  );
 
 				}
 

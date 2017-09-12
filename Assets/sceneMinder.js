@@ -11,7 +11,7 @@ private var sepiaOn: boolean = true;
 
 
 function Start () {
-	var ArEnabler:Behaviour = GameObject.Find("ARCamera").GetComponent("QCARBehaviour");
+	var ArEnabler:Behaviour = GameObject.Find("ARCamera").GetComponent("VuforiaBehaviour");
 	ArEnabler.enabled= true;
 
 }

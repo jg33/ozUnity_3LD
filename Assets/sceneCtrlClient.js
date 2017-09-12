@@ -104,7 +104,7 @@ function Update () {
 		if (cueComponent.cueNumber != currentCue && Application.loadedLevel == 2){
 			transitionSpeed = cueComponent.transitionSpeed;
 			setActiveScene(cueComponent.cueNumber.ToString());
-			GameObject.Find("RealImageTarget").SendMessage("updateTargetPos");
+			//GameObject.Find("RealImageTarget").SendMessage("updateTargetPos");
 
 
 		} else if (cueComponent.cueNumber == 1 && Application.loadedLevel == 2 && !GameObject.Find("Scene1")){
