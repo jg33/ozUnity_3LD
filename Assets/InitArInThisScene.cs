@@ -8,6 +8,7 @@ public class InitArInThisScene : MonoBehaviour {
 
 
 	public GameObject arCam;
+	public GameObject camCon;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,10 @@ public class InitArInThisScene : MonoBehaviour {
 	void Update () {
 		if (!arCam) {
 			arCam = GameObject.Find ("ARCamera");
+			arCam.GetComponent<VuforiaBehaviour> ().enabled = true;
 
+			camCon = GameObject.Find ("Camera Container");
+			camCon.SendMessage ("setTightTracking",false);
 //			if (Vuforia.VuforiaRuntime.Instance.HasInitialized) {
 //
 //
