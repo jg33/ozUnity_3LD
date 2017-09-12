@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Vuforia;
+
 public class InitArInThisScene : MonoBehaviour {
 
 
@@ -15,7 +17,17 @@ public class InitArInThisScene : MonoBehaviour {
 	void Update () {
 		if (!arCam) {
 			arCam = GameObject.Find ("ARCamera");
-			if(arCam) StartCoroutine (delayedEnable ());
+
+//			if (Vuforia.VuforiaRuntime.Instance.HasInitialized) {
+//
+//
+//				// this breaks things....
+////				Vuforia.VuforiaRuntime.Instance.Deinit();
+////				Vuforia.VuforiaRuntime.Instance.InitVuforia();
+//				//Debug.Log ("RESET VUFORIA...");
+//			}
+			
+			//if(arCam) StartCoroutine (delayedEnable ());
 		}
 
 	}
