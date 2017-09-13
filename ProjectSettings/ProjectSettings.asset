@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2016.4
+  bundleVersion: 2017.1
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -147,7 +147,7 @@ PlayerSettings:
     iOS: org.thebuildersassociation.ozBeta2
     tvOS: org.thebuildersassociation.ozBeta2
   buildNumber:
-    iOS: 6.1
+    iOS: 7.1
   AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
