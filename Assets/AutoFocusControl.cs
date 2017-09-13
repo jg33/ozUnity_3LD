@@ -4,6 +4,8 @@ using Vuforia;
 
 public class AutoFocusControl : MonoBehaviour {
 	public bool triggeredAutoFocus;
+
+	public bool hasSetFocus = false;
 	// Use this for initialization
 	void Start () {
 		#if UNITY_ANDROID
@@ -14,6 +16,13 @@ public class AutoFocusControl : MonoBehaviour {
 
 		#endif
 	}
+
+	void FixedUpdate(){
+		if (!hasSetFocus) {
+			hasSetFocus = CameraDevice.Instance.SetFocusMode (
+				CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+		}
+	}
 	
 	IEnumerator setAutofocus(){
 		yield return new WaitForSeconds (3);
@@ -21,13 +30,13 @@ public class AutoFocusControl : MonoBehaviour {
 	}
 
 	private void OnVuforiaStarted() {
-		CameraDevice.Instance.SetFocusMode(
+		hasSetFocus = CameraDevice.Instance.SetFocusMode(
 			CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 		Debug.Log ("set auto focus (start callback)");
 	}
 		
 	private void OnVuforiaStarted(bool boo) {
-		CameraDevice.Instance.SetFocusMode(
+		hasSetFocus = CameraDevice.Instance.SetFocusMode(
 			CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 		Debug.Log ("set auto focus (pause callback)");
 	}
