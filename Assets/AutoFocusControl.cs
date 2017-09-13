@@ -9,8 +9,9 @@ public class AutoFocusControl : MonoBehaviour {
 		#if UNITY_ANDROID
 		//StartCoroutine(setAutofocus());
 		CameraDevice.Instance.SetFocusMode (CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
-		VuforiaBehaviour.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
-		VuforiaBehaviour.Instance.RegisterOnPauseCallback(OnVuforiaStarted);
+		VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+		VuforiaARController.Instance.RegisterOnPauseCallback(OnVuforiaStarted);
+
 		#endif
 	}
 	
@@ -22,6 +23,12 @@ public class AutoFocusControl : MonoBehaviour {
 	private void OnVuforiaStarted() {
 		CameraDevice.Instance.SetFocusMode(
 			CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
-		Debug.Log ("set auto focus");
+		Debug.Log ("set auto focus (start callback)");
+	}
+		
+	private void OnVuforiaStarted(bool boo) {
+		CameraDevice.Instance.SetFocusMode(
+			CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+		Debug.Log ("set auto focus (pause callback)");
 	}
 }
