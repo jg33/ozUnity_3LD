@@ -34,6 +34,8 @@ private var imageTargetX: float = 0;
 private var imageTargetY: float = 0;
 private var imageTargetZ: float = 0;
 
+public var localizedString:Dictionary.<String,String>;
+
 
 
 // one-shot events that fire on cue or never //
@@ -46,13 +48,12 @@ function Awake(){
 
 function Start () {
 
+	localizedString = GameObject.Find("UITranslator").GetComponent(UITranslator).translations;
+
 	Screen.sleepTimeout = SleepTimeout.NeverSleep;
 	Network.Connect (connectionIP, portNumber);
 
-	
 	setupText();
-	
-
 
 }
 
@@ -84,7 +85,7 @@ function Update () {
 		
 		} else if(Application.loadedLevel == 1 && forcePassive){ //if connected and in passive mode show connected text
 			var alert:GameObject = GameObject.Find("InstructionAlertText");
-			alert.GetComponent(UI.Text).text = "You are now connected. Enjoy the Show!";
+			alert.GetComponent(UI.Text).text = localizedString["You are now connected. Enjoy the Show!"];
 			var alertPanel:GameObject = GameObject.Find("InstructionAlertPanel");
 			alertPanel.GetComponent(UI.Image).color = Color(0.1,0.733,0.3);
 			
@@ -297,7 +298,7 @@ function Update () {
 				reset();
 				
 				var alert2:GameObject = GameObject.Find("InstructionAlertText");
-				if (alert2) alert2.GetComponent(UI.Text).text = "Are you at the theater? Tap here to set up your phone for the show.";
+				if (alert2) alert2.GetComponent(UI.Text).text = localizedString["Are you at the theater? Tap here to set up your phone for the show."];
 				var alertPanel2:GameObject = GameObject.Find("InstructionAlertPanel");
 				if(alertPanel2) alertPanel2.GetComponent(UI.Image).color = Color(1,1,1);
 			
@@ -334,7 +335,7 @@ function OnConnectedToServer(){
 
 		if(Application.loadedLevel ==1){
 			var alert:GameObject = GameObject.Find("InstructionAlertText");
-			if (alert) alert.GetComponent(UI.Text).text = "You are now connected. Enjoy the Show!";
+			if (alert) alert.GetComponent(UI.Text).text = localizedString["You are now connected. Enjoy the Show!"];
 			var alertPanel:GameObject = GameObject.Find("InstructionAlertPanel");
 			if(alertPanel) alertPanel .GetComponent(UI.Image).color = Color(0.1,0.733,0.3);
 		}
@@ -353,7 +354,7 @@ function OnDisconnectedFromServer(){
 //		GameObject.Find("ConnectedLight").SendMessage("setConnected", false);
 		if(Application.loadedLevel ==1){
 			var alert:GameObject = GameObject.Find("InstructionAlertText");
-			if(alert) alert.GetComponent(UI.Text).text = "Are you at the theater? Tap here to set up your phone for the show.";
+			if(alert) alert.GetComponent(UI.Text).text = localizedString["Are you at the theater? Tap here to set up your phone for the show."];
 			var alertPanel:GameObject = GameObject.Find("InstructionAlertPanel");
 			if(alertPanel) alertPanel .GetComponent(UI.Image).color = Color(1,1,1);
 		}
@@ -474,7 +475,7 @@ function setupText(){
 
 	messageText[0]= " ";
 	messageText[1]= " ";
-	messageText[2]= "App ready... Please wait.";
+	messageText[2]= localizedString["App ready... Please wait."];
 	messageText[3]= "'Ding Dong' reached number 2 in the UK Singles Chart following the death of Margaret Thatcher on 8 April 2013.";
 	messageText[4]= "Which";
 	messageText[5]= "Golden Snitch";

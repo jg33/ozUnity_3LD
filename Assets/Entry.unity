@@ -10407,6 +10407,7 @@ MonoBehaviour:
   sceneArray: []
   timeoutCounter: 0
   disconnectedTimeout: 1000
+  UITranslatorObj: {fileID: 0}
 --- !u!148 &1120223038
 NetworkView:
   m_ObjectHideFlags: 0
@@ -14329,6 +14330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggeredAutoFocus: 0
+  hasSetFocus: 0
 --- !u!114 &1551253730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21556,6 +21558,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50ada36f4595405b9accbd3300c72bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1915245909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1915245912}
+  - component: {fileID: 1915245911}
+  - component: {fileID: 1915245910}
+  m_Layer: 5
+  m_Name: UITranslator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1915245910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915245909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582116a0e97fd44bfbad0a65621a7c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1915245911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915245909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369c08c8cb05440dfb6ed8066c4331df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText:
+  - BACK
+  - NEXT
+  - CLOSE
+  - DONE
+  - App ready... Please wait.
+  - Are you at the theater? Tap here to set up your phone for the show.
+  - You are now connected. Enjoy the Show!
+--- !u!224 &1915245912
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915245909}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2834507, y: 1.2834507, z: 1.2834507}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 414.85278, y: 953.13654}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1996526665
 GameObject:
   m_ObjectHideFlags: 0

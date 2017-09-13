@@ -8,13 +8,13 @@ private var backButton:GameObject;
 private var nextButton:GameObject;
 private var totalPanels = 3;
 
-public var localizedString:UITranslator;
+public var localizedString:Dictionary.<String,String>;
 
 
 function Start () {
 	currentPanel = 0;
 
-	localizedString = GameObject.Find("UITranslator").GetComponent(UITranslator);
+	localizedString = GameObject.Find("UITranslator").GetComponent(UITranslator).translations;
 }
 
 function Update () {
@@ -45,20 +45,20 @@ function setButtons(){
 	if(currentPanel == 1){
 		//backButton.GetComponent(UI.Text).text = "CLOSE";
 		//nextButton.GetComponent(UI.Text).text = "NEXT";
-		backButton.GetComponent(UI.Text).text = localizedString.back;
-		nextButton.GetComponent(UI.Text).text = localizedString.next;
+		backButton.GetComponent(UI.Text).text = localizedString["BACK"];
+		nextButton.GetComponent(UI.Text).text = localizedString["NEXT"];
 
 		} else if(currentPanel == 3){
 		//nextButton.GetComponent(UI.Text).text = "DONE";
 		//backButton.GetComponent(UI.Text).text = "BACK";
-		nextButton.GetComponent(UI.Text).text = localizedString.done;
-		backButton.GetComponent(UI.Text).text = localizedString.back;
+		nextButton.GetComponent(UI.Text).text = localizedString["DONE"];
+		backButton.GetComponent(UI.Text).text = localizedString["BACK"];
 
 		} else{
 		//backButton.GetComponent(UI.Text).text = "BACK";
 		//nextButton.GetComponent(UI.Text).text = "NEXT";
-		backButton.GetComponent(UI.Text).text = localizedString.back;
-		nextButton.GetComponent(UI.Text).text = localizedString.next;
+		backButton.GetComponent(UI.Text).text = localizedString["BACK"];
+		nextButton.GetComponent(UI.Text).text = localizedString["NEXT"];
 
 		}
 }
