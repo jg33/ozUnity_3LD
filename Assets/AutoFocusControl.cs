@@ -21,6 +21,7 @@ public class AutoFocusControl : MonoBehaviour {
 		if (!hasSetFocus) {
 			hasSetFocus = CameraDevice.Instance.SetFocusMode (
 				CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+			Debug.Log ("setting focus in update... returned: "+hasSetFocus);
 		}
 	}
 	
