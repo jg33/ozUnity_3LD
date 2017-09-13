@@ -2,24 +2,20 @@
 using UnityEngine.UI;
 using Mgl;
 
-public class TranslateMe : MonoBehaviour {
+public class TranslationsForUI : MonoBehaviour {
 
 	private I18n i18n = I18n.Instance;
-	private string originalText;
-	private Text txt;
+	public string back="BACK",next="NEXT",close="CLOSE",done="DONE";
 
 	void Start()
 	{
-		txt = GetComponent<Text> ();
-		originalText = txt.text;
 		InitLanguage();
 		if (I18n.GetLocale () != "en-US") {
-			DoTranslation ();
+			back = i18n.__(back);
+			next = i18n.__(next);
+			close = i18n.__(close);
+			done = i18n.__(done);
 		}
-	}
-
-	private void DoTranslation(){
-		txt.text = i18n.__(originalText);
 	}
 
 	private void SetLanguage (string locale) {
