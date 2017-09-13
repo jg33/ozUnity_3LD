@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using Mgl;
 
-public class TranslateMe : MonoBehaviour {
+public class AutoTranslateText : MonoBehaviour {
 
 	private I18n i18n = I18n.Instance;
 	private string originalText;
@@ -28,8 +28,8 @@ public class TranslateMe : MonoBehaviour {
 
 	private void InitLanguage () { 		
 
-		SetLanguage("zh-CN"); // for debugging
-		return;
+		//SetLanguage("zh-CN"); // for debugging
+		//return;
 
          switch (Application.systemLanguage) {
 			case SystemLanguage.English: SetLanguage("en-US"); break;

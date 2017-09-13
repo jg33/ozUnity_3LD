@@ -24,8 +24,8 @@ public class TranslationsForUI : MonoBehaviour {
 
 	private void InitLanguage () { 		
 
-		SetLanguage("zh-CN"); // for debugging
-		return;
+		//SetLanguage("zh-CN"); // for debugging
+		//return;
 
          switch (Application.systemLanguage) {
 			case SystemLanguage.English: SetLanguage("en-US"); break;
