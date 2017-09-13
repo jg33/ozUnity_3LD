@@ -64,6 +64,9 @@ function Update () {
 
 	#elif UNITY_IOS
 	if (connected){	
+
+	#elif UNITY_STANDALONE
+	if(true){
 	#endif
 		
 		forcePassive = cueComponent.forcePassive;

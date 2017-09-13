@@ -177,7 +177,7 @@ namespace Vuforia
 		
 		private void OnTrackingLost() {
 
-			Debug.Log ("Lost This object: " + gameObject.GetComponent<ImageTargetBehaviour> ().ImageTarget.Name);
+			//Debug.Log ("Lost This object: " + gameObject.GetComponent<ImageTargetBehaviour> ().ImageTarget.Name);
 			 if (mTrackableBehaviour.TrackableName == "Oz_TopTarget_inverted"){
 				GameObject camCtl = GameObject.Find ("Camera Container");
 				camCtl.SendMessage("lostTarget");
