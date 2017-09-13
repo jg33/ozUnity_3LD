@@ -1,4 +1,5 @@
 ﻿#pragma strict
+import Vuforia;
 
 
 public var AREnabled:boolean = true;
@@ -40,6 +41,10 @@ function delayDisable(secs:float){
 
 function delayEnable(secs:float){
 	ARCam.enabled = true;
-	yield WaitForSeconds(1);
+	yield WaitForSeconds(secs);
 	isDelaying = false;
+
+	#if UNITY_ANDROID
+	CameraDevice.Instance.SetFocusMode (CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+	#endif
 }
