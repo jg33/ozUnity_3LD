@@ -11031,7 +11031,6 @@ MonoBehaviour:
   sceneArray: []
   timeoutCounter: 0
   disconnectedTimeout: 1000
-  UITranslatorObj: {fileID: 0}
 --- !u!148 &1120223038
 NetworkView:
   m_ObjectHideFlags: 0
