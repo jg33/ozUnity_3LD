@@ -10,7 +10,7 @@ public class UITranslator : MonoBehaviour {
 	public Dictionary<string, string> translations = new Dictionary<string, string>();
 	public string[] UIText = new string[] {"BACK", "NEXT", "CLOSE", "DONE", "App ready... Please wait.", "Are you at the theater? Tap here to set up your phone for the show.", "You are now connected. Enjoy the Show!"};
 
-	void Start()
+	void Awake()
 	{
 		InitLanguage();
 
