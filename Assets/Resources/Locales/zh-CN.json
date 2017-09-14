@@ -7,12 +7,12 @@
 	"BACK": "返回",
 	"NEXT": "继续",
 	"CLOSE": "关闭",
-	"DONE": "完",
+	"DONE": "退出",
 	"App ready... Please wait.": "应用已就绪…请等待",
 	"OzVision": "Oz洞察",
 	"Info": "关于",
 	"Extras": "其他",
 	"Check back after the show for new content!": "节目结束后还有全新内容哦",
-	"You are now connected. Enjoy the Show!": "You are now connected. Enjoy the Show!",
-	"You are connected.": "You are connected."
+	"You are now connected. Enjoy the Show!": "已连接。演出开始！",
+	"You are connected.": "已连接 "
 }
