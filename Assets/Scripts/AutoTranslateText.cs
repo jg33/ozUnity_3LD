@@ -28,8 +28,7 @@ public class AutoTranslateText : MonoBehaviour {
 
 	private void InitLanguage () { 		
 
-		//SetLanguage("zh-CN"); // for debugging
-		//return;
+		//SetLanguage("zh-CN"); return;// for debugging
 
          switch (Application.systemLanguage) {
 			case SystemLanguage.English: SetLanguage("en-US"); break;
