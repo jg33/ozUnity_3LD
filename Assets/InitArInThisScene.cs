@@ -9,6 +9,7 @@ public class InitArInThisScene : MonoBehaviour {
 
 	public GameObject arCam;
 	public GameObject camCon;
+	public GameObject gyroCtrl;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,13 @@ public class InitArInThisScene : MonoBehaviour {
 
 			camCon = GameObject.Find ("Camera Container");
 			camCon.SendMessage ("setTightTracking",false);
+
+			gyroCtrl = GameObject.Find ("GyroResetter");
+			gyroCtrl.SendMessage ("resetGyro");
+			gyroCtrl.SendMessage ("resetResetter");
+			gyroCtrl.SendMessage ("setTightTracking",false);
+
+
 //			if (Vuforia.VuforiaRuntime.Instance.HasInitialized) {
 //
 //
