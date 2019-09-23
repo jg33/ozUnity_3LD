@@ -42,7 +42,7 @@ using UnityEngine;
 			target = (TerrainTransparency)base.target;
 
 		// if auto-update is enabled, and used-event (e.g. mouse down/move/up, while painting) occurred with our target-terrain selected
-		if (target.autoUpdateTransparencyMap && Event.current.rawType == EventType.used && Event.current.button == 0 && Selection.transforms.Any(a=>a.gameObject == target.gameObject)) //Selection.activeTransform.gameObject == target.gameObject)
+		if (target.autoUpdateTransparencyMap && Event.current.rawType == EventType.Used && Event.current.button == 0 && Selection.transforms.Any(a=>a.gameObject == target.gameObject)) //Selection.activeTransform.gameObject == target.gameObject)
 			targetLastMouseChangeTimes[target] = Time.realtimeSinceStartup;
 	}
 }

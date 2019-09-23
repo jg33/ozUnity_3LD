@@ -116,7 +116,7 @@
                     else if(EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android)// || EditorUserBuildSettings.activeBuildTarget == BuildTarget.SamsungTV)
                         texturePlatforms[i] = "Android";
                     else if(EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXIntel || EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXIntel64 ||
-                            EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXUniversal || EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows ||
+                            EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSX || EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows ||
                             EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinux || EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinux64 ||
                             EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinuxUniversal || EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows64)
                         texturePlatforms[i] = "Standalone";

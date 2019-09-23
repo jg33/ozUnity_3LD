@@ -42,7 +42,7 @@ public class Popup{
 		switch( Event.current.GetTypeForControl(controlID) )
 		{
 			// If mouse button is clicked, set all Popup selections to be retracted
-		case EventType.mouseUp:
+		case EventType.MouseUp:
 		{
 			current = null;
 			break;

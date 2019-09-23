@@ -37,7 +37,7 @@ function List(position : Rect, expandList : boolean, listEntry : int, defaultLis
     controlID = GUIUtility.GetControlID(dropdownListHash, FocusType.Passive);
     var done : boolean = false;
    
-    if(Event.current.GetTypeForControl(controlID) == EventType.mouseDown)
+    if(Event.current.GetTypeForControl(controlID) == EventType.MouseDown)
     {
     if (position.Contains(Event.current.mousePosition))
         {
@@ -46,7 +46,7 @@ function List(position : Rect, expandList : boolean, listEntry : int, defaultLis
         }
     }
    
-    if(Event.current.GetTypeForControl(controlID) == EventType.mouseDown && !position.Contains(Event.current.mousePosition))
+    if(Event.current.GetTypeForControl(controlID) == EventType.MouseDown && !position.Contains(Event.current.mousePosition))
     {
         GUIUtility.hotControl = controlID;
     }              
