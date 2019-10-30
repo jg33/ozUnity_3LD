@@ -73,7 +73,7 @@ PlayerSettings:
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
   deferSystemGesturesMode: 0
-  hideHomeButton: 0
+  hideHomeButton: 1
   submitAnalytics: 1
   usePlayerLog: 1
   bakeCollisionMeshes: 1
@@ -126,7 +126,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2017.1
+  bundleVersion: 2019.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -162,10 +162,10 @@ PlayerSettings:
     Android: org.thebuildersassociation.ozBeta2
     Standalone: unity.The Builders Association.Elements of Oz
     Tizen: org.thebuildersassociation.ozBeta2
-    iOS: org.thebuildersassociation.ozBeta2
+    iOS: io.nightlight.tbaOz
     tvOS: org.thebuildersassociation.ozBeta2
   buildNumber:
-    iOS: 7.1
+    iOS: 9.1
   AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
@@ -251,8 +251,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: 1f09c188ceeae41e0b5183ae4894315c, type: 3}
-  AndroidKeystoreName: OzElements.keystore
-  AndroidKeyaliasName: ozelements
+  AndroidKeystoreName: 2019Keystore.keystore
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
