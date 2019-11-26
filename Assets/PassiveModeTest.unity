@@ -267,8 +267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1073.67}
-  m_SizeDelta: {x: 800, y: 600}
+  m_AnchoredPosition: {x: -0.00011444, y: -1343.8}
+  m_SizeDelta: {x: 1175.2, y: 664.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48070749
 MonoBehaviour:
@@ -289,9 +289,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b1573417791954e70927a09a98b106b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7516f6f5a8e594414bcc775228aafa9e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -349,14 +349,17 @@ RectTransform:
   - {fileID: 1886373562}
   - {fileID: 837249575}
   - {fileID: 1935714009}
+  - {fileID: 1569462566}
   - {fileID: 1681793208}
+  - {fileID: 550232990}
+  - {fileID: 2030367528}
   m_Father: {fileID: 717096944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 618.9752}
-  m_SizeDelta: {x: 1940, y: 4662.89}
+  m_AnchoredPosition: {x: 0.000061035156, y: 198}
+  m_SizeDelta: {x: 1960.3, y: 5372.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &60042685
 MonoBehaviour:
@@ -8631,7 +8634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 87.9}
+  m_AnchoredPosition: {x: 0, y: 87.8999}
   m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513033066
@@ -8985,6 +8988,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &550232989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 550232990}
+  - component: {fileID: 550232993}
+  - component: {fileID: 550232992}
+  - component: {fileID: 550232991}
+  - component: {fileID: 550232994}
+  m_Layer: 5
+  m_Name: Privacy Policy Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &550232990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550232989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8458698, y: 0.9056407, z: 0.8458698}
+  m_Children:
+  - {fileID: 1173125399}
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.3002, y: -1743.9}
+  m_SizeDelta: {x: 615, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &550232991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550232989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 550232992}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 550232994}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &550232992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550232989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &550232993
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550232989}
+--- !u!114 &550232994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550232989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2498f6ec66e46ac9179a531469d87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Url: 
 --- !u!1 &550842216
 GameObject:
   m_ObjectHideFlags: 0
@@ -20552,7 +20690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4399}
+  m_AnchoredPosition: {x: -0.000080109, y: -4217}
   m_SizeDelta: {x: 1673, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837249576
@@ -20873,7 +21011,7 @@ GameObject:
   - component: {fileID: 898393046}
   - component: {fileID: 898393045}
   m_Layer: 5
-  m_Name: HannahCamera
+  m_Name: MonkeyScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20894,8 +21032,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2142.66}
-  m_SizeDelta: {x: 800, y: 600}
+  m_AnchoredPosition: {x: -2.3003, y: -2698}
+  m_SizeDelta: {x: 1322.1, y: 729.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898393045
 MonoBehaviour:
@@ -20916,9 +21054,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fe7fc8c0fe03c45f1b6b3d218ddf2dae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af1307aa645d746e0acac6dc3459f0e4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -20992,7 +21130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 37.579956}
+  m_AnchoredPosition: {x: 0, y: 37.579834}
   m_SizeDelta: {x: 0, y: 85.513855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &914295213
@@ -21384,7 +21522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2111}
+  m_AnchoredPosition: {x: -2.3001, y: -2096.6}
   m_SizeDelta: {x: 1689, y: 4193.2847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966074801
@@ -21419,15 +21557,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "The Builders Association is a New York-based performance and media company
-    that creates original productions based on stories drawn from contemporary life.
-    The company uses the richness of new and old tools to extend the boundaries of
-    theater. Based on innovative collaborations, Builders\u2019 productions blend
-    stage performance, text, video, sound, and architecture to tell stories about
-    human experience in the 21st century. From BAM to Bogota, Singapore to Melbourne,
-    Minneapolis and Los Angeles to Budapest, The Builders Association\u2019s OBIE
-    award-winning shows have toured to major venues the world over.\n(Scroll down
-    for more.)"
+  m_Text: 'Led by Marianne Weems, The Builders are recognized across the globe as
+    leaders in theatrical innovation, incorporating performance with every form of
+    media to create original, large-scale, interdisciplinary, multi-dimensional, performances.
+    The Builders'' work extends the boundaries of theater using new and old tools
+    together to create original productions based on stories drawn from contemporary
+    life.
+
+
+    The Builders have toured to more than 80 major venues, including the Singapore
+    Arts Festival, London''s Barbican Centre, Romaeuropa Festival, the Festival Iberoamericano
+    de Teatro de Bogota, and the Melbourne International Arts Festival. In New York
+    City, the Builders have been presented at the Kitchen, New York Theater Workshop,
+    St. Ann''s Warehouse, the Guggenheim Museum, the Public Theater, the Whitney Museum;
+    five productions have premiered at the Brooklyn Academy of Music/BAM.'
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -21439,27 +21582,39 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: "The Builders Association is a New York-based performance and media
-      company that creates original productions based on stories drawn from contemporary
-      life. The company uses the richness of new and old tools to extend the boundaries
-      of theater. Based on innovative collaborations, Builders\u2019 productions blend
-      stage performance, text, video, sound, and architecture to tell stories about
-      human experience in the 21st century. From BAM to Bogota, Singapore to Melbourne,
-      Minneapolis and Los Angeles to Budapest, The Builders Association\u2019s OBIE
-      award-winning shows have toured to major venues the world over.\n(Scroll down
-      for more.)"
+    m_InputText: 'Led by Marianne Weems, The Builders are recognized across the globe
+      as leaders in theatrical innovation, incorporating performance with every form
+      of media to create original, large-scale, interdisciplinary, multi-dimensional,
+      performances. The Builders'' work extends the boundaries of theater using new
+      and old tools together to create original productions based on stories drawn
+      from contemporary life.
+
+
+      The Builders have toured to more than 80 major venues, including the Singapore
+      Arts Festival, London''s Barbican Centre, Romaeuropa Festival, the Festival
+      Iberoamericano de Teatro de Bogota, and the Melbourne International Arts Festival.
+      In New York City, the Builders have been presented at the Kitchen, New York
+      Theater Workshop, St. Ann''s Warehouse, the Guggenheim Museum, the Public Theater,
+      the Whitney Museum; five productions have premiered at the Brooklyn Academy
+      of Music/BAM.'
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: "The Builders Association is a New York-based performance and media
-      company that creates original productions based on stories drawn from contemporary
-      life. The company uses the richness of new and old tools to extend the boundaries
-      of theater. Based on innovative collaborations, Builders\u2019 productions blend
-      stage performance, text, video, sound, and architecture to tell stories about
-      human experience in the 21st century. From BAM to Bogota, Singapore to Melbourne,
-      Minneapolis and Los Angeles to Budapest, The Builders Association\u2019s OBIE
-      award-winning shows have toured to major venues the world over.\n(Scroll down
-      for more.)"
+    m_OutputText: 'Led by Marianne Weems, The Builders are recognized across the globe
+      as leaders in theatrical innovation, incorporating performance with every form
+      of media to create original, large-scale, interdisciplinary, multi-dimensional,
+      performances. The Builders'' work extends the boundaries of theater using new
+      and old tools together to create original productions based on stories drawn
+      from contemporary life.
+
+
+      The Builders have toured to more than 80 major venues, including the Singapore
+      Arts Festival, London''s Barbican Centre, Romaeuropa Festival, the Festival
+      Iberoamericano de Teatro de Bogota, and the Melbourne International Arts Festival.
+      In New York City, the Builders have been presented at the Kitchen, New York
+      Theater Workshop, St. Ann''s Warehouse, the Guggenheim Museum, the Public Theater,
+      the Whitney Museum; five productions have premiered at the Brooklyn Academy
+      of Music/BAM.'
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -25560,7 +25715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 41.1}
+  m_AnchoredPosition: {x: 0, y: 41.100098}
   m_SizeDelta: {x: 0, y: 91.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043231456
@@ -25680,7 +25835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.54992676}
+  m_AnchoredPosition: {x: 0, y: -0.5500488}
   m_SizeDelta: {x: 7432, y: 1.0999911}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086107032
@@ -25912,8 +26067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -201.84, y: -3865}
-  m_SizeDelta: {x: 465, y: 785}
+  m_AnchoredPosition: {x: -235, y: -3526}
+  m_SizeDelta: {x: 435.42, y: 254.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134700894
 MonoBehaviour:
@@ -25947,31 +26102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mary Beebe
-
-    Richard Block
-
-    Scott Cohen
-
-    Peter Cooke
-
-    Gai Gherardi
-
-    jdobkin
-
-    Margaret Healey
-
-    Matthew Karges
-
-    David Mendoza
-
-    Carrie Moyer
-
-    Adam Simon
-
-    Narelle Sissons
-
-    Jeff Weems'
+  m_Text: "Mary Beebe \_\nSharon Connelly \_\nJonathan Edson \_\nAnton Kisselgoff"
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -25983,59 +26114,11 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: 'Mary Beebe
-
-      Richard Block
-
-      Scott Cohen
-
-      Peter Cooke
-
-      Gai Gherardi
-
-      jdobkin
-
-      Margaret Healey
-
-      Matthew Karges
-
-      David Mendoza
-
-      Carrie Moyer
-
-      Adam Simon
-
-      Narelle Sissons
-
-      Jeff Weems'
+    m_InputText: "Mary Beebe \_\nSharon Connelly \_\nJonathan Edson \_\nAnton Kisselgoff"
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 'Mary Beebe
-
-      Richard Block
-
-      Scott Cohen
-
-      Peter Cooke
-
-      Gai Gherardi
-
-      jdobkin
-
-      Margaret Healey
-
-      Matthew Karges
-
-      David Mendoza
-
-      Carrie Moyer
-
-      Adam Simon
-
-      Narelle Sissons
-
-      Jeff Weems'
+    m_OutputText: "Mary Beebe \_\nSharon Connelly \_\nJonathan Edson \_\nAnton Kisselgoff"
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -26247,6 +26330,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b615202487511462397dbd6bc0b524b8, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1173125398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1173125399}
+  - component: {fileID: 1173125401}
+  - component: {fileID: 1173125400}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1173125399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173125398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550232990}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1173125400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173125398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fffda87a1f1054f64a179f46a8e45c03, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 54
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Privacy Policy Link
+--- !u!222 &1173125401
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173125398}
 --- !u!1 &1175587388
 GameObject:
   m_ObjectHideFlags: 0
@@ -37034,8 +37191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2145}
-  m_SizeDelta: {x: 1673, y: 4448}
+  m_AnchoredPosition: {x: 12.5, y: -2145}
+  m_SizeDelta: {x: 1643.4, y: 4448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320314233
 MonoBehaviour:
@@ -37061,7 +37218,7 @@ MonoBehaviour:
     m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 54
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -37109,7 +37266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -36.299927}
+  m_AnchoredPosition: {x: 0, y: -36.30005}
   m_SizeDelta: {x: 0, y: 87.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1334624499
@@ -37858,7 +38015,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2596, y: -0.000030517578}
-  m_SizeDelta: {x: 590, y: 257.9}
+  m_SizeDelta: {x: 565.6, y: 257.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388386557
 MonoBehaviour:
@@ -37892,7 +38049,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Connect to the \n\u201CSurrender Dorothy\u201D WiFi network"
+  m_Text: "Connect to the \n\u201CSurrenderDorothy\u201D WiFi Network"
 --- !u!222 &1388386558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37942,7 +38099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2821.142}
+  m_AnchoredPosition: {x: -4.0999, y: -3063}
   m_SizeDelta: {x: 1689, y: 2804.2844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400032260
@@ -37977,9 +38134,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This lighthearted 21st century mash-up of The Wizard of Oz features YouTube
-    Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film, and smartphone
-    interactivity to delve into the land of our Technicolor imaginations.
+  m_Text: "This 21st century mash-up of The Wizard of Oz features YouTube Oz fanatics,
+    heavy metal, a heart-felt interrogation of the iconic film, and smartphone interactivity
+    to delve into the land of our Technicolor imaginations.\n\nELEMENTS OF OZ is The
+    Builders' 17th original production. OZ began development in 2015 in NYC, and premiered
+    at Peak Performances @ Montclair State University in December of that year. The
+    production received its NYC premiere December 2016 at 3LD Art & Technology Center
+    to a critically-acclaimed, sold out run. \_"
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -37991,15 +38152,23 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: This lighthearted 21st century mash-up of The Wizard of Oz features
-      YouTube Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film,
-      and smartphone interactivity to delve into the land of our Technicolor imaginations.
+    m_InputText: "This 21st century mash-up of The Wizard of Oz features YouTube Oz
+      fanatics, heavy metal, a heart-felt interrogation of the iconic film, and smartphone
+      interactivity to delve into the land of our Technicolor imaginations.\n\nELEMENTS
+      OF OZ is The Builders' 17th original production. OZ began development in 2015
+      in NYC, and premiered at Peak Performances @ Montclair State University in December
+      of that year. The production received its NYC premiere December 2016 at 3LD
+      Art & Technology Center to a critically-acclaimed, sold out run. \_"
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: This lighthearted 21st century mash-up of The Wizard of Oz features
-      YouTube Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film,
-      and smartphone interactivity to delve into the land of our Technicolor imaginations.
+    m_OutputText: "This 21st century mash-up of The Wizard of Oz features YouTube
+      Oz fanatics, heavy metal, a heart-felt interrogation of the iconic film, and
+      smartphone interactivity to delve into the land of our Technicolor imaginations.\n\nELEMENTS
+      OF OZ is The Builders' 17th original production. OZ began development in 2015
+      in NYC, and premiered at Peak Performances @ Montclair State University in December
+      of that year. The production received its NYC premiere December 2016 at 3LD
+      Art & Technology Center to a critically-acclaimed, sold out run. \_"
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -38073,8 +38242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3110}
-  m_SizeDelta: {x: 1673, y: 3699}
+  m_AnchoredPosition: {x: -4.0999, y: -3437}
+  m_SizeDelta: {x: 1680.8, y: 3772.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426734440
 MonoBehaviour:
@@ -38307,8 +38476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1298, y: -0.000030517578}
-  m_SizeDelta: {x: 517.5, y: 257.9}
+  m_AnchoredPosition: {x: 1297.2, y: -0.000030517578}
+  m_SizeDelta: {x: 534.7, y: 257.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474488793
 MonoBehaviour:
@@ -38342,7 +38511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Turn Airplane Mode on
+  m_Text: Turn Airplane Mode On
 --- !u!222 &1474488794
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45650,6 +45819,155 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1569462565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1569462566}
+  - component: {fileID: 1569462569}
+  - component: {fileID: 1569462568}
+  - component: {fileID: 1569462567}
+  m_Layer: 5
+  m_Name: SpecialThanks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1569462566
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569462565}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.84586966, y: 0.9056407, z: 0.84586966}
+  m_Children: []
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000017643, y: -3699.3}
+  m_SizeDelta: {x: 1100, y: 126.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1569462567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569462565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2498f6ec66e46ac9179a531469d87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Url: 
+--- !u!114 &1569462568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569462565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "A special thanks to DBOX! \_\n& Theater Mitu!"
+  m_DefaultStyles: {fileID: 0}
+  m_QuadRenderersPool: []
+  m_Interactable: 1
+  m_OpenURLPatterns: 0
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_TextProcessor:
+    m_LinkKeywordCollections: []
+    m_InputText: "A special thanks to DBOX! \_\n& Theater Mitu!"
+    m_InputTextSourceObject: {fileID: 0}
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_OutputText: "A special thanks to DBOX! \_\n& Theater Mitu!"
+    m_QuadKeywordCollections: []
+    m_ReferenceFontSize: 54
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: 6ceea1b1d91bf49c1bc9de79c6cfb42f, type: 2}
+    m_TagKeywordCollections: []
+  m_ShouldOverrideStylesFontStyle: 0
+  m_ShouldOverrideStylesFontColor: 0
+  m_ShouldOverrideStylesLineSpacing: 0
+  m_ShouldOverrideStylesLinkHitboxPadding: 0
+  m_QuadMaterial: {fileID: 0}
+  m_ClickedLink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60042685}
+        m_MethodName: openURL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mcDirections
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_EnteredLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ExitedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_PressedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ReleasedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!222 &1569462569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569462565}
 --- !u!1 &1570271212
 GameObject:
   m_ObjectHideFlags: 0
@@ -45977,7 +46295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1169.5001, y: 71.119995}
+  m_AnchoredPosition: {x: -1169.5001, y: 71.11987}
   m_SizeDelta: {x: 73.000244, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584860414
@@ -46046,8 +46364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000018119812, y: -0.000019073486}
-  m_SizeDelta: {x: 517.5, y: 257.9}
+  m_AnchoredPosition: {x: 9, y: -0.000019073486}
+  m_SizeDelta: {x: 811.5, y: 257.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589578664
 MonoBehaviour:
@@ -46081,7 +46399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Turn your ringer on
+  m_Text: "Turn Your Ringer On \n& \nVolume Up"
 --- !u!222 &1589578665
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46563,7 +46881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -3911}
+  m_AnchoredPosition: {x: -2.3001, y: -3726}
   m_SizeDelta: {x: 1673, y: 1423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673316027
@@ -46633,11 +46951,11 @@ RectTransform:
   m_LocalScale: {x: 0.84586746, y: 0.90563846, z: 0.8458672}
   m_Children: []
   m_Father: {fileID: 60042684}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 247, y: -4482.8}
+  m_AnchoredPosition: {x: 257.49985, y: -4293}
   m_SizeDelta: {x: 465, y: 240.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681793209
@@ -47059,8 +47377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -3680}
-  m_SizeDelta: {x: 1689, y: 713.28516}
+  m_AnchoredPosition: {x: 12.500006, y: -3514.8}
+  m_SizeDelta: {x: 1691.7, y: 829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789286104
 MonoBehaviour:
@@ -47094,10 +47412,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The Builders Association would like to thank our generous IndieGoGo backers
-    for helping to make Elements of Oz possible!
-
-'
+  m_Text: "This performance marks The Builders' NYU Skirball debut. The company would
+    like to thank Jay Wegman, Amy Coombs, and everyone at NYU Skirball and NYU's IT
+    Department for their incredible support.\n\nSpecial thanks to our first wave of
+    2019 Kickstarter supporters: \_"
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -47109,17 +47427,17 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: 'The Builders Association would like to thank our generous IndieGoGo
-      backers for helping to make Elements of Oz possible!
-
-'
+    m_InputText: "This performance marks The Builders' NYU Skirball debut. The company
+      would like to thank Jay Wegman, Amy Coombs, and everyone at NYU Skirball and
+      NYU's IT Department for their incredible support.\n\nSpecial thanks to our first
+      wave of 2019 Kickstarter supporters: \_"
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 'The Builders Association would like to thank our generous IndieGoGo
-      backers for helping to make Elements of Oz possible!
-
-'
+    m_OutputText: "This performance marks The Builders' NYU Skirball debut. The company
+      would like to thank Jay Wegman, Amy Coombs, and everyone at NYU Skirball and
+      NYU's IT Department for their incredible support.\n\nSpecial thanks to our first
+      wave of 2019 Kickstarter supporters: \_"
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -47633,7 +47951,7 @@ GameObject:
   - component: {fileID: 1831127123}
   - component: {fileID: 1831127122}
   m_Layer: 5
-  m_Name: Glowing Audience Img
+  m_Name: HannahDorothy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47654,8 +47972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2865}
-  m_SizeDelta: {x: 800, y: 600}
+  m_AnchoredPosition: {x: -0.000015259, y: -4805.8}
+  m_SizeDelta: {x: 1023.8, y: 651.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831127122
 MonoBehaviour:
@@ -47676,9 +47994,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3ea255f68d1774741bbbae6b1c0f96e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed073d048ebbe4c71a8d0233b9725a64, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -47790,8 +48108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 247, y: -3865}
-  m_SizeDelta: {x: 437, y: 785}
+  m_AnchoredPosition: {x: 243.5998, y: -3514.8}
+  m_SizeDelta: {x: 470.2, y: 226.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886373563
 MonoBehaviour:
@@ -47825,31 +48143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'bevcoyle
-
-    Cee Scott Brown
-
-    Sharon Connelly
-
-    Babs Davy
-
-    James Gibbs
-
-    Catherine Gund
-
-    Cynthia Hedstrom
-
-    Anna Magenta
-
-    Laurence Miller
-
-    Ellen Salpeter
-
-    Lowery Sims
-
-    Lisa Vogel
-
-    Kim Whitener'
+  m_Text: "Sarah Krohn \_\nEllen F. Salpeter \_\nSteve Solga \_"
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -47861,59 +48155,11 @@ MonoBehaviour:
     m_Bottom: 0
   m_TextProcessor:
     m_LinkKeywordCollections: []
-    m_InputText: 'bevcoyle
-
-      Cee Scott Brown
-
-      Sharon Connelly
-
-      Babs Davy
-
-      James Gibbs
-
-      Catherine Gund
-
-      Cynthia Hedstrom
-
-      Anna Magenta
-
-      Laurence Miller
-
-      Ellen Salpeter
-
-      Lowery Sims
-
-      Lisa Vogel
-
-      Kim Whitener'
+    m_InputText: "Sarah Krohn \_\nEllen F. Salpeter \_\nSteve Solga \_"
     m_InputTextSourceObject: {fileID: 0}
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
-    m_OutputText: 'bevcoyle
-
-      Cee Scott Brown
-
-      Sharon Connelly
-
-      Babs Davy
-
-      James Gibbs
-
-      Catherine Gund
-
-      Cynthia Hedstrom
-
-      Anna Magenta
-
-      Laurence Miller
-
-      Ellen Salpeter
-
-      Lowery Sims
-
-      Lisa Vogel
-
-      Kim Whitener'
+    m_OutputText: "Sarah Krohn \_\nEllen F. Salpeter \_\nSteve Solga \_"
     m_QuadKeywordCollections: []
     m_ReferenceFontSize: 54
     m_ShouldOverrideStylesFontSize: 0
@@ -48140,7 +48386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -201.84, y: -4482.8}
+  m_AnchoredPosition: {x: -172.00012, y: -4293}
   m_SizeDelta: {x: 465, y: 240.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935714010
@@ -52070,7 +52316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -42.3}
+  m_AnchoredPosition: {x: 0, y: -42.30005}
   m_SizeDelta: {x: 0, y: 102.25336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998210351
@@ -52595,6 +52841,167 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &2030367527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2030367528}
+  - component: {fileID: 2030367531}
+  - component: {fileID: 2030367530}
+  - component: {fileID: 2030367529}
+  m_Layer: 5
+  m_Name: InitialSupporters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2030367528
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030367527}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.84587353, y: 0.9056449, z: 0.84587353}
+  m_Children: []
+  m_Father: {fileID: 60042684}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 17.8, y: -3927.6}
+  m_SizeDelta: {x: 1724.6, y: 356.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2030367529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030367527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2498f6ec66e46ac9179a531469d87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Url: 
+--- !u!114 &2030367530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030367527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "And to our original backers who made this app possible: \_\nRichard Block,
+    Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi, James
+    Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew Karges,
+    Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims, Adam
+    Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
+  m_DefaultStyles: {fileID: 0}
+  m_QuadRenderersPool: []
+  m_Interactable: 1
+  m_OpenURLPatterns: 0
+  m_LinkHitboxPadding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_TextProcessor:
+    m_LinkKeywordCollections: []
+    m_InputText: "And to our original backers who made this app possible: \_\nRichard
+      Block, Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
+      James Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew
+      Karges, Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims,
+      Adam Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
+    m_InputTextSourceObject: {fileID: 0}
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_OutputText: "And to our original backers who made this app possible: \_\nRichard
+      Block, Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
+      James Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew
+      Karges, Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims,
+      Adam Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
+    m_QuadKeywordCollections: []
+    m_ReferenceFontSize: 54
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: 6ceea1b1d91bf49c1bc9de79c6cfb42f, type: 2}
+    m_TagKeywordCollections: []
+  m_ShouldOverrideStylesFontStyle: 0
+  m_ShouldOverrideStylesFontColor: 0
+  m_ShouldOverrideStylesLineSpacing: 0
+  m_ShouldOverrideStylesLinkHitboxPadding: 0
+  m_QuadMaterial: {fileID: 0}
+  m_ClickedLink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60042685}
+        m_MethodName: openURL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mcDirections
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_EnteredLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ExitedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_PressedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ReleasedLink:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!222 &2030367531
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030367527}
 --- !u!1 &2040314990
 GameObject:
   m_ObjectHideFlags: 0
@@ -53273,7 +53680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 4}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143731218
