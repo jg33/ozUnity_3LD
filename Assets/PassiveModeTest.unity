@@ -26397,7 +26397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Privacy Policy Link
+  m_Text: Privacy Policy
 --- !u!222 &1173125401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52922,10 +52922,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "And to our original backers who made this app possible: \_\nRichard Block,
-    Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi, James
-    Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew Karges,
-    Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims, Adam
-    Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
+    Cee Scott Brown, bevcoyle, Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
+    James Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew
+    Karges, Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims,
+    Adam Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
   m_DefaultStyles: {fileID: 0}
   m_QuadRenderersPool: []
   m_Interactable: 1
@@ -52938,7 +52938,7 @@ MonoBehaviour:
   m_TextProcessor:
     m_LinkKeywordCollections: []
     m_InputText: "And to our original backers who made this app possible: \_\nRichard
-      Block, Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
+      Block, Cee Scott Brown, bevcoyle, Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
       James Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew
       Karges, Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims,
       Adam Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
@@ -52946,7 +52946,7 @@ MonoBehaviour:
     m_IsDynamicFontDesired: 1
     m_IsRichTextDesired: 1
     m_OutputText: "And to our original backers who made this app possible: \_\nRichard
-      Block, Cee Scott Brown, bevcoyle Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
+      Block, Cee Scott Brown, bevcoyle, Scott Cohen, Peter Cooke, Babs Davy, Gai Gherardi,
       James Gibbs, Catherine Gund, Cynthia Hedstrom, jdobkin, Margaret Healey, Matthew
       Karges, Anna Magenta, David Mendoza, Laurence Miller, Carrie Moyer, Lowery Sims,
       Adam Simon, Narelle Sissons, Lisa Vogel, and Jeff Weems."
