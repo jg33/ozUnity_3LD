@@ -126,7 +126,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2019.3
+  bundleVersion: 2019.5
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -167,8 +167,8 @@ PlayerSettings:
   buildNumber:
     Standalone: 10
     iOS: 9.3
-  AndroidBundleVersionCode: 92
-  AndroidMinSdkVersion: 27
+  AndroidBundleVersionCode: 95
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 2
   aotOptions: 
@@ -249,7 +249,7 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
   clonedFromGUID: 00000000000000000000000000000000
-  AndroidTargetArchitectures: 5
+  AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: 1f09c188ceeae41e0b5183ae4894315c, type: 3}
   AndroidKeystoreName: OzElements.keystore
@@ -664,7 +664,7 @@ PlayerSettings:
   platformArchitecture:
     iOS: 2
   scriptingBackend:
-    Android: 0
+    Android: 1
     Standalone: 0
     WebGL: 1
     iOS: 1
